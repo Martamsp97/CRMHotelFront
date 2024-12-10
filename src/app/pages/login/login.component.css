@@ -1,0 +1,55 @@
+.formulario {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h4 {
+    font-family: 'Antic Didone', sans-serif;
+    font-weight: 800;
+    margin-top: 70px;
+    font-size: 50px;
+    color: black;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.form-control {
+    border: none !important;
+    border-bottom: 2px solid #e0e0e0 !important;
+    border-radius: 0 !important;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-bottom: 2px solid #2e5951 !important;
+    box-shadow: none !important;
+}
+
+/* Estilo general del botón */
+.input-con-icono {
+    margin-top: 20px;
+    width: 60%;
+    border-radius: 0 !important;
+    padding-right: 200px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    background-image: url('/images/icono.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: transparent;
+    font-weight: 500;
+
+}
