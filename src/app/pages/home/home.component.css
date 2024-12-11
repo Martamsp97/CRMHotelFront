@@ -282,6 +282,34 @@ carousel-item {
             }
 
         }
+
+        a {
+            display: inline-flex;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+
+
+            p {
+                margin: 0px;
+                width: 120px;
+
+            }
+
+            img {
+                width: 60px;
+            }
+        }
+
+        a:hover {
+            transform: translateX(7px);
+        }
     }
 
 
