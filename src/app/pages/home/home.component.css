@@ -162,3 +162,127 @@ carousel-item {
     }
 
 }
+
+.habitaciones {
+    margin-left: 2.5rem;
+    font-family: "Quicksand", sans-serif;
+
+    h2 {
+        letter-spacing: 0.0625rem;
+        width: 45%;
+        font-family: "Nympha";
+        font-weight: 600;
+        font-size: 2rem;
+        margin-top: 2.5rem;
+
+    }
+
+    .submenu-habitaciones {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            width: 50%;
+        }
+
+        a {
+            display: inline-flex;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+
+
+            p {
+                margin: 0px;
+                width: 120px;
+
+            }
+
+            img {
+                width: 60px;
+            }
+        }
+
+        a:hover {
+            transform: translateX(7px);
+        }
+
+    }
+
+
+}
+
+.carrusel-habitaciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.reserva {
+    margin-top: 2rem;
+    background-color: #2e5951;
+    color: whitesmoke;
+    padding: 5rem 3rem;
+    text-align: center;
+
+    h2 {
+        letter-spacing: 0.0625rem;
+        margin-bottom: 1rem;
+        font-family: "Nympha";
+        font-weight: 600;
+        font-size: 2rem;
+
+
+    }
+
+
+    .form {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .row {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+
+            .campo-form {
+                display: grid;
+                grid-template-columns: 1fr;
+                width: 30%;
+                margin-top: 60px;
+
+                .form-label {
+                    font-family: "quicksand", sans-serif;
+                    margin-bottom: 10px;
+                    text-align: left;
+                }
+
+                .form-control {
+                    color: whitesmoke;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid whitesmoke;
+
+
+                }
+
+                input::placeholder {
+                    color: whitesmoke;
+                }
+
+            }
+
+        }
+    }
+
+
+}

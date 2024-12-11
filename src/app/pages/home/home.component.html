@@ -87,3 +87,58 @@
     </div>
 
 </section>
+<section class="habitaciones">
+    <h2>Comodidad y Espacio a Tu Alcance</h2>
+    <div class="submenu-habitaciones">
+        <p>Cada una de nuestras habitaciones ha sido pensada para ofrecerte un ambiente tranquilo y relajante, donde el
+            diseño
+            moderno se encuentra con la belleza natural de Tenerife.</p>
+        <a>
+            <p>NUESTRAS HABITACIONES</p>
+            <img src="/images/icono.png" alt="">
+        </a>
+    </div>
+    <div class="carrusel-habitaciones">
+        <article>
+            <figure>
+                <img src="/images/habitacion.jpg" alt="">
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="/images/habitacion2.jpg" alt="">
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="/images/habitacion3.jpg" alt="">
+            </figure>
+        </article>
+    </div>
+</section>
+<section class="reserva">
+    <h2>Planea hoy tu escapada</h2>
+    <div class="form">
+        <form [formGroup]="reserva" (ngSubmit)="onSubmit()" class="row">
+            <div class="campo-form">
+                <label class="form-label" for="fecha">Llegada</label>
+                <input class="form-control" type="date" name="fecha" id="fecha" placeholder="Mar, 15/6/2025"
+                    formControlName="llegada">
+            </div>
+            <div class="campo-form">
+                <label class="form-label" for="fecha">Salida</label>
+                <input class="form-control" type="date" name="fecha" id="fecha" placeholder="Mar, 20/6/2025"
+                    formControlName="salida">
+            </div>
+            <div class="campo-form">
+                <label class="form-label" for="clientes">Número de clientes</label>
+                <input class="form-control" type="text" name="clientes" id="clientes" placeholder="3"
+                    formControlName="num_personas">
+            </div>
+        </form>
+    </div>
+    <a>
+        <p>RESERVAR</p>
+        <img src="/images/icono.png" alt="">
+    </a>
+</section>
