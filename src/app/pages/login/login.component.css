@@ -2,11 +2,11 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: var(--fuente-secundaria);
 }
 
 h4 {
-    font-family: 'Nympha', sans-serif;
+    font-family: var(--fuente-principal);
     font-weight: 500;
     font-size: 60px;
     color: white;
@@ -19,9 +19,9 @@ h4 {
 }
 
 .form-control {
-    border: none !important;
+    border: none;
     border-bottom: 2px solid #e0e0e0 !important;
-    border-radius: 0 !important;
+    border-radius: 0;
     padding: 10px;
     background-color: transparent;
     color: white;
@@ -29,7 +29,7 @@ h4 {
 
 .form-control:focus {
     border-bottom: 2px solid #3c7369 !important;
-    box-shadow: none !important;
+    box-shadow: none;
 }
 
 .form-control::placeholder {
@@ -39,7 +39,7 @@ h4 {
 .input-con-icono {
     margin-top: 20px;
     width: 60%;
-    border-radius: 0 !important;
+    border-radius: 0;
     padding-right: 200px;
     display: inline-flex;
     align-items: center;
@@ -60,10 +60,9 @@ h4 {
     transition: transform 0.3s ease;
 }
 
-/* Movimiento cuando el cursor está encima */
+/* Se mueve hacia la derecha al hacer hover */
 .input-con-icono:hover {
     transform: translateX(7px);
-    /* Se mueve hacia arriba */
 }
 
 .background {
@@ -74,4 +73,10 @@ h4 {
     justify-content: center;
     align-items: center;
     padding: 70px;
+}
+
+.error {
+    color: var(--color-error);
+    font-weight: 600;
+    margin-top: 4px;
 }

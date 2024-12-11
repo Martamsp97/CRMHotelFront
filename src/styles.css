@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
 
+:root {
+    --color-primario: #2e5951;
+    --color-secundario: #3c7369;
+    --color-error: #800040;
+    --fuente-principal: 'Nympha', sans-serif;
+    --fuente-secundaria: 'Quicksand', sans-serif;
+}
+
 
 @font-face {
     font-family: 'Nympha';
