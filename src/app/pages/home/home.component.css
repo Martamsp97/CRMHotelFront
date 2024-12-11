@@ -5,6 +5,10 @@ img {
 
 }
 
+a {
+    color: black;
+}
+
 .titulo {
     margin: 3.75rem auto 2.5rem auto;
     display: block;
@@ -142,14 +146,15 @@ carousel-item {
             cursor: pointer;
             justify-content: center;
             align-items: center;
-            gap: 0.625rem;
+            gap: 1rem;
             width: auto;
             text-align: left;
 
 
             p {
                 margin: 0rem;
-                width: 5rem;
+                width: 6rem;
+                font-size: 1.2rem;
 
             }
 
@@ -206,6 +211,8 @@ carousel-item {
             p {
                 margin: 0px;
                 width: 7.5rem;
+                font-size: 1.2rem;
+
 
             }
 
@@ -323,5 +330,108 @@ carousel-item {
 
     a:hover {
         transform: translateX(0.4375rem);
+    }
+}
+
+.relax {
+    margin: 3rem 2.5rem;
+
+
+    p {
+        width: 80%;
+    }
+
+    h2 {
+        letter-spacing: 0.0625rem;
+        margin-bottom: 1rem;
+        font-family: "Nympha";
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .articles-relax {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+
+        .boton-spa {
+            margin-bottom: 2rem;
+
+            a {
+                display: inline-flex;
+                text-decoration: none;
+                background-color: transparent;
+                border: none;
+                margin-top: 2.5rem;
+                width: 100%;
+                cursor: pointer;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                width: auto;
+                text-align: left;
+
+
+                p {
+                    margin: 0rem;
+                    width: 10rem;
+                    font-size: 1.2rem;
+
+                }
+
+                img {
+                    width: 3.75rem;
+                }
+            }
+
+            a:hover {
+                transform: translateX(7px);
+            }
+        }
+
+        figure {
+            width: 50%;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-family: "Quicksand", sans-serif;
+            width: 100%;
+            display: block;
+
+            h3 {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+
+        .izquierda {
+            width: 50%;
+
+            figure {
+                img {
+                    height: 50vh;
+                }
+            }
+
+        }
+
+        .derecha {
+            width: 50%;
+            display: flex;
+            gap: 1.3rem;
+
+            &>figure:first-child {
+                width: 50%;
+            }
+
+            &>figure:last-child {
+                width: 30%;
+            }
+        }
     }
 }
