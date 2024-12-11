@@ -53,7 +53,7 @@ img {
         margin-top: 3.125rem;
 
         figure {
-            width: 60px;
+            width: 3.75rem;
             rotate: 90deg;
         }
     }
@@ -124,7 +124,7 @@ carousel-item {
         width: 50%;
         font-family: "Quicksand", sans-serif;
 
-        margin-left: 100px;
+        margin-left: 6.25rem;
         justify-content: center;
 
         p {
@@ -137,24 +137,24 @@ carousel-item {
             text-decoration: none;
             background-color: transparent;
             border: none;
-            margin-top: 40px;
+            margin-top: 2.5rem;
             width: 100%;
             cursor: pointer;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 0.625rem;
             width: auto;
             text-align: left;
 
 
             p {
-                margin: 0px;
-                width: 80px;
+                margin: 0rem;
+                width: 5rem;
 
             }
 
             img {
-                width: 60px;
+                width: 3.75rem;
             }
         }
 
@@ -182,7 +182,7 @@ carousel-item {
     .submenu-habitaciones {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
         width: 100%;
 
         p {
@@ -199,18 +199,18 @@ carousel-item {
             cursor: pointer;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 1.25rem;
             text-align: left;
 
 
             p {
                 margin: 0px;
-                width: 120px;
+                width: 7.5rem;
 
             }
 
             img {
-                width: 60px;
+                width: 3.75rem;
             }
         }
 
@@ -263,11 +263,11 @@ carousel-item {
                 display: grid;
                 grid-template-columns: 1fr;
                 width: 30%;
-                margin-top: 60px;
+                margin-top: 3.75rem;
 
                 .form-label {
                     font-family: "quicksand", sans-serif;
-                    margin-bottom: 10px;
+                    margin-bottom: 0.625rem;
                     text-align: left;
                 }
 
@@ -275,7 +275,7 @@ carousel-item {
                     color: whitesmoke;
                     background-color: transparent;
                     border: none;
-                    border-bottom: 1px solid whitesmoke;
+                    border-bottom: 0.0625rem solid whitesmoke;
 
 
                 }
@@ -294,7 +294,7 @@ carousel-item {
 
 .boton-reservar {
     display: flex;
-    margin-top: 70px;
+    margin-top: 4.375rem;
 
     a {
         display: inline-flex;
@@ -305,23 +305,23 @@ carousel-item {
         cursor: pointer;
         justify-content: center;
         align-items: center;
-        gap: 15px;
+        gap: 0.9375rem;
         text-align: left;
 
 
         p {
-            margin: 0px;
-            width: 80px;
+            margin: 0rem;
+            width: 5rem;
             font-size: 1.2rem;
 
         }
 
         img {
-            width: 60px;
+            width: 3.75rem;
         }
     }
 
     a:hover {
-        transform: translateX(7px);
+        transform: translateX(0.4375rem);
     }
 }
