@@ -1,25 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
 
-/* @font-face {
-    font-family: "Nympha";
-    src: url("../assets/fonts/Nympha.otf") format("opentype");
-} */
 
-/*         src: url(/fonts/san_de_more/SandeMoreDemo-Regular.otf) format('opentype'),
-        url(/fonts/san_de_more/SandeMoreDemo-Bold.otf) format('opentype'),
-        url(/fonts/san_de_more/SandeMoreDemo-Italic.otf) format('opentype'),
-        url(/fonts/san_de_more/SandeMoreDemo-Medium.otf) format('opentype'),
-        url(/fonts/san_de_more/SandeMoreDemo-SemiBold.otf) format('opentype');
-        font-weight: 400 700 500 600;
-        font-style: normal italic; */
+@font-face {
+    font-family: 'Nympha';
+    src: url(/fonts/NymphaTrial-Regular.ttf) format('opentype'),
+        url(/fonts/NymphaTrial-Light.ttf) format('opentype'),
+        url(/fonts/NymphaTrial-LightItalic.ttf) format('opentype'),
+        url(/fonts/NymphaTrial-RegularItalic.ttf) format('opentype')
+}
+
 
 .fondo-login {
-    background-image: src('./images/mykola-kolya-korzh-rqObPpH7wj8-unsplash.jpg');
+    background-image: url('/images/mykola-kolya-korzh-rqObPpH7wj8-unsplash.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
+    background-color: rgba(15, 15, 15, 0.8);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(10px)
 }
