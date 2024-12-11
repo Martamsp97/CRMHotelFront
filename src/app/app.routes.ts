@@ -9,6 +9,6 @@ export const routes: Routes = [
     { path: "", component: HomeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'registro', component: RegistroComponent },
-    { path: 'habitaciones', component: HabitacionesComponent }
+    { path: 'habitaciones', component: HabitacionesComponent },
     { path: '**', redirectTo: '' }
 ];

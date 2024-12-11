@@ -1,1 +1,65 @@
-<p>registro works!</p>
+<div class="background">
+    <h4>¡Tu próxima experiencia inolvidable comienza aquí!</h4>
+    <form class="formulario" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="form-column">
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" placeholder="Ingresa tu nombre" formControlName="nombre" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Apellidos</label>
+                <input type="text" class="form-control" placeholder="Ingresa tus apellidos"
+                    formControlName="apellidos" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" placeholder="Ingresa tu nombre de usuario"
+                    formControlName="username" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico"
+                    formControlName="email" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="Ingresa tu contraseña"
+                    formControlName="password" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha de nacimiento</label>
+                <input type="date" class="form-control" placeholder="Ingresa tu fecha de nacimiento"
+                    formControlName="fecha_nacimiento" />
+            </div>
+        </div>
+        <div class="form-column">
+            <div class="mb-3">
+                <label class="form-label">DNI</label>
+                <input type="text" class="form-control" placeholder="Ingresa tu DNI" formControlName="dni" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Teléfono</label>
+                <input type="text" class="form-control" placeholder="Ingresa tu teléfono" formControlName="telefono" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Dirección</label>
+                <input type="text" class="form-control" placeholder="Ingresa tu dirección"
+                    formControlName="direccion" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Ciudad</label>
+                <input type="text" class="form-control" placeholder="Ingresa tu ciudad" formControlName="ciudad" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">País</label>
+                <input type="text" class="form-control" placeholder="Ingresa tu país" formControlName="pais" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Código Postal</label>
+                <input type="text" class="form-control" placeholder="Ingresa tu código postal"
+                    formControlName="cod_postal" />
+            </div>
+        </div>
+        <input type="submit" value="REGISTRARSE" class="input-con-icono">
+    </form>
+</div>
