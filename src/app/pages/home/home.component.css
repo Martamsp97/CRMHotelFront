@@ -16,7 +16,7 @@ img {
     h5 {
         font-family: "Quicksand",
             sans-serif;
-        font-size: 0.7rem;
+        font-size: 1rem;
         font-weight: 400;
         color: #000;
         margin: 0;
@@ -42,6 +42,7 @@ img {
 
     p {
         font-family: "Quicksand", sans-serif;
+        font-size: 1.2rem;
 
     }
 
@@ -52,7 +53,7 @@ img {
         margin-top: 3.125rem;
 
         figure {
-            width: 3.125rem;
+            width: 60px;
             rotate: 90deg;
         }
     }
@@ -128,6 +129,7 @@ carousel-item {
 
         p {
             width: 50%;
+            font-size: 1.2rem;
         }
 
         a {
@@ -180,9 +182,12 @@ carousel-item {
     .submenu-habitaciones {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 20px;
+        width: 100%;
 
         p {
             width: 50%;
+            font-size: 1.2rem;
         }
 
         a {
@@ -282,35 +287,41 @@ carousel-item {
             }
 
         }
-
-        a {
-            display: inline-flex;
-            text-decoration: none;
-            background-color: transparent;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            text-align: left;
-
-
-            p {
-                margin: 0px;
-                width: 120px;
-
-            }
-
-            img {
-                width: 60px;
-            }
-        }
-
-        a:hover {
-            transform: translateX(7px);
-        }
     }
 
 
+}
+
+.boton-reservar {
+    display: flex;
+    margin-top: 70px;
+
+    a {
+        display: inline-flex;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        text-align: left;
+
+
+        p {
+            margin: 0px;
+            width: 80px;
+            font-size: 1.2rem;
+
+        }
+
+        img {
+            width: 60px;
+        }
+    }
+
+    a:hover {
+        transform: translateX(7px);
+    }
 }
