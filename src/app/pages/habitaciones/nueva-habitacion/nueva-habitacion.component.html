@@ -26,25 +26,25 @@
               <div class="mb-3">
                 <label class="form-label">Numero de piso</label>
                 <input
-                  type="email"
+                  type="number"
                   class="form-control"
-                  formControlName="nombre"
+                  formControlName="piso"
                 />
               </div>
               <div class="mb-3">
                 <label class="form-label">Número de puerta</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
-                  formControlName="apellidos"
+                  formControlName="puerta"
                 />
               </div>
               <div class="mb-3">
                 <label class="form-label">Numero de mascotas</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
-                  formControlName="direccion"
+                  formControlName="mascotas"
                 />
               </div>
               <div class="mb-3">
@@ -66,7 +66,7 @@
               </div>
               <div class="mb-3">
                 <label class="form-label">Tamaño</label>
-                <select class="form-control" formControlName="categoria">
+                <select class="form-control" formControlName="tamanho">
                   <option value="">Seleccione opción</option>
                   <option value="M">Grande</option>
                   <option value="F">Mediana</option>
@@ -75,7 +75,7 @@
               </div>
               <div class="mb-3">
                 <label class="form-label">Tipo de vista</label>
-                <select class="form-control" formControlName="categoria">
+                <select class="form-control" formControlName="vista">
                   <option value="">Seleccione opción</option>
                   <option value="M">Exterior</option>
                   <option value="F">Interior</option>
@@ -83,7 +83,7 @@
               </div>
               <div class="mb-3">
                 <label class="form-label">Cocina</label>
-                <select class="form-control" formControlName="categoria">
+                <select class="form-control" formControlName="cocina">
                   <option value="">Seleccione opción</option>
                   <option value="M">Incluye</option>
                   <option value="F">No incluye</option>
@@ -101,7 +101,7 @@
                 type="submit"
                 class="btn btn-secondary d-flex align-items-center gap-2"
               >
-                Modificar <i class="fi fi-rr-file-edit"></i>
+                Modificar <i class="fi fi-br-pen-field"></i>
               </button>
             </div>
           </div>
