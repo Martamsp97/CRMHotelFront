@@ -69,10 +69,10 @@
     <div class="about">
         <div class="fotos">
             <figure>
-                <img src="/images/natura1.jpg" alt="">
+                <img src="/images/aboutus1.jpg" alt="">
             </figure>
             <figure>
-                <img src="/images/natura2.jpg" alt="">
+                <img src="/images/aboutus2.jpg" alt="">
             </figure>
         </div>
         <div class="textoabout">
@@ -80,7 +80,7 @@
                 ofrecerte un refugio
                 tranquilo, lejos del ajetreo y el bullicio de la vida diaria.</p>
             <a>
-                <p>QUIENES SOMOS</p>
+                <p>QUIÉNES SOMOS</p>
                 <img src="/images/icono.png" alt="">
             </a>
         </div>
@@ -93,7 +93,7 @@
         <p>Cada una de nuestras habitaciones ha sido pensada para ofrecerte un ambiente tranquilo y relajante, donde el
             diseño
             moderno se encuentra con la belleza natural de Tenerife.</p>
-        <a>
+        <a [routerLink]="['habitaciones']">
             <p>NUESTRAS HABITACIONES</p>
             <img src="/images/icono.png" alt="">
         </a>
@@ -137,8 +137,63 @@
             </div>
         </form>
     </div>
-    <a>
-        <p>RESERVAR</p>
-        <img src="/images/icono_blanco.png" alt="">
-    </a>
+    <div class="boton-reservar">
+        <a>
+            <p>RESERVAR</p>
+            <img src="/images/icono_blanco.png" alt="">
+        </a>
+    </div>
+
+</section>
+<section class="relax">
+    <h2>Relájate, Rejuvenece, Renueva</h2>
+    <div class="articles-relax">
+        <article class="izquierda">
+            <p>Descubre un oasis de bienestar donde cada detalle está diseñado para cuidar de ti. Nuestro spa te invita
+                a
+                disfrutar de
+                tratamientos exclusivos, vistas al océano que calman el alma y espacios pensados para desconectar del
+                mundo
+                y reconectar
+                contigo mismo.</p>
+            <div class="boton-spa">
+                <a>
+                    <p>SERVICIOS DE SPA</p>
+                    <img src="/images/icono.png" alt="">
+                </a>
+            </div>
+            <figure>
+                <img src="/images/spa1.jpg" alt="">
+                <figcaption>
+                    <h3>RELÁJATE CON EL PODER DEL AGUA</h3>
+                    <p>Un espacio diseñado para relajar tu cuerpo y liberar tu mente, rodeado de la tranquilidad que
+                        solo
+                        Tenerife puede
+                        ofrecer.</p>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="derecha">
+            <figure>
+                <img src="/images/esencias.jpg" alt="">
+                <figcaption>
+                    <h3>EL ARTE DEL BIENESTAR NATURAL</h3>
+                    <p>Sumérgete en una experiencia sensorial única con nuestros tratamientos personalizados. Los
+                        aceites
+                        esenciales
+                        cuidadosamente seleccionados despertarán tus sentidos y revitalizarán tu bienestar.</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/images/sauna.jpg" alt="">
+                <figcaption>
+                    <h3>EL ABRAZO DE LA CALIDEZ</h3>
+                    <p>Purifica tu cuerpo y renueva tu energía en nuestra sauna. Un refugio de calor y calma donde el
+                        estrés
+                        desaparece y el
+                        relax se convierte en protagonista.</p>
+                </figcaption>
+            </figure>
+        </article>
+    </div>
 </section>

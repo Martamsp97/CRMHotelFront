@@ -5,6 +5,10 @@ img {
 
 }
 
+a {
+    color: black;
+}
+
 .titulo {
     margin: 3.75rem auto 2.5rem auto;
     display: block;
@@ -16,7 +20,7 @@ img {
     h5 {
         font-family: "Quicksand",
             sans-serif;
-        font-size: 0.7rem;
+        font-size: 1rem;
         font-weight: 400;
         color: #000;
         margin: 0;
@@ -42,6 +46,7 @@ img {
 
     p {
         font-family: "Quicksand", sans-serif;
+        font-size: 1.2rem;
 
     }
 
@@ -52,7 +57,7 @@ img {
         margin-top: 3.125rem;
 
         figure {
-            width: 3.125rem;
+            width: 3.75rem;
             rotate: 90deg;
         }
     }
@@ -123,11 +128,12 @@ carousel-item {
         width: 50%;
         font-family: "Quicksand", sans-serif;
 
-        margin-left: 100px;
+        margin-left: 6.25rem;
         justify-content: center;
 
         p {
             width: 50%;
+            font-size: 1.2rem;
         }
 
         a {
@@ -135,24 +141,25 @@ carousel-item {
             text-decoration: none;
             background-color: transparent;
             border: none;
-            margin-top: 40px;
+            margin-top: 2.5rem;
             width: 100%;
             cursor: pointer;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 1rem;
             width: auto;
             text-align: left;
 
 
             p {
-                margin: 0px;
-                width: 80px;
+                margin: 0rem;
+                width: 6rem;
+                font-size: 1.2rem;
 
             }
 
             img {
-                width: 60px;
+                width: 3.75rem;
             }
         }
 
@@ -180,9 +187,12 @@ carousel-item {
     .submenu-habitaciones {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 1.25rem;
+        width: 100%;
 
         p {
             width: 50%;
+            font-size: 1.2rem;
         }
 
         a {
@@ -194,18 +204,20 @@ carousel-item {
             cursor: pointer;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 1.25rem;
             text-align: left;
 
 
             p {
                 margin: 0px;
-                width: 120px;
+                width: 7.5rem;
+                font-size: 1.2rem;
+
 
             }
 
             img {
-                width: 60px;
+                width: 3.75rem;
             }
         }
 
@@ -258,11 +270,11 @@ carousel-item {
                 display: grid;
                 grid-template-columns: 1fr;
                 width: 30%;
-                margin-top: 60px;
+                margin-top: 3.75rem;
 
                 .form-label {
                     font-family: "quicksand", sans-serif;
-                    margin-bottom: 10px;
+                    margin-bottom: 0.625rem;
                     text-align: left;
                 }
 
@@ -270,7 +282,7 @@ carousel-item {
                     color: whitesmoke;
                     background-color: transparent;
                     border: none;
-                    border-bottom: 1px solid whitesmoke;
+                    border-bottom: 0.0625rem solid whitesmoke;
 
 
                 }
@@ -282,35 +294,144 @@ carousel-item {
             }
 
         }
-
-        a {
-            display: inline-flex;
-            text-decoration: none;
-            background-color: transparent;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            text-align: left;
-
-
-            p {
-                margin: 0px;
-                width: 120px;
-
-            }
-
-            img {
-                width: 60px;
-            }
-        }
-
-        a:hover {
-            transform: translateX(7px);
-        }
     }
 
 
+}
+
+.boton-reservar {
+    display: flex;
+    margin-top: 4.375rem;
+
+    a {
+        display: inline-flex;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        gap: 0.9375rem;
+        text-align: left;
+
+
+        p {
+            margin: 0rem;
+            width: 5rem;
+            font-size: 1.2rem;
+
+        }
+
+        img {
+            width: 3.75rem;
+        }
+    }
+
+    a:hover {
+        transform: translateX(0.4375rem);
+    }
+}
+
+.relax {
+    margin: 3rem 2.5rem;
+
+
+    p {
+        width: 80%;
+    }
+
+    h2 {
+        letter-spacing: 0.0625rem;
+        margin-bottom: 1rem;
+        font-family: "Nympha";
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .articles-relax {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+
+        .boton-spa {
+            margin-bottom: 2rem;
+
+            a {
+                display: inline-flex;
+                text-decoration: none;
+                background-color: transparent;
+                border: none;
+                margin-top: 2.5rem;
+                width: 100%;
+                cursor: pointer;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                width: auto;
+                text-align: left;
+
+
+                p {
+                    margin: 0rem;
+                    width: 10rem;
+                    font-size: 1.2rem;
+
+                }
+
+                img {
+                    width: 3.75rem;
+                }
+            }
+
+            a:hover {
+                transform: translateX(7px);
+            }
+        }
+
+        figure {
+            width: 50%;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-family: "Quicksand", sans-serif;
+            width: 100%;
+            display: block;
+
+            h3 {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+
+        .izquierda {
+            width: 50%;
+
+            figure {
+                img {
+                    height: 50vh;
+                }
+            }
+
+        }
+
+        .derecha {
+            width: 50%;
+            display: flex;
+            gap: 1.3rem;
+
+            &>figure:first-child {
+                width: 50%;
+            }
+
+            &>figure:last-child {
+                width: 30%;
+            }
+        }
+    }
 }
