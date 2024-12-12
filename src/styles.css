@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700');
 
 :root {
     --color-primario: #2e5951;
@@ -8,6 +8,7 @@
     --fuente-secundaria: 'Quicksand', sans-serif;
 }
 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css');
 
 @font-face {
     font-family: 'Nympha';
@@ -30,4 +31,8 @@
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px)
+}
+
+html {
+    scroll-behavior: smooth;
 }
