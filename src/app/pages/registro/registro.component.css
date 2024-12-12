@@ -100,3 +100,9 @@ h4 {
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
+
+.error {
+    color: var(--color-error);
+    font-weight: 600;
+    margin-top: 4px;
+}

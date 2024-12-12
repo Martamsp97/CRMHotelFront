@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, inject, Inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsuariosService } from '../../services/usuarios.service';
 import { Router } from '@angular/router';
 
@@ -18,28 +18,32 @@ export class RegistroComponent {
   router = inject(Router)
 
   formulario: FormGroup = new FormGroup({
-    nombre: new FormControl(''),
-    apellidos: new FormControl(''),
-    username: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    dni: new FormControl(''),
-    telefono: new FormControl(''),
-    ciudad: new FormControl(''),
-    pais: new FormControl(''),
-    cod_postal: new FormControl(''),
-    fecha_nacimiento: new FormControl(''),
-    direccion: new FormControl('')
+    nombre: new FormControl(null, [Validators.required]),
+    apellidos: new FormControl(null, [Validators.required]),
+    username: new FormControl(null, [Validators.required]),
+    email: new FormControl(null, [Validators.required,
+    Validators.pattern(/^[a-zA-Z0-9._%+-ñÑ]+@[a-zA-Z0-9.-]+\.[a-zA-ZñÑ]{2,}$/)]),
+    password: new FormControl(null, [Validators.required]),
+    dni: new FormControl(null, [Validators.required, Validators.pattern(/^\d{8}[A-Za-z]$/)]),
+    telefono: new FormControl(null, [Validators.required, Validators.pattern(/^\d{9}$/)]),
+    ciudad: new FormControl(null, [Validators.required]),
+    pais: new FormControl(null, [Validators.required]),
+    cod_postal: new FormControl(null, [Validators.required]),
+    fecha_nacimiento: new FormControl(null, [Validators.required]),
+    direccion: new FormControl(null, [Validators.required])
   });
 
 
   ngOnInit() {
     this.document.body.classList.add('fondo-login');
+  }
 
+  checkError(fieldName: string, errorName: string) {
+    return this.formulario.get(fieldName)?.hasError(errorName) && this.formulario.get(fieldName)?.touched
   }
 
   async onSubmit() {
-    console.log('ENTRA')
+    this.formulario.markAllAsTouched();
     try {
       const response = await this.UsuariosServie.registro(this.formulario.value)
       console.log(response)
@@ -49,7 +53,6 @@ export class RegistroComponent {
       /* alert */
       console.log(error)
     }
-
 
   }
 
