@@ -1,27 +1,78 @@
-@import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
+/*------------------------
+        Globales 
+-------------------------*/
 
-@font-face {
-    font-family: 'NymphaTrial-Light'; 
-    src: url('/fonts/NymphaTrial-Light.ttf')
-}
-
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'NymphaTrial-Light';
-	margin-top: 1rem;
-}
-p{
-	font-family: "Quicksand" !important;
-}
-table {
-	font-family: "Quicksand" !important;
-}
+/* :root {
+    --color-primario: #2e5951;
+    --color-secundario: #3c7369;
+    --color-error: #800040;
+    --fuente-principal: 'Nympha', sans-serif;
+    --fuente-secundaria: 'Quicksand', sans-serif;
+} */
 
 img {
-	max-width: 100%;
+    display: block;
+    width: 100%;
+    height: auto;
+
 }
 
+.titulo {
+    margin: 3.75rem auto 2.5rem auto;
+    display: block;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 
-/* buttons */
+    h5 {
+        font-family:"Nympha";
+        font-size: 3rem;
+        font-weight: 400;
+        color: var(--color-primario);
+        margin: 0;
+        padding: 0;
+        letter-spacing: 0.0625rem;
+
+    }
+
+    h1 {
+        margin: 20px 0 40px 0;
+
+        p {
+            font-family: "Quicksand",sans-serif;
+            font-style: normal;
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--color-premium);
+        }
+
+
+    }
+
+    p {
+        font-family: "Quicksand", sans-serif;
+		font-size: 1.4rem;
+
+    }
+
+    .icono {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-top: 3.125rem;
+
+        figure {
+            width: 3.125rem;
+            rotate: 90deg;
+        }
+    }
+}
+
+/*------------------------
+         Buttons 
+-------------------------*/
+
 
 .primary-btn {
 	display: inline-block;
@@ -36,6 +87,12 @@ img {
 	border: 2px solid #AE954B;
 	position: relative;
 	margin-top: 2rem;
+}
+
+.btn-res .primary-btn:hover {
+	background-color: #AE9548;
+	transform: translateY(-3px);
+	transition: 0.6s;
 }
 
 .primary-btn i {
@@ -93,6 +150,7 @@ img {
 .rooms-section {
 	padding-top: 0;
 	padding-bottom: 80px;
+
 }
 
 .room-item {
@@ -101,6 +159,9 @@ img {
 	overflow: hidden;
 	margin-bottom: 30px;
 	transition: transform 0.3s ease;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff;
 }
 
 .room-item:hover {
