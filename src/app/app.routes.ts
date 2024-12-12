@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
-import { HabitacionesComponent } from './pages/habitaciones/habitaciones.component';
+import { ListaHabitacionesComponent } from './pages/habitaciones/lista-habitaciones/lista-habitaciones.component';
+import { NuevaHabitacionComponent } from './pages/habitaciones/nueva-habitacion/nueva-habitacion.component';
 
 export const routes: Routes = [
-    { path: 'habitaciones', component: HabitacionesComponent }
+    { path: 'habitaciones', component: ListaHabitacionesComponent },
+    { path: 'crearHabitacion', component: NuevaHabitacionComponent }
 ];
