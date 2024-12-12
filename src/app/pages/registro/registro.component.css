@@ -106,3 +106,15 @@ h4 {
     font-weight: 600;
     margin-top: 4px;
 }
+
+a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: var(--fuente-secundaria);
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -3,6 +3,9 @@
     margin: 0 auto;
     padding: 20px;
     font-family: var(--fuente-secundaria);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 h4 {
@@ -47,7 +50,7 @@ h4 {
     border-radius: 0;
     padding-right: 200px;
     display: inline-flex;
-    align-items: center;
+    align-self: center;
     gap: 10px;
     border: none;
     padding: 10px 15px;
@@ -84,4 +87,21 @@ h4 {
     color: var(--color-error);
     font-weight: 600;
     margin-top: 4px;
+}
+
+.link {
+    text-align: center;
+}
+
+.link_registro {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: var(--fuente-secundaria);
+
+}
+
+.link_registro:hover {
+    text-decoration: underline;
 }
