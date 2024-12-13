@@ -1,97 +1,35 @@
 <div class="reservas-container">
     <h2>Reservas</h2>
     <div class="filtro">
-        <label for="fecha-entrada">Fecha de Entrada:</label>
-        <input type="date" id="fecha-entrada" name="fecha-entrada">
+        <form [formGroup]="formulario" (ngSubmit)="filtrarFecha()">
+            <label for="fecha-entrada">Fecha de Entrada:</label>
+            <input type="date" id="fecha-entrada" name="fecha-entrada" formControlName="fecha-entrada">
 
-        <label for="fecha-salida">Fecha de Salida:</label>
-        <input type="date" id="fecha-salida" name="fecha-salida">
+            <label for="fecha-salida">Fecha de Salida:</label>
+            <input type="date" id="fecha-salida" name="fecha-salida" formControlName="fecha-salida">
 
-        <button type="button">Filtrar</button>
+            <button type="submit">Filtrar</button>
+        </form>
+        <form [formGroup]="formularioDni" (ngSubmit)="filtrarDni()">
+            <label for="usuario">DNI:</label>
+            <input type="text" id="usuario" name="usuario">
 
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario">
-
-        <button type="button">Filtrar</button>
+            <button type="submit">Filtrar</button>
+        </form>
     </div>
 
     <div class="reservas-cards">
+        @for (reserva of arrrReservas; track reserva.id) {
         <div class="reserva-card">
-            <h2>Nombre del Cliente</h2>
-            <p><span>Número de Personas:</span> 2</p>
-            <p><span>Número de Habitaciones:</span> 1</p>
-            <p><span>Fecha de Entrada:</span> 2023-10-01</p>
-            <p><span>Fecha de Salida:</span> 2023-10-05</p>
-            <p><span>Precio:</span> $500</p>
-            <p><span>Tipo de Cancelación:</span> Flexible</p>
-            <p><span>Método de Pago:</span> Tarjeta de Crédito</p>
+            <h2>{{reserva.usuarios_id}}</h2>
+            <p><span>Número de Personas:</span> {{reserva.num_personas}}</p>
+            <p><span>Fecha de Entrada:</span> {{reserva.fecha_entrada}}</p>
+            <p><span>Fecha de Salida:</span> {{reserva.fecha_salida}}</p>
+            <p><span>Precio:</span> {{reserva.precio}}</p>
+            <p><span>Tipo de Cancelación:</span> {{reserva.tipo_cancelacion}}</p>
+            <p><span>Método de Pago:</span> {{reserva.metodo_pago}}</p>
             <input value="Ver detalle" class="input-con-icono">
         </div>
-        <div class="reserva-card">
-            <h2>Nombre del Cliente</h2>
-            <p><span>Número de Personas:</span> 2</p>
-            <p><span>Número de Habitaciones:</span> 1</p>
-            <p><span>Fecha de Entrada:</span> 2023-10-01</p>
-            <p><span>Fecha de Salida:</span> 2023-10-05</p>
-            <p><span>Precio:</span> $500</p>
-            <p><span>Tipo de Cancelación:</span> Flexible</p>
-            <p><span>Método de Pago:</span> Tarjeta de Crédito</p>
-            <input value="Ver detalle" class="input-con-icono">
-        </div>
-        <div class="reserva-card">
-            <h2>Nombre del Cliente</h2>
-            <p><span>Número de Personas:</span> 2</p>
-            <p><span>Número de Habitaciones:</span> 1</p>
-            <p><span>Fecha de Entrada:</span> 2023-10-01</p>
-            <p><span>Fecha de Salida:</span> 2023-10-05</p>
-            <p><span>Precio:</span> $500</p>
-            <p><span>Tipo de Cancelación:</span> Flexible</p>
-            <p><span>Método de Pago:</span> Tarjeta de Crédito</p>
-            <input value="Ver detalle" class="input-con-icono">
-        </div>
-        <div class="reserva-card">
-            <h2>Nombre del Cliente</h2>
-            <p><span>Número de Personas:</span> 2</p>
-            <p><span>Número de Habitaciones:</span> 1</p>
-            <p><span>Fecha de Entrada:</span> 2023-10-01</p>
-            <p><span>Fecha de Salida:</span> 2023-10-05</p>
-            <p><span>Precio:</span> $500</p>
-            <p><span>Tipo de Cancelación:</span> Flexible</p>
-            <p><span>Método de Pago:</span> Tarjeta de Crédito</p>
-            <input value="Ver detalle" class="input-con-icono">
-        </div>
-        <div class="reserva-card">
-            <h2>Nombre del Cliente</h2>
-            <p><span>Número de Personas:</span> 2</p>
-            <p><span>Número de Habitaciones:</span> 1</p>
-            <p><span>Fecha de Entrada:</span> 2023-10-01</p>
-            <p><span>Fecha de Salida:</span> 2023-10-05</p>
-            <p><span>Precio:</span> $500</p>
-            <p><span>Tipo de Cancelación:</span> Flexible</p>
-            <p><span>Método de Pago:</span> Tarjeta de Crédito</p>
-            <input value="Ver detalle" class="input-con-icono">
-        </div>
-        <div class="reserva-card">
-            <h2>Nombre del Cliente</h2>
-            <p><span>Número de Personas:</span> 2</p>
-            <p><span>Número de Habitaciones:</span> 1</p>
-            <p><span>Fecha de Entrada:</span> 2023-10-01</p>
-            <p><span>Fecha de Salida:</span> 2023-10-05</p>
-            <p><span>Precio:</span> $500</p>
-            <p><span>Tipo de Cancelación:</span> Flexible</p>
-            <p><span>Método de Pago:</span> Tarjeta de Crédito</p>
-            <input value="Ver detalle" class="input-con-icono">
-        </div>
-        <div class="reserva-card">
-            <h2>Nombre del Cliente</h2>
-            <p><span>Número de Personas:</span> 2</p>
-            <p><span>Número de Habitaciones:</span> 1</p>
-            <p><span>Fecha de Entrada:</span> 2023-10-01</p>
-            <p><span>Fecha de Salida:</span> 2023-10-05</p>
-            <p><span>Precio:</span> $500</p>
-            <p><span>Tipo de Cancelación:</span> Flexible</p>
-            <p><span>Método de Pago:</span> Tarjeta de Crédito</p>
-            <input value="Ver detalle" class="input-con-icono">
-        </div>
+        }
     </div>
 </div>
