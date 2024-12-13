@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HabitacionesService } from '../../../services/habitaciones.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-nueva-habitacion',
@@ -12,6 +14,7 @@ import { Router } from '@angular/router';
 export class NuevaHabitacionComponent {
 
   router = inject(Router);
+  habitacionesService = inject(HabitacionesService)
 
   formulario: FormGroup = new FormGroup({
     piso: new FormControl(1),
@@ -27,6 +30,9 @@ export class NuevaHabitacionComponent {
 
   async onSubmit() {
     try {
+      console.log(this.formulario.value);
+      const habitacion = await this.habitacionesService.create(this.formulario.value);
+      Swal.fire({ title: 'Nuevo Habitacion', text: 'La habitacion se ha creado con éxito', icon: 'success' });
     } catch (error) {
       console.log(error);
     }

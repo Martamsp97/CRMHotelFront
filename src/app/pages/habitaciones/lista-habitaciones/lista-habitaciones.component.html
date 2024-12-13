@@ -13,20 +13,23 @@
 <!-- Title Section End -->
 
 <!-- Rooms Section Begin -->
-<section class="rooms-section py-5">
-  <div class="container">
-    <div class="row">
+
+<section class="rooms-section">
+  <div class="contenedor">
+    <div class="cardHabitacion">
       <!-- Room Item -->
-      <div class="col-lg-4 col-md-6">
+      @for (habitacion of arrHabitaciones; track habitacion.id) {
+      <div class="">
         <div class="room-item">
           <img src="room/room-1.jpg" alt="Room Image" />
           <div class="ri-text">
-            <h2>Habitación Premium</h2>
-            <h3>159€<span>/por noche</span></h3>
+            <h2>Habitación {{ habitacion.categoria }}</h2>
+            <h3>{{ habitacion.precio }}€<span> / por noche</span></h3>
             <div>
-              <p><strong>Tamaño:</strong> Mediana</p>
-              <p><strong>Camas:</strong> King Beds</p>
-              <p><strong>Vistas:</strong> Exterior</p>
+              <p><strong>Tamaño:</strong> {{ habitacion.tamanho }}</p>
+              <p><strong>Camas:</strong>{{ habitacion.num_camas }}</p>
+              <p><strong>Vistas:</strong>{{ habitacion.vista }}</p>
+              <p><strong>Cocina:</strong>{{ habitacion.cocina }}</p>
               <p><strong>Servicios:</strong></p>
               <div class="room-features">
                 <div class="room-info">
@@ -56,11 +59,29 @@
                 >Reservar <i class="fi fi-rs-arrow-small-right"></i
               ></a>
             </div>
+            @if(habitacionesService){
+            <div class="btn-res d-flex gap-3">
+              <button
+                class="btn btn-primary d-flex align-items-center gap-2"
+                [routerLink]="['/crearHabitacion']"
+              >
+                Modificar <i class="fi fi-br-pen-field"></i>
+              </button>
+              <button
+                type="submit"
+                class="btn btn-secondary d-flex align-items-center gap-2"
+              >
+                Eliminar <i class="fi fi-rs-arrow-small-right"></i>
+              </button>
+            </div>
+            }
           </div>
         </div>
       </div>
+      }
       <!-- Room Item End -->
     </div>
   </div>
 </section>
+
 <!-- Rooms Section End -->
