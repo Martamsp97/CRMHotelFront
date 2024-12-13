@@ -7,14 +7,22 @@ import { NuevaHabitacionComponent } from './pages/habitaciones/nueva-habitacion/
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CrmReservasComponent } from './pages/crm-reservas/crm-reservas.component';
 import { CrmHabitacionesComponent } from './pages/crm-habitaciones/crm-habitaciones.component';
+import { MainComponent } from './pages/main/main.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '', pathMatch: 'full' },
-    { path: "", component: HomeComponent },
+    {
+        path: '',
+        component: MainComponent,
+        children: [
+            { path: "", component: HomeComponent },
+            { path: 'habitaciones', component: ListaHabitacionesComponent },
+            { path: 'crearHabitacion', component: NuevaHabitacionComponent },
+
+        ],
+    },
     { path: 'login', component: LoginComponent },
     { path: 'registro', component: RegistroComponent },
-    { path: 'habitaciones', component: ListaHabitacionesComponent },
-    { path: 'crearHabitacion', component: NuevaHabitacionComponent },
+
     {
         path: 'dashboard',
         component: DashboardComponent,
