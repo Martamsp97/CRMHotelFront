@@ -1,4 +1,5 @@
 export default interface Habitacion {
+    id: number;
     piso: number;
     puerta: number;
     mascotas: number;
