@@ -63,9 +63,10 @@ h2 {
 }
 
 .reservas-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
 
 .reserva-card {
@@ -73,7 +74,7 @@ h2 {
     border: 1px solid var(--color-secundario);
     border-radius: 20px;
     padding: 20px;
-    width: calc(33.333% - 20px);
+    /*  width: calc(33.333% - 20px); */
 }
 
 .reserva-card h2 {
