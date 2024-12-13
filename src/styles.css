@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-@import url("https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700");
-=======
 @import url(https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700);
-@import 'material-icons/iconfont/material-icons.css';
->>>>>>> feature-dashboard
+/* @import 'material-icons/iconfont/material-icons.css'; */
 
 :root {
   --color-primario: #2e5951;
