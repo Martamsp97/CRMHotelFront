@@ -19,5 +19,14 @@ export class ReservasService {
       this.httpClient.get<Reserva[]>(`${this.url}`))
   }
 
+  filterByFechas(fechaInicio: Date, fechaFin: Date): Promise<Reserva[]> {
+    return lastValueFrom(
+      this.httpClient.get<Reserva[]>(`${this.url}/fecha/${fechaInicio}/${fechaFin}`))
+  }
+
+  filterByDni(dni: string): Promise<Reserva[]> {
+    return lastValueFrom(
+      this.httpClient.get<Reserva[]>(`${this.url}/dni/${dni}`))
+  }
 
 }
