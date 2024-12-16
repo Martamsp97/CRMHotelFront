@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Reserva } from '../../interfaces/reserva';
 
 @Component({
   selector: 'app-crm-detalle-reserva',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './crm-detalle-reserva.component.css'
 })
 export class CrmDetalleReservaComponent {
+
+  reserva: Reserva | null = null
 
 }

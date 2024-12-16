@@ -1,1 +1,26 @@
-<p>crm-detalle-reserva works!</p>
+<div class="card">
+    <div class="card-header">
+        <h2>Información de la Reserva</h2>
+        @if(reserva){
+        <div class="card-body">
+            <p><strong>ID:</strong> {{ reserva.id }}</p>
+            <p><strong>Fecha de Entrada:</strong> {{ reserva.fecha_entrada}}</p>
+            <p><strong>Fecha de Salida:</strong> {{ reserva.fecha_salida}}</p>
+            <p><strong>Puntuación:</strong> {{ reserva.puntuacion }}</p>
+            <p><strong>ID de Usuario:</strong> {{ reserva.usuarios_id }}</p>
+            <p><strong>Número de Personas:</strong> {{ reserva.num_personas }}</p>
+            <p><strong>Régimen:</strong> {{ reserva.regimen }}</p>
+            <p><strong>Tipo de Cancelación:</strong> {{ reserva.tipo_cancelacion }}</p>
+            <p><strong>Aparcamiento:</strong> {{ reserva.aparcamiento ? 'Sí' : 'No' }}</p>
+            <p><strong>Desayuno:</strong> {{ reserva.desayuno ? 'Sí' : 'No' }}</p>
+            <p><strong>Spa:</strong> {{ reserva.spa ? 'Sí' : 'No' }}</p>
+            <p><strong>Gimnasio:</strong> {{ reserva.gimnasio ? 'Sí' : 'No' }}</p>
+            <p><strong>Piscina:</strong> {{ reserva.piscina ? 'Sí' : 'No' }}</p>
+            <p><strong>Precio:</strong> {{ reserva.precio}}</p>
+            <p><strong>Método de Pago:</strong> {{ reserva.metodo_pago }}</p>
+            <p><strong>Estado:</strong> {{ reserva.estado }}</p>
+            <p><strong>Número de Habitaciones:</strong> {{ reserva.num_habitaciones }}</p>
+        </div>
+        }
+    </div>
+</div>
