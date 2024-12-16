@@ -8,6 +8,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CrmReservasComponent } from './pages/crm-reservas/crm-reservas.component';
 import { CrmHabitacionesComponent } from './pages/crm-habitaciones/crm-habitaciones.component';
 import { MainComponent } from './pages/main/main.component';
+import { NewHabComponent } from './pages/new-hab/new-hab.component';
+import { EditHabComponent } from './pages/edit-hab/edit-hab.component';
 
 export const routes: Routes = [
     {
@@ -28,7 +30,9 @@ export const routes: Routes = [
         component: DashboardComponent,
         children: [
             { path: 'reservas', component: CrmReservasComponent },
-            { path: 'habitaciones', component: CrmHabitacionesComponent }
+            { path: 'habitaciones', component: CrmHabitacionesComponent },
+            { path: 'habitaciones/new', component: NewHabComponent },
+            { path: 'habitaciones/edit/:habId', component: EditHabComponent }
         ],
     },
     { path: '**', redirectTo: '' }

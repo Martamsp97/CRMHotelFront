@@ -1,1 +1,66 @@
-<p>crm-habitaciones works!</p>
+<div class="crmhabs">
+    <h2>Habitaciones</h2>
+    <div class="filtro">
+        <!--  <form [formGroup]="formulariofecha" (ngSubmit)="filtrarFecha()">
+            <label for="fecha-entrada">Fecha de Entrada:</label>
+            <input type="date" id="fecha-entrada" name="fecha-entrada" formControlName="fechaentrada">
+
+            <label for="fecha-salida">Fecha de Salida:</label>
+            <input type="date" id="fecha-salida" name="fecha-salida" formControlName="fechasalida">
+
+            <button type="submit">Filtrar</button>
+        </form> -->
+
+        <form class="filplanta" [formGroup]="filtroPlanta" (ngSubmit)="filtrarPlanta()">
+            <label for="piso">Piso: </label>
+            <input type="text" id="piso" name="piso" formControlName="piso">
+
+            <button type="submit">Filtrar</button>
+        </form>
+        <form class="filcat" [formGroup]="filtrocat" (ngSubmit)="filtrarCategoria()">
+            <label for="categoria">Categoría: </label>
+            <select name="categoria" id="categoria" formControlName="categoria">
+                <option value="">Selecciona una categoría</option>
+                <option value="Standard">Standard</option>
+                <option value="Deluxe">Deluxe</option>
+                <option value="Premium">Premium</option>
+            </select>
+
+            <button type="submit">Filtrar</button>
+        </form>
+        <form class="filubi" [formGroup]="filtroubi" (ngSubmit)="filtrarUbicacion()">
+            <label for="vista">Vista: </label>
+            <select name="vista" id="vista" formControlName="vista">
+                <option value="">Selecciona una vista</option>
+                <option value="Int">INT</option>
+                <option value="EXT">EXT</option>
+
+            </select>
+
+            <button type="submit">Filtrar</button>
+        </form>
+
+
+        <div class="create">
+            <figure [routerLink]="[]"><img src="/images/create.png" alt=""></figure>
+        </div>
+    </div>
+
+    <section class="hab-cards">
+        @for (habitacion of arrHabitaciones; track habitacion.id) {
+        <article class="hab-card">
+            <h3>Habitación {{habitacion.puerta}}</h3>
+            <p><span>Piso: </span> {{habitacion.piso}}, <span>Vista: </span>{{habitacion.vista}} </p>
+            <p><span>Categoría: </span> {{habitacion.categoria}}</p>
+            <p><span>Número de camas: </span> {{habitacion.num_camas}}</p>
+            <p><span>Precio: </span> {{habitacion.precio}}</p>
+            <div class="btns">
+                <a href="">Ver detalle</a>
+
+                <a [routerLink]="['/habitaciones/edit', habitacion.id]">Editar</a>
+                <button class="delete" (click)="borrarHab()">Eliminar</button>
+            </div>
+        </article>
+        }
+    </section>
+</div>
