@@ -29,4 +29,8 @@ export class ReservasService {
       this.httpClient.get<Reserva[]>(`${this.url}/dni/${dni}`))
   }
 
+  filterById(id: number): Promise<Reserva> {
+    return lastValueFrom(
+      this.httpClient.get<Reserva>(`${this.url}/${id}`))
+  }
 }

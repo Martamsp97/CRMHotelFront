@@ -29,6 +29,7 @@ export const routes: Routes = [
         component: DashboardComponent,
         children: [
             { path: 'reservas', component: CrmReservasComponent },
+            { path: 'reservas/:id', component: CrmDetalleReservaComponent },
             { path: 'habitaciones', component: CrmHabitacionesComponent },
             { path: '', component: CrmDetalleReservaComponent }
         ],
