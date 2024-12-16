@@ -15,4 +15,5 @@ export interface Reserva {
     precio: number;
     metodo_pago: string;
     estado: string;
+    num_habitaciones: number;
 }

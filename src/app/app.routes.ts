@@ -8,6 +8,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CrmReservasComponent } from './pages/crm-reservas/crm-reservas.component';
 import { CrmHabitacionesComponent } from './pages/crm-habitaciones/crm-habitaciones.component';
 import { MainComponent } from './pages/main/main.component';
+import { CrmDetalleReservaComponent } from './pages/crm-detalle-reserva/crm-detalle-reserva.component';
 
 export const routes: Routes = [
     {
@@ -28,7 +29,8 @@ export const routes: Routes = [
         component: DashboardComponent,
         children: [
             { path: 'reservas', component: CrmReservasComponent },
-            { path: 'habitaciones', component: CrmHabitacionesComponent }
+            { path: 'habitaciones', component: CrmHabitacionesComponent },
+            { path: '', component: CrmDetalleReservaComponent }
         ],
     },
     { path: '**', redirectTo: '' }
