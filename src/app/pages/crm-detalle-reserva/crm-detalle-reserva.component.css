@@ -1,43 +1,40 @@
-/* Main content styles */
 .reservas-container {
-    margin-left: 270px;
-    /* Add margin to account for the sidebar */
     padding: 20px;
+    max-width: 800px;
+    text-align: center;
+    margin-left: 450px;
+}
+
+h2 {
+    font-family: var(--fuente-principal);
+    color: var(--color-primario);
+    margin-bottom: 20px;
+    font-size: 50px;
 }
 
 .reserva-detalle {
-    background-color: #f9f9f9;
+    border: 2px solid var(--color-primario);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .reserva-detalle p {
     margin: 10px 0;
     font-family: var(--fuente-secundaria);
     color: #333;
+    text-align: center;
 }
 
 .reserva-detalle p strong {
     color: var(--color-primario);
 }
 
-.d-flex {
-    display: flex;
-}
-
-.justify-content-end {
-    justify-content: flex-end;
-}
-
-.mt-3 {
-    margin-top: 1rem;
-}
-
-.me-2 {
-    margin-right: 0.5rem;
-}
 
 .btn {
     padding: 10px 20px;
@@ -46,22 +43,17 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
+    justify-items: center;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-danger {
     background-color: var(--color-primario);
     color: white;
 }
 
-.btn-primary:hover {
-    background-color: darken(var(--color-primario), 10%);
-}
-
-.btn-danger {
-    background-color: var(--color-secundario);
-    color: white;
-}
-
+.btn-primary:hover,
 .btn-danger:hover {
-    background-color: darken(var(--color-secundario), 10%);
+    background-color: var(--color-secundario)
 }

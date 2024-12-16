@@ -2,11 +2,9 @@
     <h2>Detalle de la Reserva</h2>
     @if(reserva){
     <div class="reserva-detalle">
-        <p><strong>ID:</strong> {{ reserva.id }}</p>
         <p><strong>Fecha de Entrada:</strong> {{ reserva.fecha_entrada }}</p>
         <p><strong>Fecha de Salida:</strong> {{ reserva.fecha_salida }}</p>
         <p><strong>Puntuación:</strong> {{ reserva.puntuacion }}</p>
-        <p><strong>ID de Usuario:</strong> {{ reserva.usuarios_id }}</p>
         <p><strong>Número de Personas:</strong> {{ reserva.num_personas }}</p>
         <p><strong>Régimen:</strong> {{ reserva.regimen }}</p>
         <p><strong>Tipo de Cancelación:</strong> {{ reserva.tipo_cancelacion }}</p>
