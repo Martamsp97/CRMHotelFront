@@ -7,13 +7,13 @@ import Habitacion from '../interfaces/habitacion.interface';
 type createHab = {
   piso: number;
   puerta: number;
-  mascotas: number;
+  mascotas: boolean;
   num_camas: string;
   categoria: string;
   precio: number;
   tamanho: string;
   vista: string;
-  cocina: number;
+  cocina: boolean;
 };
 
 @Injectable({
@@ -36,7 +36,7 @@ export class CrmHabsService {
   /* 
     hetHabitacionesByFecha(fechaentrada: string, fechasalida: string): Promise<Habitacion[]> { return lastValueFrom(this.httpClient.get<Habitacion[]>(`${this.baseUrl}/fecha/${fechaentrada}/${fechasalida}`)) } */
 
-  getHabByPiso(piso: string): Promise<Habitacion[]> {
+  getHabByPiso(piso: number): Promise<Habitacion[]> {
     return lastValueFrom(this.httpClient.get<Habitacion[]>(`${this.baseUrl}/piso/${piso}`))
   }
 
@@ -56,7 +56,7 @@ export class CrmHabsService {
     )
 
   }
-  updateHabitacion(habId: string, body: createHab): Promise<Habitacion> {
+  updateHabitacion(habId: number, body: createHab): Promise<Habitacion> {
     return lastValueFrom(
       this.httpClient.put<Habitacion>(`${this.baseUrl}/${habId}`, body)
     )

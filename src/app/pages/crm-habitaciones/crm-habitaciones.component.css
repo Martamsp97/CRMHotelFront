@@ -1,8 +1,9 @@
 .crmhabs {
     width: 90%;
-    margin: 0 auto;
+    margin: 40px auto;
     padding-left: 200px;
     border-radius: 8px;
+    padding-bottom: 40px;
 }
 
 h2 {

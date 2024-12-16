@@ -3,18 +3,18 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import Habitacion from '../../interfaces/habitacion.interface';
 import { CrmHabsService } from '../../services/crm-habs.service';
 import { RouterLink } from '@angular/router';
-import Swal from 'sweetalert2';
+import { CrmhabscardComponent } from "../../components/crmhabscard/crmhabscard.component";
+
 @Component({
   selector: 'app-crm-habitaciones',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, CrmhabscardComponent],
   templateUrl: './crm-habitaciones.component.html',
   styleUrl: './crm-habitaciones.component.css'
 })
 export class CrmHabitacionesComponent {
 
-  @Input() habitacion: Habitacion | null = null
-  @Output() habitacionBorrada: EventEmitter<Habitacion> = new EventEmitter
+
   arrHabitaciones: Habitacion[] = []
 
   crmHabsService = inject(CrmHabsService)
@@ -49,8 +49,17 @@ export class CrmHabitacionesComponent {
     } catch (error) {
       console.log(error)
 
+    };
+
+  }
+  async onHabitacionBorrada() {
+    try {
+      this.arrHabitaciones = await this.crmHabsService.getAllHabitaciones()
+    } catch (error) {
+      console.log(error)
     }
   }
+
 
   /*   async filtrarFecha() {
       try {
@@ -94,18 +103,5 @@ export class CrmHabitacionesComponent {
       console.log(error)
     }
   }
-  async borrarHab() { //no funciona, revisar
-    const result = await Swal.fire({ title: 'Eliminar habitación', text: '¿Estás seguro que quieres eliminar esta habitación? Si le das a aceptar, no podrás deshacer esta acción', icon: 'question', showCancelButton: true, confirmButtonText: 'Sí, quiero eliminarla' });
-    if (result.isConfirmed) {
-      try {
-        if (this.habitacion) {
-          this.habitacion = await this.crmHabsService.deleteHabitacion(this.habitacion?.id)
-          this.habitacionBorrada.emit(this.habitacion)
-          Swal.fire('Eliminar habitación', 'La habitación ha sido eliminado con éxito', 'success')
-        }
-      } catch (error) {
-        console.log(error)
-      }
-    }
-  }
+
 }
