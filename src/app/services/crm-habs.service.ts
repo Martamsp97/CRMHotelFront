@@ -7,13 +7,13 @@ import Habitacion from '../interfaces/habitacion.interface';
 type createHab = {
   piso: number;
   puerta: number;
-  mascotas: number;
+  mascotas: boolean;
   num_camas: string;
   categoria: string;
   precio: number;
   tamanho: string;
   vista: string;
-  cocina: number;
+  cocina: boolean;
 };
 
 @Injectable({
@@ -33,7 +33,22 @@ export class CrmHabsService {
       this.httpClient.get<Habitacion>(`${this.baseUrl}/${habId}`)
     )
   }
+  /* 
+    hetHabitacionesByFecha(fechaentrada: string, fechasalida: string): Promise<Habitacion[]> { return lastValueFrom(this.httpClient.get<Habitacion[]>(`${this.baseUrl}/fecha/${fechaentrada}/${fechasalida}`)) } */
 
+  getHabByPiso(piso: number): Promise<Habitacion[]> {
+    return lastValueFrom(this.httpClient.get<Habitacion[]>(`${this.baseUrl}/piso/${piso}`))
+  }
+
+  getHabByCategoria(categoria: string): Promise<Habitacion[]> {
+    return lastValueFrom(
+      this.httpClient.get<Habitacion[]>(`${this.baseUrl}/categoria/${categoria}`))
+  }
+
+  getHabByVista(vista: string): Promise<Habitacion[]> {
+    return lastValueFrom(
+      this.httpClient.get<Habitacion[]>(`${this.baseUrl}/vista/${vista}`))
+  }
 
   createHabitacion(body: createHab): Promise<Habitacion> {
     return lastValueFrom(
@@ -41,9 +56,9 @@ export class CrmHabsService {
     )
 
   }
-  updateHabitacion(empleadoId: string, body: createHab): Promise<Habitacion> {
+  updateHabitacion(habId: number, body: createHab): Promise<Habitacion> {
     return lastValueFrom(
-      this.httpClient.put<Habitacion>(`${this.baseUrl}/${empleadoId}`, body)
+      this.httpClient.put<Habitacion>(`${this.baseUrl}/${habId}`, body)
     )
   }
   deleteHabitacion(habId: number): Promise<Habitacion> {

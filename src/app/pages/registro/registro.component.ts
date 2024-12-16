@@ -3,6 +3,7 @@ import { Component, inject, Inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsuariosService } from '../../services/usuarios.service';
 import { Router, RouterLink } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-registro',
@@ -47,10 +48,12 @@ export class RegistroComponent {
     try {
       const response = await this.UsuariosServie.registro(this.formulario.value)
       console.log(response)
-      /* alertoncio del sweetalert */
+      Swal.fire({ title: 'Nuevo Usuario', text: 'Enhorabuena, ya perteneces a nuestra familia ♥️', icon: 'success' });
       this.router.navigateByUrl('/login')
+
     } catch (error) {
-      /* alert */
+      Swal.fire({ title: 'Nuevo Usuario', text: 'Lo sentimos, ha habido un problema con tu solicitud', icon: 'error' });
+      this.router.navigateByUrl('/login')
       console.log(error)
     }
 

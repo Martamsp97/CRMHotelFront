@@ -5,6 +5,7 @@ export interface Reserva {
     puntuacion: number;
     usuarios_id: number;
     num_personas: number;
+    num_habitaciones: string;
     regimen: string;
     tipo_cancelacion: string;
     aparcamiento: boolean;
@@ -15,5 +16,5 @@ export interface Reserva {
     precio: number;
     metodo_pago: string;
     estado: string;
-    num_habitaciones: number;
+
 }
