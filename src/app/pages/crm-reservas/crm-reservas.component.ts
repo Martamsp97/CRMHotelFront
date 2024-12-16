@@ -35,13 +35,22 @@ export class CrmReservasComponent {
     }
   }
 
-  filtrarFecha() {
-    console.log(this.formulario.value.fecha_entrada)
-    console.log(this.formulario.value.fecha_salida)
+  async filtrarFecha() {
+    try {
+      const response = await this.reservasService.filterByFechas(this.formulario.value.fecha_entrada, this.formulario.value.fecha_salida)
+      this.arrrReservas = response
+    } catch (error) {
+      console.log(error)
+    }
 
   }
 
-  filtrarDni() {
-    console.log(this.formularioDni.value)
+  async filtrarDni() {
+    try {
+      const response = await this.reservasService.filterByDni(this.formularioDni.value.dni)
+      this.arrrReservas = response
+    } catch (error) {
+      console.log(error)
+    }
   }
 }

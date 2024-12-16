@@ -3,16 +3,16 @@
     <div class="filtro">
         <form [formGroup]="formulario" (ngSubmit)="filtrarFecha()">
             <label for="fecha-entrada">Fecha de Entrada:</label>
-            <input type="date" id="fecha-entrada" name="fecha-entrada" formControlName="fecha-entrada">
+            <input type="date" id="fecha-entrada" name="fecha-entrada" formControlName="fecha_entrada">
 
             <label for="fecha-salida">Fecha de Salida:</label>
-            <input type="date" id="fecha-salida" name="fecha-salida" formControlName="fecha-salida">
+            <input type="date" id="fecha-salida" name="fecha-salida" formControlName="fecha_salida">
 
             <button type="submit">Filtrar</button>
         </form>
         <form [formGroup]="formularioDni" (ngSubmit)="filtrarDni()">
-            <label for="usuario">DNI:</label>
-            <input type="text" id="usuario" name="usuario">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" formControlName="dni">
 
             <button type="submit">Filtrar</button>
         </form>
@@ -23,6 +23,7 @@
         <div class="reserva-card">
             <h2>{{reserva.usuarios_id}}</h2>
             <p><span>Número de Personas:</span> {{reserva.num_personas}}</p>
+            <p><span>Número de Habitaciones:</span> {{reserva.num_habitaciones}}</p>
             <p><span>Fecha de Entrada:</span> {{reserva.fecha_entrada}}</p>
             <p><span>Fecha de Salida:</span> {{reserva.fecha_salida}}</p>
             <p><span>Precio:</span> {{reserva.precio}}</p>
