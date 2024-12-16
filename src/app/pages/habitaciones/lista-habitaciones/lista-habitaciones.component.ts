@@ -30,16 +30,16 @@ export class ListaHabitacionesComponent {
   }
 
 
-  // async onClick() {
-  //   const result = await Swal.fire({ title: 'Borrado', text: '¿Quieres borrar la habitación?', icon: 'question', showCancelButton: true, confirmButtonText: 'Sí, ¡Bórralo!' });
-  //   if (result.isConfirmed) {
-  //     try {
-  //       const response = await this.habitacionesService.deleteById(this.habitacion!.id);
-  //       Swal.fire('Borrado', 'Se ha borrado el empleado', 'success');
-  //       this.habitacionBorrada.emit();
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-  // }
+  async onClick() {
+    const result = await Swal.fire({ title: 'Borrado', text: '¿Quieres borrar la habitación?', icon: 'question', showCancelButton: true, confirmButtonText: 'Sí, ¡Bórralo!' });
+    if (result.isConfirmed) {
+      try {
+        const response = await this.habitacionesService.deleteById(this.habitacion!.id);
+        Swal.fire('Borrado', 'Se ha borrado el empleado', 'success');
+        this.habitacionBorrada.emit();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
 }
