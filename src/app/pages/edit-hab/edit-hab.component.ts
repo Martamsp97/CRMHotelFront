@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
   styleUrl: './edit-hab.component.css'
 })
 export class EditHabComponent {
-  @Input() idHab: number = 0;
+  @Input() habId: number = 0;
 
   router = inject(Router)
 
@@ -35,7 +35,7 @@ export class EditHabComponent {
 
   async ngOnInit() {
     try {
-      this.habitacion = await this.crmHabService.getHabById(this.idHab)
+      this.habitacion = await this.crmHabService.getHabById(this.habId)
 
       this.editFormHab.setValue({
         piso: this.habitacion?.piso,
@@ -55,7 +55,7 @@ export class EditHabComponent {
   }
   async onSubmit() {
     try {
-      const response = await this.crmHabService.updateHabitacion(this.idHab, this.editFormHab.value);
+      const response = await this.crmHabService.updateHabitacion(this.habId, this.editFormHab.value);
       Swal.fire('Actualizar Habitación', 'La habitación se ha actualizado correctamente', 'success')
       this.router.navigate(['dashboard/habitaciones'])
       console.log(response)
