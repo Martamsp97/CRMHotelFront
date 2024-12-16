@@ -28,6 +28,11 @@ export class HabitacionesService {
       this.httpClient.get<Habitacion[]>(this.baseUrl)
     )
   }
+  getById(habitacionID: number): Promise<Habitacion> {
+    return lastValueFrom(
+      this.httpClient.get<Habitacion>(`${this.baseUrl}/${habitacionID}`)
+    )
+  }
   create(body: CreateBody): Promise<Habitacion[]> {
     return lastValueFrom(
       this.httpClient.post<Habitacion[]>(this.baseUrl, body)

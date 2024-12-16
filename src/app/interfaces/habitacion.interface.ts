@@ -1,4 +1,5 @@
 export default interface Habitacion {
+
     id: number;
     piso: number;
     puerta: number;
@@ -9,4 +10,10 @@ export default interface Habitacion {
     tamanho: string;
     vista: string;
     cocina: number;
+}
+
+export interface Features {
+    detail: string;
+    icon: string;
+    label: string
 }

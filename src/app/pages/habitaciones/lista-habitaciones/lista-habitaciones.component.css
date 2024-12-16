@@ -160,16 +160,18 @@ img {
 }
 
 .room-item {
-  border: 1px ridge #ae9548;
+  border: 2px ridge #ae9548;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 30px;
   transition: transform 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.886);
   border-radius: 10px;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   max-width: 400px;
-  max-height: 900px;
+  max-height: auto;
 }
 
 .room-item:hover {
@@ -186,12 +188,13 @@ img {
   padding: 24px 24px 30px 28px;
 }
 .room-item .ri-text h4 {
-  color: #19191a;
-  /* margin-bottom: 17px; */
+  color: var(--color-primario);
+  margin-bottom: 17px;
+  font-size: 1.9rem;
   font-family: var(--fuenteSub);
 }
 .room-item .ri-text h3 {
-  color: #dfa974;
+  color: var(--color-premium);
   font-weight: 700;
   font-size: 2rem;
   /* margin-bottom: 1.5em;
@@ -223,33 +226,22 @@ img {
 .room-item .ri-text .primary-btn {
   color: #19191a;
 }
-.room-pagination {
-  text-align: center;
-  padding-top: 20px;
-}
-.room-pagination a {
-  font-size: 16px;
-  color: #707079;
-  border: 1px solid #efd4b9;
-  border-radius: 2px;
-  padding: 7px 13px 5px;
-  margin-right: 7px;
-  display: inline-block;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.room-pagination a:last-child {
-  margin-right: 0;
-}
-.room-pagination a:hover {
-  background: #dfa974;
-  color: #ffffff;
-}
 /*-----------------------
   Room Details Section
 -------------------------*/
-
+.description-text {
+  font-size: 1.2rem;
+  font-family: var(--fuente-secundaria);
+  color: black;
+  margin-top: 1rem;
+}
+.description-info {
+  font-size: 1.2rem;
+  font-family: var(--fuente-secundaria);
+  text-align: justify;
+  color: var(--color-primario);
+  margin-top: 1rem;
+}
 .room-details-section {
   padding-top: 0;
   padding-bottom: 80px;

@@ -37,16 +37,16 @@
 }
 
 /*------------------------
-        Globales 
--------------------------*/
+          Globales 
+  -------------------------*/
 
 /* :root {
-    --color-primario: #2e5951;
-    --color-secundario: #3c7369;
-    --color-error: #800040;
-    --fuente-principal: 'Nympha', sans-serif;
-    --fuente-secundaria: 'Quicksand', sans-serif;
-} */
+      --color-primario: #2e5951;
+      --color-secundario: #3c7369;
+      --color-error: #800040;
+      --fuente-principal: 'Nympha', sans-serif;
+      --fuente-secundaria: 'Quicksand', sans-serif;
+  } */
 
 img {
   display: block;
@@ -126,8 +126,8 @@ img {
 }
 
 /*------------------------
-         Buttons 
--------------------------*/
+           Buttons 
+  -------------------------*/
 .btn-res {
   justify-content: center;
   margin-top: 20px;
@@ -191,8 +191,8 @@ img {
 }
 
 /*---------------------
-  Room Section
------------------------*/
+    Room Section
+  -----------------------*/
 
 .contenido {
   display: flex;
@@ -289,8 +289,8 @@ img {
   color: #ffffff;
 }
 /*-----------------------
-  Room Details Section
--------------------------*/
+    Room Details Section
+  -------------------------*/
 .ri-text h2 {
   margin-bottom: 4rem;
 }

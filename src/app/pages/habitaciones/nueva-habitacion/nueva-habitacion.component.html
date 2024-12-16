@@ -1,10 +1,10 @@
 <!-- Title Section Begin -->
 <section class="titulo">
   <h5>HABITACIONES</h5>
-  <h1>
+  <h2>
     <p>Sistema de Creación y Modificación</p>
     <p>De Habitaciones</p>
-  </h1>
+  </h2>
   <p>Explora nuestras habitaciones y elige tu próxima escapada</p>
   <div class="icono">
     <figure><img src="/images/icono.png" alt="icono" /></figure>
@@ -19,7 +19,7 @@
       <!-- Room Item -->
       <div class="col-lg-4 col-md-6">
         <div class="room-item">
-          <img src="room/room-1.jpg" alt="Room Image" />
+          <img src="room/room-deluxe_3.jpg" alt="Room Image" />
           <div class="ri-text">
             <h2>Gestion de Habitaciones</h2>
             <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
@@ -57,7 +57,9 @@
                 </select>
               </div>
               <div class="mb-3">
-                <label class="form-label">Categoria</label>
+                <label class="form-label" (change)="onCategoryChange()"
+                  >Categoria</label
+                >
                 <select class="form-control" formControlName="categoria">
                   <option value="">Seleccione opción</option>
                   <option value="Deluxe">Deluxe</option>
@@ -104,12 +106,6 @@
                   class="btn btn-primary d-flex align-items-center gap-2"
                 >
                   Crear <i class="fi fi-rr-file-edit"></i>
-                </button>
-                <button
-                  type="submit"
-                  class="btn btn-secondary d-flex align-items-center gap-2"
-                >
-                  Modificar <i class="fi fi-br-pen-field"></i>
                 </button>
               </div>
             </form>

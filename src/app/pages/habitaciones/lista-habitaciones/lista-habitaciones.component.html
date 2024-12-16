@@ -1,10 +1,10 @@
 <!-- Title Section Begin -->
 <section class="titulo">
   <h5>LISTA DE HABITACIONES</h5>
-  <h1>
+  <h2>
     <p>Experiencias únicas</p>
     <p>de lujo y bienestar</p>
-  </h1>
+  </h2>
   <p>Explora nuestras habitaciones y elige tu próxima escapada</p>
   <div class="icono">
     <figure><img src="/images/icono.png" alt="icono" /></figure>
@@ -21,38 +21,33 @@
       @for (habitacion of arrHabitaciones; track habitacion.id) {
       <div class="">
         <div class="room-item">
-          <img src="room/room-1.jpg" alt="Room Image" />
+          <img src="room/room-deluxe_2.jpg" alt="Room Image" />
           <div class="ri-text">
-            <h2>Habitación {{ habitacion.categoria }}</h2>
+            <h4>Habitación {{ habitacion.categoria }}</h4>
             <h3>{{ habitacion.precio }}€<span> / por noche</span></h3>
-            <div>
-              <p><strong>Tamaño:</strong> {{ habitacion.tamanho }}</p>
-              <p><strong>Camas:</strong>{{ habitacion.num_camas }}</p>
-              <p><strong>Vistas:</strong>{{ habitacion.vista }}</p>
-              <p><strong>Cocina:</strong>{{ habitacion.cocina }}</p>
-              <p><strong>Servicios:</strong></p>
-              <div class="room-features">
-                <div class="room-info">
-                  <i class="fi fi-rr-screen"></i>
-                  <span>Smart TV</span>
-                </div>
-                <div class="room-info">
-                  <i class="fi fi-bs-wifi"></i>
-                  <span>High Wi-Fi</span>
-                </div>
-                <div class="room-info">
-                  <i class="fi fi-rs-air-conditioner"></i>
-                  <span>Aire acondicionado</span>
-                </div>
-                <div class="room-info">
-                  <i class="fi fi-br-square-p"></i>
-                  <span>Parking</span>
-                </div>
-                <div class="room-info">
-                  <i class="fi fi-br-swimmer"></i>
-                  <span>Piscina</span>
-                </div>
+            <div class="description-text">
+              <p><strong>Tamaño: </strong> {{ habitacion.tamanho }}</p>
+              <p><strong>Camas: </strong>{{ habitacion.num_camas }}</p>
+              <p><strong>Vistas: </strong>{{ habitacion.vista }}</p>
+              <p><strong>Cocina: </strong>{{ habitacion.cocina }}</p>
+              <p><strong>Detalles: </strong></p>
+              @for (detHab of roomDeluxeDetail; track $index) {
+              <div class="description-info" (click)="selectDetail(detHab)">
+                <span>{{ detHab.text }}</span>
               </div>
+              }
+              <p><strong>Servicios: </strong></p>
+              <div class="room-features">
+                <!-- Lista de íconos -->
+                @for (servicio of arrServicios; track $index) {
+                <div class="room-info" (click)="selectIcons(servicio)">
+                  <i [class]="servicio.icon"></i>
+                  <span>{{ servicio.label }}</span>
+                </div>
+                }
+              </div>
+
+              <!-- Icono seleccionado -->
             </div>
             <div class="btn-res">
               <a class="primary-btn" [routerLink]="['/registro']"
