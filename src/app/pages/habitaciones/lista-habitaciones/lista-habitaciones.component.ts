@@ -51,6 +51,7 @@ export class ListaHabitacionesComponent {
   }
 
 
+<<<<<<< HEAD
   selectedFeature: { icon: string; label: string } | null = null;
   selectedDetail: { text: string } | null = null;
 
@@ -62,5 +63,19 @@ export class ListaHabitacionesComponent {
   selectDetail(feature: { text: string }) {
     this.selectedDetail = feature;
   }
+=======
+  /*   async onClick() {
+      const result = await Swal.fire({ title: 'Borrado', text: '¿Quieres borrar la habitación?', icon: 'question', showCancelButton: true, confirmButtonText: 'Sí, ¡Bórralo!' });
+      if (result.isConfirmed) {
+        try {
+          const response = await this.habitacionesService.deleteById(this.habitacion!.id);
+          Swal.fire('Borrado', 'Se ha borrado el empleado', 'success');
+          this.habitacionBorrada.emit();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    } */
+>>>>>>> feature-detallereservas
 }
 

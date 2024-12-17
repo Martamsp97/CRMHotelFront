@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { Reserva } from '../../interfaces/reserva';
 import { ReservasService } from '../../services/reservas.service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-crm-reservas',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './crm-reservas.component.html',
   styleUrl: './crm-reservas.component.css'
 })
@@ -22,6 +23,7 @@ export class CrmReservasComponent {
   })
 
   arrrReservas: Reserva[] = []
+  router = inject(Router)
 
   reservasService = inject(ReservasService)
 

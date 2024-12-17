@@ -29,7 +29,7 @@
             <p><span>Precio:</span> {{reserva.precio}}</p>
             <p><span>Tipo de Cancelación:</span> {{reserva.tipo_cancelacion}}</p>
             <p><span>Método de Pago:</span> {{reserva.metodo_pago}}</p>
-            <input value="Ver detalle" class="input-con-icono">
+            <input value="Ver detalle" class="input-con-icono" [routerLink]="['/dashboard/reservas/', reserva.id]">
         </div>
         }
     </div>
