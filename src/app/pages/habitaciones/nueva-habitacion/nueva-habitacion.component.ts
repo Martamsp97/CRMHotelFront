@@ -20,16 +20,7 @@ export class NuevaHabitacionComponent {
 
   router = inject(Router);
   habitacionesService = inject(HabitacionesService);
-  selectedServices: { icon: string; label: string }[] = [];
-  selectedDetail: { text: string }[] = [];
-  form: FormGroup;
 
-
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      categoria: [''],
-    });
-  }
 
   formulario: FormGroup = new FormGroup({
     piso: new FormControl(1),
@@ -44,25 +35,6 @@ export class NuevaHabitacionComponent {
   });
 
 
-  roomDeluxe = [
-    { icon: 'fi fi-rr-screen', label: 'Smart TV' },
-    { icon: 'fi fi-bs-wifi', label: 'Wi-Fi' },
-    { icon: 'fi fi-rr-mug-hot-alt', label: 'Desayuno Buffet' },
-    { icon: 'fi fi-rs-air-conditioner', label: 'Aire acondicionado' },
-
-  ];
-
-  roomPremium = [
-    { icon: 'fi fi-rr-screen', label: 'Smart TV' },
-    { icon: 'fi fi-bs-wifi', label: 'Wi-Fi' },
-    { icon: 'fi fi-rr-mug-hot-alt', label: 'Desayuno Buffet' },
-
-  ];
-
-  roomEstandar = [
-    { icon: 'fi fi-rr-screen', label: 'Smart TV' },
-    { icon: 'fi fi-bs-wifi', label: 'Wi-Fi' },
-  ];
 
 
   async onSubmit() {
@@ -75,23 +47,6 @@ export class NuevaHabitacionComponent {
       console.log(error);
     }
   }
-
-  onCategoryChange() {
-    const selectedCategory = this.form.get('categoria')?.value;
-
-    // Actualizar los servicios seleccionados en base a la categoría
-    if (selectedCategory === 'roomDeluxe') {
-      this.selectedServices = this.roomDeluxe;
-    } else if (selectedCategory === 'roomPremium') {
-      this.selectedServices = this.roomPremium;
-    } else if (selectedCategory === 'roomEstandar') {
-      this.selectedServices = this.roomEstandar;
-    } else {
-      this.selectedServices = [];
-    }
-  }
-
-
 }
 
 

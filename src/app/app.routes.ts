@@ -19,20 +19,20 @@ import { DetalleHabitacionesComponent } from './pages/habitaciones/detalle-habit
 import { FormularioReservasComponent } from './pages/formulario-reservas/formulario-reservas.component';
 
 export const routes: Routes = [
+
     {
         path: '',
-        component: MainComponent,
+        // component: MainComponent,
         children: [
             { path: "", component: HomeComponent },
             { path: 'habitaciones', component: ListaHabitacionesComponent },
             { path: 'crearHabitacion', component: NuevaHabitacionComponent },
             { path: 'habitaciones/:habitacionId', component: DetalleHabitacionesComponent },
             { path: 'reservas', component: FormularioReservasComponent },
-
             { path: 'nosotros', component: QuienessomosComponent },
             { path: 'spa', component: SpaComponent },
 
-            { path: 'habitaciones/:habitacionId', component: DetalleHabitacionesComponent }
+            // { path: 'habitaciones/:habitacionId', component: DetalleHabcrmComponent }
         ],
     },
 

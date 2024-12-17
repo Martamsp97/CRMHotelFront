@@ -17,8 +17,12 @@ export default interface Habitacion {
     imagenes: Images[];
 }
 
-export interface Features {
+export interface Details {
+    category: string;
     detail: string;
+}
+
+export interface Features {
     icon: string;
-    label: string
+    label: string;
 }

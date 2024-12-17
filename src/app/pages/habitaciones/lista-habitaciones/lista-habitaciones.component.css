@@ -91,10 +91,64 @@ img {
 /*------------------------
          Buttons 
 -------------------------*/
-
 .btn-res {
-  justify-content: center;
   margin-top: 20px;
+  position: absolute;
+  bottom: 2rem;
+  left: 19rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px; /* Botones más redondeados */
+  transition: transform 0.2s, background-color 0.3s;
+  cursor: pointer;
+  width: 9rem;
+}
+
+.btn:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.btn-primary {
+  color: var(--color-primario);
+  background-color: transparent;
+  border-color: var(--color-premium);
+  margin-bottom: 2rem;
+}
+.btn-primary i {
+  position: absolute;
+  left: 7rem;
+  top: 12px;
+  font-size: 21px;
+  color: var(--color-primario);
+}
+
+.btn-primary:hover {
+  color: white;
+  background-color: var(--color-secundario);
+  transform: translateY(-3px);
+  transition: 0.6s;
+
+  i {
+    color: white;
+    transform: translateY(-3px);
+    transition: 0.6s;
+  }
+}
+
+.btn i {
+  font-size: 18px; /* Ajusta el tamaño del ícono */
+}
+
+/* .btn-res {
+  margin-top: 20px;
+  position: absolute;
+  bottom: 2rem;
+  left: 19rem;
 }
 
 .primary-btn {
@@ -125,7 +179,7 @@ img {
   top: 14px;
   font-size: 21px;
   color: var(--color-primario);
-}
+} */
 
 /*---------------------
   Room Section
@@ -145,19 +199,22 @@ img {
 }
 
 .room-item {
-  border: 2px ridge var(--color-secundario);
+  border: 2px double var(--color-secundario);
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 30px;
   transition: transform 0.3s ease;
-  max-width: 400px;
-  max-height: auto;
+  max-width: 500px;
+  height: 90rem;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.41);
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+}
+.room-item:hover {
+  transform: scale(1.02);
 }
 
 .room-item .ri-text {
