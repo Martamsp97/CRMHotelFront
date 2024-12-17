@@ -2,9 +2,8 @@
 <section class="titulo">
   <h5>HABITACIONES</h5>
   <h2>
-    <p>Detalles de Habitaciones por ID</p>
+    <p>Detalles de Habitaciones</p>
   </h2>
-  <p>Explora nuestras habitaciones y elige tu próxima escapada</p>
   <div class="icono">
     <figure><img src="/images/icono.png" alt="icono" /></figure>
   </div>
@@ -16,11 +15,11 @@
   <div class="room-contain">
     <div class="contenido">
       <!-- Room Item -->
-      <div class="col-lg-4 col-md-6">
+      <div class="">
         <div class="room-item">
           <img src="room/room-deluxe_1.jpg" alt="Room Image" />
           <div class="ri-text">
-            <h2>Detalle de Habitaciones</h2>
+            <h2>ID: {{ habitacion?.id }}</h2>
             @if (habitacion) {
             <div class="description-text">
               <h4>Habitación {{ habitacion.categoria }}</h4>
@@ -31,12 +30,12 @@
               <p>
                 <strong>Numero de Camas: </strong>{{ habitacion.num_camas }}
               </p>
-              <p><strong>Vista: </strong>{{ habitacion.vista }}</p>
-              <p><strong>Cocina: </strong>{{ habitacion.cocina }}</p>
-              <p><strong>Precio: </strong>{{ habitacion.precio }}</p>
               <p>
                 <strong>Numero de Mascotas: </strong>{{ habitacion.mascotas }}
               </p>
+              <p><strong>Vista: </strong>{{ habitacion.vista }}</p>
+              <p><strong>Cocina: </strong>{{ habitacion.cocina }}</p>
+              <p><strong>Precio: </strong>{{ habitacion.precio }} €</p>
             </div>
 
             }@else {
