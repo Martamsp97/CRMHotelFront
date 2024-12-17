@@ -26,7 +26,6 @@ export class FormularioReservasComponent {
     spa: new FormControl(''),
     gimnasio: new FormControl(''),
     piscina: new FormControl(''),
-    precio: new FormControl(''),
     metodo_pago: new FormControl(''),
     num_habitaciones: new FormControl('')
   })
