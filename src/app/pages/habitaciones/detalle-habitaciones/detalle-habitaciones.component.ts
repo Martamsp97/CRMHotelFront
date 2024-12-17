@@ -1,11 +1,12 @@
 import { Component, inject, Input } from '@angular/core';
 import { HabitacionesService } from '../../../services/habitaciones.service';
 import Habitacion from '../../../interfaces/habitacion.interface';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-detalle-habitaciones',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './detalle-habitaciones.component.html',
   styleUrl: './detalle-habitaciones.component.css'
 })
@@ -21,7 +22,6 @@ export class DetalleHabitacionesComponent {
     try {
       this.habitacion = await this.habitacionesService.getById(this.habitacionId);
       console.log(this.habitacion);
-
     } catch (error) {
       console.log(error);
     }
