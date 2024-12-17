@@ -12,8 +12,12 @@ export default interface Habitacion {
     cocina: number;
 }
 
-export interface Features {
+export interface Details {
+    category: string;
     detail: string;
+}
+
+export interface Features {
     icon: string;
-    label: string
+    label: string;
 }

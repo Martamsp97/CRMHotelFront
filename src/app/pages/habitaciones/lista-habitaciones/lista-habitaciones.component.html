@@ -25,17 +25,18 @@
               <p><strong>Camas: </strong>{{ habitacion.num_camas }}</p>
               <p><strong>Vistas: </strong>{{ habitacion.vista }}</p>
               <p><strong>Cocina: </strong>{{ habitacion.cocina }}</p>
-              <p><strong>Detalles: </strong></p>
-              @for (detHab of roomDeluxeDetail; track $index) {
-              <div class="description-info" (click)="selectDetail(detHab)">
-                <span>{{ detHab.text }}</span>
-              </div>
-              }
+              <p>
+                <strong>Detalles: </strong
+                >{{ getDetailForCategory(habitacion.categoria) }}
+              </p>
+              <!-- Traer de el array de detalles si el detalle correspone a {{ habitacion.categoria }} -->
+
               <p><strong>Servicios: </strong></p>
               <div class="room-features">
-                <!-- Lista de íconos -->
-                @for (servicio of arrServicios; track $index) {
+                @for (servicio of getIconsByCategory(habitacion.categoria);
+                track servicio.icon) {
                 <div class="room-info" (click)="selectIcons(servicio)">
+                  <!-- Lista de íconos -->
                   <i [class]="servicio.icon"></i>
                   <span>{{ servicio.label }}</span>
                 </div>
@@ -44,10 +45,13 @@
 
               <!-- Icono seleccionado -->
             </div>
-            <div class="btn-res">
-              <a class="primary-btn" [routerLink]="['/registro']"
-                >Reservar <i class="fi fi-rs-arrow-small-right"></i
-              ></a>
+            <div class="btn-res d-flex gap-3">
+              <button
+                [routerLink]="['/registro']"
+                class="btn btn-primary d-flex align-items-center gap-2"
+              >
+                Reservar <i class="fi fi-rs-arrow-small-right"></i>
+              </button>
             </div>
           </div>
         </div>

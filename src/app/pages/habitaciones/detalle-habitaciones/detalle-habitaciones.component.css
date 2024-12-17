@@ -10,10 +10,41 @@
     --fuente-secundaria: 'Quicksand', sans-serif;
 } */
 
-img {
-  display: block;
-  width: 100%;
+figure {
+  width: 45%;
   height: auto;
+  /* border: 2px solid var(--color-secundario); */
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  margin: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+figure:hover {
+  transform: scale(1.02);
+}
+
+figcaption {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family: var(--fuente-principal);
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .titulo {
@@ -34,7 +65,7 @@ img {
     letter-spacing: 0.0625rem;
   }
 
-  h1 {
+  h2 {
     margin: 20px 0 40px 0;
 
     p {
@@ -121,19 +152,19 @@ img {
 
 .contenido {
   display: flex;
-  align-items: center;
   justify-content: center;
-  justify-items: center;
 }
-
+.wrapper {
+  margin-left: 150px;
+}
 .room-item {
-  border: 2px ridge var(--color-secundario);
+  border: 2px double var(--color-secundario);
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 30px;
-  margin-top: 3rem;
-  max-width: 400px;
-  max-height: auto;
+  /* margin-bottom: 30px;
+  margin-top: 3rem; */
+  width: 1000px;
+  height: auto;
   transition: transform 0.3s ease;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.41);
@@ -141,12 +172,30 @@ img {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  display: flex;
 }
 
 .room-item .ri-text {
   border-top: none;
   padding: 24px 24px 30px 28px;
+  /* max-width: 100%;
+  max-height: 600px; */
 }
+
+.noExiste {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  text-align: center;
+  margin: 50px;
+  align-items: center;
+
+  i {
+    color: var(--color-error);
+    font-size: 150px;
+  }
+}
+
 .room-item .ri-text h4 {
   color: var(--color-primario);
   margin-bottom: 17px;
