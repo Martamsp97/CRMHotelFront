@@ -1,0 +1,59 @@
+<!-- Title Section Begin -->
+<section class="titulo">
+  <h5>HABITACIONES</h5>
+  <h2>
+    <p>Detalles de Habitaciones</p>
+  </h2>
+  <div class="icono">
+    <figure><img src="/images/icono.png" alt="icono" /></figure>
+  </div>
+</section>
+<!-- Title Section End -->
+
+<!-- Rooms Section Begin -->
+<section class="rooms-section">
+  <div class="room-contain">
+    <div class="contenido">
+      <!-- Room Item -->
+      <div class="">
+        <div class="room-item">
+          <img src="room/room-deluxe_1.jpg" alt="Room Image" />
+          <div class="ri-text">
+            <h2>ID: {{ habitacion?.id }}</h2>
+            @if (habitacion) {
+            <div class="description-text">
+              <h4>Habitación {{ habitacion.categoria }}</h4>
+              <p><strong>Numero de Piso: </strong>{{ habitacion.piso }}</p>
+              <p><strong>Numero de Puerta: </strong>{{ habitacion.puerta }}</p>
+              <p><strong>Categoría: </strong>{{ habitacion.categoria }}</p>
+              <p><strong>Tamaño: </strong> {{ habitacion.tamanho }}</p>
+              <p>
+                <strong>Numero de Camas: </strong>{{ habitacion.num_camas }}
+              </p>
+              <p>
+                <strong>Numero de Mascotas: </strong>{{ habitacion.mascotas }}
+              </p>
+              <p><strong>Vista: </strong>{{ habitacion.vista }}</p>
+              <p><strong>Cocina: </strong>{{ habitacion.cocina }}</p>
+              <p><strong>Precio: </strong>{{ habitacion.precio }} €</p>
+            </div>
+
+            }@else {
+            <h2>La habitacion No Existe</h2>
+            }
+          </div>
+        </div>
+        <div class="btn-res d-flex gap-3">
+          <button
+            type="submit"
+            class="btn btn-primary d-flex align-items-center gap-2"
+          >
+            Volver <i class="fi fi-rr-file-edit"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Room Item End -->
+    </div>
+  </div>
+</section>
+<!-- Rooms Section End -->

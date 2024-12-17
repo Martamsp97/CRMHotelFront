@@ -14,6 +14,7 @@ import { EditHabComponent } from './pages/edit-hab/edit-hab.component';
 import { DetalleHabcrmComponent } from './pages/detalle-habcrm/detalle-habcrm.component';
 import { QuienessomosComponent } from './pages/quienessomos/quienessomos.component';
 import { SpaComponent } from './pages/spa/spa.component';
+import { DetalleHabitacionesComponent } from './pages/habitaciones/detalle-habitaciones/detalle-habitaciones.component';
 
 export const routes: Routes = [
     {
@@ -24,10 +25,12 @@ export const routes: Routes = [
             { path: 'habitaciones', component: ListaHabitacionesComponent },
             { path: 'crearHabitacion', component: NuevaHabitacionComponent },
             { path: 'nosotros', component: QuienessomosComponent },
-            { path: 'spa', component: SpaComponent }
+            { path: 'spa', component: SpaComponent },
 
+            { path: 'habitaciones/:habitacionId', component: DetalleHabitacionesComponent }
         ],
     },
+
     { path: 'login', component: LoginComponent },
     { path: 'registro', component: RegistroComponent },
 
