@@ -50,4 +50,11 @@ export class HabitacionesService {
     }
     return true;
   }
+
+  getBusqueda(fecha_entrada: string, fecha_salida: string): Promise<Habitacion[]> {
+    return lastValueFrom(
+      this.httpClient.get<Habitacion[]>(`${this.baseUrl}/busqueda/${fecha_entrada}/${fecha_salida}`)
+    )
+  }
+
 }
