@@ -10,6 +10,8 @@ import { CrmHabitacionesComponent } from './pages/crm-habitaciones/crm-habitacio
 import { MainComponent } from './pages/main/main.component';
 import { CrmDetalleReservaComponent } from './pages/crm-detalle-reserva/crm-detalle-reserva.component';
 import { DetalleHabitacionesComponent } from './pages/habitaciones/detalle-habitaciones/detalle-habitaciones.component';
+import { NewHabComponent } from './pages/new-hab/new-hab.component';
+import { EditHabComponent } from './pages/edit-hab/edit-hab.component';
 
 export const routes: Routes = [
     {
@@ -33,17 +35,10 @@ export const routes: Routes = [
             { path: '', redirectTo: 'reservas', pathMatch: 'full' },
             { path: 'reservas', component: CrmReservasComponent },
             { path: 'habitaciones', component: CrmHabitacionesComponent },
-<<<<<<< HEAD
             { path: '', component: CrmDetalleReservaComponent },
-            // { path: 'habitaciones/new', component: NewHabComponent },
-            // { path: 'habitaciones/edit/:habId', component: EditHabComponent },
-            // { path: 'habitaciones/detalle/:habId', component: DetalleHabcrmComponent }
-=======
-
             { path: 'habitaciones/new', component: NewHabComponent },
             { path: 'habitaciones/edit/:habId', component: EditHabComponent },
-            { path: 'habitaciones/detalle/:habId', component: DetalleHabcrmComponent }
->>>>>>> ea7597863f6aba71fe7de1b64e94da468d5b0dd5
+            { path: 'habitaciones/detalle/:habId', component: DetalleHabitacionesComponent }
         ],
     },
     { path: '**', redirectTo: '' }
