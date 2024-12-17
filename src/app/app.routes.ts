@@ -9,13 +9,10 @@ import { CrmReservasComponent } from './pages/crm-reservas/crm-reservas.componen
 import { CrmHabitacionesComponent } from './pages/crm-habitaciones/crm-habitaciones.component';
 import { MainComponent } from './pages/main/main.component';
 import { CrmDetalleReservaComponent } from './pages/crm-detalle-reserva/crm-detalle-reserva.component';
-<<<<<<< HEAD
 import { DetalleHabitacionesComponent } from './pages/habitaciones/detalle-habitaciones/detalle-habitaciones.component';
 import { NewHabComponent } from './pages/new-hab/new-hab.component';
 import { EditHabComponent } from './pages/edit-hab/edit-hab.component';
-=======
 import { FormularioReservasComponent } from './pages/formulario-reservas/formulario-reservas.component';
->>>>>>> feature-detallereservas
 
 export const routes: Routes = [
     {
@@ -25,12 +22,9 @@ export const routes: Routes = [
             { path: "", component: HomeComponent },
             { path: 'habitaciones', component: ListaHabitacionesComponent },
             { path: 'crearHabitacion', component: NuevaHabitacionComponent },
-<<<<<<< HEAD
             { path: 'habitaciones/:habitacionId', component: DetalleHabitacionesComponent }
-=======
             { path: 'reservas', component: FormularioReservasComponent }
 
->>>>>>> feature-detallereservas
         ],
     },
 
