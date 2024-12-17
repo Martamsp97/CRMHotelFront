@@ -22,7 +22,7 @@ export const routes: Routes = [
             { path: "", component: HomeComponent },
             { path: 'habitaciones', component: ListaHabitacionesComponent },
             { path: 'crearHabitacion', component: NuevaHabitacionComponent },
-            { path: 'habitaciones/:habitacionId', component: DetalleHabitacionesComponent }
+            { path: 'habitaciones/:habitacionId', component: DetalleHabitacionesComponent },
             { path: 'reservas', component: FormularioReservasComponent }
 
         ],
