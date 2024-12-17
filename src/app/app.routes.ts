@@ -50,7 +50,7 @@ export const routes: Routes = [
             { path: '', component: CrmDetalleReservaComponent },
             { path: 'habitaciones/new', component: NewHabComponent },
             { path: 'habitaciones/edit/:habId', component: EditHabComponent },
-            { path: 'habitaciones/detalle/:habId', component: DetalleHabitacionesComponent }
+            { path: 'habitaciones/detalle/:habId', component: DetalleHabcrmComponent },
         ],
     },
     { path: '**', redirectTo: '' }

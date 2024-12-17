@@ -21,7 +21,7 @@ export class NewHabComponent {
     piso: new FormControl(null, [Validators.required]),
     puerta: new FormControl(null, [Validators.required]),
     mascotas: new FormControl("", [Validators.required]),
-    num_camas: new FormControl(null, [Validators.required]),
+    num_camas: new FormControl("", [Validators.required]),
     categoria: new FormControl("", [Validators.required]),
     precio: new FormControl(null, [Validators.required]),
     tamanho: new FormControl("", [Validators.required]),

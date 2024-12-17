@@ -48,6 +48,7 @@ figure {
 
 .nav-home {
     width: 70%;
+    margin: 0 auto;
 
     li {
 
@@ -59,9 +60,9 @@ figure {
 .login {
 
     display: flex;
-
+    text-align: right;
     justify-content: right;
-    width: 8%;
+    width: 20%;
 
 
 }
