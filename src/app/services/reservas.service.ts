@@ -33,4 +33,9 @@ export class ReservasService {
     return lastValueFrom(
       this.httpClient.get<Reserva>(`${this.url}/${id}`))
   }
+
+  createReserva(body: Reserva): Promise<Reserva> {
+    return lastValueFrom(
+      this.httpClient.post<Reserva>(`${this.url}`, body))
+  }
 }

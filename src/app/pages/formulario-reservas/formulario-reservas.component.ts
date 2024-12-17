@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { ReservasService } from '../../services/reservas.service';
 
 @Component({
   selector: 'app-formulario-reservas',
@@ -9,6 +10,10 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './formulario-reservas.component.css'
 })
 export class FormularioReservasComponent {
+
+  reservasService = inject(ReservasService);
+
+
 
   formulario: FormGroup = new FormGroup({
     fecha_entrada: new FormControl(''),
@@ -23,10 +28,14 @@ export class FormularioReservasComponent {
     piscina: new FormControl(''),
     precio: new FormControl(''),
     metodo_pago: new FormControl(''),
-    num_habitaciones: new FormControl(''),
+    num_habitaciones: new FormControl('')
   })
 
+  crearReserva() {
+
+  }
 
   //recordar al insertar en la bbdd la reserva añadirle el id del usuario que la ha hecho y el estado de la reserva, que sería confirmada
+  // req.user.id en el back para obtener el id del usuario que ha hecho la reserva
 
 }
