@@ -56,6 +56,15 @@ export class CrmHabsService {
     )
 
   }
+
+  subirImagen(habId: number, imagen: FormData) {
+    return lastValueFrom(
+      this.httpClient.post<Habitacion>(`${this.baseUrl}/imagenes/${habId}`, imagen)
+    )
+  }
+
+
+
   updateHabitacion(habId: number, body: createHab): Promise<Habitacion> {
     return lastValueFrom(
       this.httpClient.put<Habitacion>(`${this.baseUrl}/${habId}`, body)

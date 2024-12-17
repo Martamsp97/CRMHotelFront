@@ -30,12 +30,20 @@ export const routes: Routes = [
         path: 'dashboard',
         component: DashboardComponent,
         children: [
+            { path: '', redirectTo: 'reservas', pathMatch: 'full' },
             { path: 'reservas', component: CrmReservasComponent },
             { path: 'habitaciones', component: CrmHabitacionesComponent },
+<<<<<<< HEAD
             { path: '', component: CrmDetalleReservaComponent },
             // { path: 'habitaciones/new', component: NewHabComponent },
             // { path: 'habitaciones/edit/:habId', component: EditHabComponent },
             // { path: 'habitaciones/detalle/:habId', component: DetalleHabcrmComponent }
+=======
+
+            { path: 'habitaciones/new', component: NewHabComponent },
+            { path: 'habitaciones/edit/:habId', component: EditHabComponent },
+            { path: 'habitaciones/detalle/:habId', component: DetalleHabcrmComponent }
+>>>>>>> ea7597863f6aba71fe7de1b64e94da468d5b0dd5
         ],
     },
     { path: '**', redirectTo: '' }
