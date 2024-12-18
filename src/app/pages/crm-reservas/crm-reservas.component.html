@@ -21,9 +21,8 @@
     <div class="reservas-cards">
         @for (reserva of arrrReservas; track reserva.id) {
         <div class="reserva-card">
-            <h2>{{reserva.usuarios_id}}</h2>
+            <h2>{{reserva.usuario.nombre}} {{reserva.usuario.apellidos}}</h2>
             <p><span>Número de Personas:</span> {{reserva.num_personas}}</p>
-            <p><span>Número de Habitaciones:</span> {{reserva.num_habitaciones}}</p>
             <p><span>Fecha de Entrada:</span> {{reserva.fecha_entrada}}</p>
             <p><span>Fecha de Salida:</span> {{reserva.fecha_salida}}</p>
             <p><span>Precio:</span> {{reserva.precio}}</p>

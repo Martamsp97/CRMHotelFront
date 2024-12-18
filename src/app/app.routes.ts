@@ -9,17 +9,13 @@ import { CrmReservasComponent } from './pages/crm-reservas/crm-reservas.componen
 import { CrmHabitacionesComponent } from './pages/crm-habitaciones/crm-habitaciones.component';
 import { MainComponent } from './pages/main/main.component';
 import { CrmDetalleReservaComponent } from './pages/crm-detalle-reserva/crm-detalle-reserva.component';
-<<<<<<< HEAD
 
-=======
->>>>>>> feature-reservasdashboard
 import { NewHabComponent } from './pages/new-hab/new-hab.component';
 import { EditHabComponent } from './pages/edit-hab/edit-hab.component';
 import { DetalleHabcrmComponent } from './pages/detalle-habcrm/detalle-habcrm.component';
 import { QuienessomosComponent } from './pages/quienessomos/quienessomos.component';
 import { SpaComponent } from './pages/spa/spa.component';
 import { DetalleHabitacionesComponent } from './pages/habitaciones/detalle-habitaciones/detalle-habitaciones.component';
-<<<<<<< HEAD
 
 import { FormularioReservasComponent } from './pages/formulario-reservas/formulario-reservas.component';
 import { EditReservaComponent } from './pages/edit-reserva/edit-reserva.component';
@@ -27,10 +23,6 @@ import { MisReservasComponent } from './pages/mis-reservas/mis-reservas.componen
 
 import { BusquedaHabitacionesComponent } from './pages/busqueda-habitaciones/busqueda-habitaciones.component';
 
-=======
-import { FormularioReservasComponent } from './pages/formulario-reservas/formulario-reservas.component';
-import { BusquedaHabitacionesComponent } from './pages/busqueda-habitaciones/busqueda-habitaciones.component';
->>>>>>> feature-reservasdashboard
 
 export const routes: Routes = [
 
@@ -43,20 +35,10 @@ export const routes: Routes = [
             { path: 'crearHabitacion', component: NuevaHabitacionComponent },
             { path: 'habitaciones/:habitacionId', component: DetalleHabitacionesComponent },
             { path: 'reservas', component: FormularioReservasComponent },
-<<<<<<< HEAD
-
             { path: 'misreservas', component: MisReservasComponent },
-
-
             { path: 'nosotros', component: QuienessomosComponent },
             { path: 'spa', component: SpaComponent },
             { path: 'habitaciones/:habitacionId', component: DetalleHabcrmComponent },
-
-=======
-            { path: 'nosotros', component: QuienessomosComponent },
-            { path: 'spa', component: SpaComponent },
-            { path: 'habitaciones/:habitacionId', component: DetalleHabcrmComponent },
->>>>>>> feature-reservasdashboard
             { path: 'busqueda', component: BusquedaHabitacionesComponent }
 
         ],

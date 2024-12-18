@@ -30,6 +30,7 @@ export class CrmReservasComponent {
   async ngOnInit() {
     try {
       const response = await this.reservasService.getAll()
+      console.log(response);
       this.arrrReservas = response
     } catch (error) {
       console.log(error)

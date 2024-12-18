@@ -1,3 +1,5 @@
+import { Usuario } from "./usuario.interfaces";
+
 export interface Reserva {
     id: number;
     fecha_entrada: Date;
@@ -16,5 +18,6 @@ export interface Reserva {
     precio: number;
     metodo_pago: string;
     estado: string;
+    usuario: Usuario;
 
 }
