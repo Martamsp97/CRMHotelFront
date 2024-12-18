@@ -1,8 +1,8 @@
 import { Component, inject, Input } from '@angular/core';
 import { HabitacionesService } from '../../../services/habitaciones.service';
-import Habitacion, { Details } from '../../../interfaces/habitacion.interface';
+import Habitacion from '../../../interfaces/habitacion.interface';
 import { RouterLink } from '@angular/router';
-import { ListaHabitacionesComponent } from '../lista-habitaciones/lista-habitaciones.component';
+
 
 @Component({
   selector: 'app-detalle-habitaciones',

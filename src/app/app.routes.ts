@@ -22,7 +22,7 @@ export const routes: Routes = [
 
     {
         path: '',
-        // component: MainComponent,
+        component: MainComponent,
         children: [
             { path: "", component: HomeComponent },
             { path: 'habitaciones', component: ListaHabitacionesComponent },

@@ -158,7 +158,7 @@ figcaption {
   margin-left: 150px;
 }
 .room-item {
-  border: 2px double var(--color-secundario);
+  /* border: 2px double var(--color-secundario); */
   border-radius: 8px;
   overflow: hidden;
   /* margin-bottom: 30px;

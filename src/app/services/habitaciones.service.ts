@@ -5,15 +5,16 @@ import Habitacion from '../interfaces/habitacion.interface';
 import { lastValueFrom } from 'rxjs';
 
 type CreateBody = {
-  piso: number,
-  puerta: number,
-  mascotas: number,
-  num_camas: string,
-  categoria: string,
-  precio: number,
-  tamanho: string,
-  vista: string,
-  cocina: number
+  id: number;
+  piso: number;
+  puerta: number;
+  mascotas: boolean;
+  num_camas: string;
+  categoria: string;
+  precio: number;
+  tamanho: string;
+  vista: string;
+  cocina: boolean
 }
 
 @Injectable({
@@ -29,9 +30,12 @@ export class HabitacionesService {
     )
   }
   getById(habitacionID: number): Promise<Habitacion> {
+    console.log(habitacionID);
+
     return lastValueFrom(
       this.httpClient.get<Habitacion>(`${this.baseUrl}/${habitacionID}`)
     )
+
   }
   create(body: CreateBody): Promise<Habitacion[]> {
     return lastValueFrom(
