@@ -37,7 +37,7 @@ export class DetalleHabitacionesComponent {
       console.log(error);
     }
   }
-  getCocinaStatus(cocina: number): string {
+  getCocinaStatus(cocina: boolean): string {
     return cocina ? 'Incluye' : 'No incluye';
   }
 
