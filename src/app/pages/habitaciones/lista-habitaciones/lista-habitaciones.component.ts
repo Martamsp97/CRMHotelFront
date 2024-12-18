@@ -82,9 +82,18 @@ export class ListaHabitacionesComponent {
     }
   }
 
+<<<<<<< HEAD
   getDetailForCategory(category: string): string {
     const feature = this.arrDetails.find(detail => detail.category === category);
     return feature ? feature.detail : 'Detalle no disponible';
+=======
+
+  selectedFeature: { icon: string; label: string } | null = null;
+  selectedDetail: { text: string } | null = null;
+
+  selectIcons(feature: { icon: string; label: string }) {
+    this.selectedFeature = feature;
+>>>>>>> feature-habitacionreserva
   }
 
   getIconsByCategory(categoria: string): Features[] {
@@ -99,6 +108,7 @@ export class ListaHabitacionesComponent {
         return [];
     }
   }
+<<<<<<< HEAD
   selectIcons(servicio: Features) {
     console.log('Servicio seleccionado:', servicio);
   }
@@ -116,5 +126,7 @@ export class ListaHabitacionesComponent {
     return 'Vista desconocida'; // En caso de un valor inesperado
   }
 
+=======
+>>>>>>> feature-habitacionreserva
 }
 

@@ -1,6 +1,6 @@
 .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 40px;
     max-width: 900px;
@@ -8,13 +8,15 @@
     box-sizing: border-box;
 }
 
+
 h2 {
     font-family: var(--fuente-principal);
     font-weight: 500;
-    font-size: 50px;
+    font-size: 70px;
     color: var(--color-primario);
     text-align: center;
     margin-bottom: 30px;
+    margin-right: 100px;
 }
 
 form {
@@ -50,7 +52,18 @@ form input[type="checkbox"] {
     border-bottom: 2px solid #ccc;
     background-color: transparent;
     padding: 8px 5px;
-    color: #333;
+    /* color: #333; */
+    font-size: 16px;
+    /* box-sizing: border-box; */
+    transition: border-color 0.3s ease;
+}
+
+form select {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    padding: 8px 5px;
+    color: var(--color-primario);
     font-size: 16px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
@@ -63,9 +76,10 @@ form input:focus {
 }
 
 form input[type="checkbox"] {
-    width: auto;
-    margin-top: 8px;
+    /* width: auto; */
+    /* margin-top: 8px; */
     cursor: pointer;
+    /* align-items: flex-end; */
 }
 
 form button {
@@ -85,7 +99,7 @@ form button {
 }
 
 form button:hover {
-    background-color: darken(var(--color-primario), 10%);
+    background-color: var(--color-secundario);
     transform: scale(1.02);
 }
 
@@ -97,4 +111,11 @@ form button:hover {
 
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
+}
+
+.checkbox-container {
+    justify-content: center;
+    flex-direction: row !important;
+    display: flex;
+    align-content: space-evenly;
 }

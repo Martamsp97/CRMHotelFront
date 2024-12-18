@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +10,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  router = inject(Router);
+
   reserva: FormGroup = new FormGroup(
     {
       llegada: new FormControl(),
@@ -18,5 +21,9 @@ export class HomeComponent {
     })
 
 
-  onSubmit() { }
+  onSubmit() {
+
+    localStorage.setItem('busqueda', JSON.stringify(this.reserva.value));
+    this.router.navigate(['/busqueda']);
+  }
 }
