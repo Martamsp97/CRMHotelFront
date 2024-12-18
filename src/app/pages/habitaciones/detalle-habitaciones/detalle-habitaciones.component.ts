@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { HabitacionesService } from '../../../services/habitaciones.service';
-import Habitacion from '../../../interfaces/habitacion.interface';
+import Habitacion, { Details } from '../../../interfaces/habitacion.interface';
 import { RouterLink } from '@angular/router';
 
 
@@ -28,5 +28,6 @@ export class DetalleHabitacionesComponent {
       console.log(error);
     }
   }
+
 
 }
