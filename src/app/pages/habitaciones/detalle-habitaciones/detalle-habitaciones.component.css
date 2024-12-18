@@ -11,7 +11,7 @@
 } */
 
 figure {
-  width: 45%;
+  width: 50%;
   height: auto;
   /* border: 2px solid var(--color-secundario); */
   border-radius: 30px;
@@ -163,7 +163,7 @@ figcaption {
   overflow: hidden;
   /* margin-bottom: 30px;
   margin-top: 3rem; */
-  width: 1000px;
+  width: 1100px;
   height: auto;
   transition: transform 0.3s ease;
   /* From https://css.glass */
@@ -178,8 +178,8 @@ figcaption {
 .room-item .ri-text {
   border-top: none;
   padding: 24px 24px 30px 28px;
-  /* max-width: 100%;
-  max-height: 600px; */
+  max-width: 50%;
+  /* max-height: 600px; */
 }
 
 .noExiste {
@@ -203,6 +203,7 @@ figcaption {
   font-family: var(--fuente-principal);
   font-weight: 700;
 }
+
 .room-item .ri-text h3 {
   color: var(--color-primario);
   font-weight: 700;
@@ -231,6 +232,25 @@ figcaption {
 /*-----------------------
   Room Details Section
 -------------------------*/
+.description-text {
+  font-size: 1.2rem;
+  font-family: var(--fuente-secundaria);
+  color: black;
+  margin-top: 1rem;
+  .precio {
+    font-size: 2rem;
+    color: var(--color-primario);
+  }
+}
+/* .description-info {
+  font-size: 1.2rem;
+  font-family: var(--fuente-secundaria);
+  text-align: justify;
+  color: var(--color-primario);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+} */
+
 .ri-text h2 {
   margin-bottom: 2rem;
   text-align: end;

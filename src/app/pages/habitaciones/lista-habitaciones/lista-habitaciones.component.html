@@ -23,8 +23,13 @@
             <div class="description-text">
               <p><strong>Tamaño: </strong> {{ habitacion.tamanho }}</p>
               <p><strong>Camas: </strong>{{ habitacion.num_camas }}</p>
-              <p><strong>Vistas: </strong>{{ habitacion.vista }}</p>
-              <p><strong>Cocina: </strong>{{ habitacion.cocina }}</p>
+              <p>
+                <strong>Vista: </strong>{{ getVistaStatus(habitacion.vista) }}
+              </p>
+              <p>
+                <strong>Cocina: </strong
+                >{{ getCocinaStatus(habitacion.cocina) }}
+              </p>
               <p>
                 <strong>Detalles: </strong
                 >{{ getDetailForCategory(habitacion.categoria) }}

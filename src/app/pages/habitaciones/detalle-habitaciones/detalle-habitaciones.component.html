@@ -23,18 +23,29 @@
               @if (habitacion) {
               <div class="description-text">
                 <h4>Categoria {{ habitacion.categoria }}</h4>
+                <p>
+                  <strong>Detalles: </strong
+                  >{{ getDetailForCategory(habitacion.categoria) }}
+                </p>
                 <p><strong>Numero de Piso: </strong>{{ habitacion.piso }}</p>
-                <p><strong>Categoría: </strong>{{ habitacion.categoria }}</p>
                 <p><strong>Tamaño: </strong> {{ habitacion.tamanho }}</p>
                 <p>
                   <strong>Numero de Camas: </strong>{{ habitacion.num_camas }}
                 </p>
                 <p>
-                  <strong>Numero de Mascotas: </strong>{{ habitacion.mascotas }}
+                  <strong>Mascotas: </strong
+                  >{{ getMascotasStatus(habitacion.cocina) }}
                 </p>
-                <p><strong>Vista: </strong>{{ habitacion.vista }}</p>
-                <p><strong>Cocina: </strong>{{ habitacion.cocina }}</p>
-                <p><strong>Precio: </strong>{{ habitacion.precio }} €</p>
+                <p>
+                  <strong>Vista: </strong>{{ getVistaStatus(habitacion.vista) }}
+                </p>
+                <p>
+                  <strong>Cocina: </strong
+                  >{{ getCocinaStatus(habitacion.cocina) }}
+                </p>
+                <p class="precio">
+                  <strong>Precio: </strong>{{ habitacion.precio }} €
+                </p>
               </div>
 
               }@else {

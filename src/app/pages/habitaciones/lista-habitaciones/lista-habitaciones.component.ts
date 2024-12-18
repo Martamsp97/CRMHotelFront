@@ -15,6 +15,7 @@ import Swal from 'sweetalert2';
 
 export class ListaHabitacionesComponent {
 
+
   habitacionesService = inject(HabitacionesService);
   arrHabitaciones: Habitacion[] = [];
 
@@ -101,5 +102,19 @@ export class ListaHabitacionesComponent {
   selectIcons(servicio: Features) {
     console.log('Servicio seleccionado:', servicio);
   }
+
+  getCocinaStatus(cocina: boolean): string {
+    return cocina ? 'Incluye' : 'No incluye';
+  }
+
+  getVistaStatus(vista: string): string {
+    if (vista === 'int') {
+      return 'Interior';
+    } else if (vista === 'ext') {
+      return 'Exterior';
+    }
+    return 'Vista desconocida'; // En caso de un valor inesperado
+  }
+
 }
 
