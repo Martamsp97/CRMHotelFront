@@ -103,7 +103,7 @@ export class ListaHabitacionesComponent {
     console.log('Servicio seleccionado:', servicio);
   }
 
-  getCocinaStatus(cocina: boolean): string {
+  getCocinaStatus(cocina: number): string {
     return cocina ? 'Incluye' : 'No incluye';
   }
 

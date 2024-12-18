@@ -12,13 +12,9 @@ export default interface Habitacion {
     precio: number;
     tamanho: string;
     vista: string;
-<<<<<<< HEAD
     cocina: number;
     reserva_habitaciones: Reserva[];
     imagenes: Images[];
-=======
-    cocina: boolean
->>>>>>> feature_jc
 }
 
 export interface Details {
