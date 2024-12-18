@@ -15,10 +15,13 @@
         <!-- Room Item -->
         <div class="">
           <div class="room-item">
+            <!-- Obtener imagenes del ngOnInit -->
+            @for(ruta of rutasImagenes; track ruta) {
             <figure>
-              <img src="room/room-deluxe_1.jpg" alt="Room Image" />
+              <img [src]="'http://localhost:3000/' + ruta" alt="Room Image" />
               <figcaption>Habitación {{ habitacion?.puerta }}</figcaption>
             </figure>
+            }
             <div class="ri-text">
               @if (habitacion) {
               <div class="description-text">

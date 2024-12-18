@@ -12,12 +12,13 @@ import Swal from 'sweetalert2';
   styleUrl: './lista-habitaciones.component.css'
 })
 
-
 export class ListaHabitacionesComponent {
 
-
   habitacionesService = inject(HabitacionesService);
-  arrHabitaciones: Habitacion[] = [];
+  Habitacion: Habitacion[] = [];
+
+  rutasImagenes: string[] = [];
+
 
   arrDetails: Details[] = [
     { category: 'deluxe', detail: 'Esta espectacular Habitación de 400 m² hace gala de una elegante combinación de arte, diseño y tecnología. El espacio se distribuye en un amplio salón y un comedor para disfrutar de una mayor privacidad. Además, la suite cuenta con una pequeña cocina y una cómoda zona de trabajo. Relájese en el maravilloso dormitorio con su gran vestidor o en el lujoso baño. La terraza de 220 m² permite celebrar eventos privados y los grandes ventanales llenan la sala de luz natural.' },
@@ -74,13 +75,18 @@ export class ListaHabitacionesComponent {
 
   async ngOnInit() {
     try {
-      this.arrHabitaciones = await this.habitacionesService.getAll();
-      console.log(this.arrHabitaciones);
-
+      this.Habitacion = await this.habitacionesService.getAll();
+      console.log(this.Habitacion);
     } catch (error) {
       console.log(error);
     }
   }
+
+
+  // getImageById(id: number): string {
+  //   const habitacion = this.Habitacion.find(habitacion => habitacion.id === id);
+  //   return habitacion ? habitacion.imagenes[0].ruta : '';
+  // }
 
   getDetailForCategory(category: string): string {
     const feature = this.arrDetails.find(detail => detail.category === category);

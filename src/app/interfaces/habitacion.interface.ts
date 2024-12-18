@@ -9,9 +9,15 @@ export default interface Habitacion {
     precio: number;
     tamanho: string;
     vista: string;
-    cocina: boolean
+    cocina: boolean,
+    imagenes: Imagen[];
 }
 
+export interface Imagen {
+    id: number;
+    ruta: string;
+    habitaciones_id: number;
+}
 export interface Details {
     category: string;
     detail: string;

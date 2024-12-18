@@ -1,6 +1,6 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { HabitacionesService } from '../../../services/habitaciones.service';
-import Habitacion, { Details } from '../../../interfaces/habitacion.interface';
+import Habitacion, { Details, Imagen } from '../../../interfaces/habitacion.interface';
 import { RouterLink } from '@angular/router';
 
 
@@ -12,12 +12,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './detalle-habitaciones.component.css'
 })
 export class DetalleHabitacionesComponent {
-
   @Input() habitacionId: number = 0;
 
   habitacionesService = inject(HabitacionesService);
 
   habitacion: Habitacion | null = null;
+  rutasImagenes: string[] = [];
 
   arrDetails: Details[] = [
     { category: 'deluxe', detail: 'Esta espectacular Habitación de 400 m² hace gala de una elegante combinación de arte, diseño y tecnología. El espacio se distribuye en un amplio salón y un comedor para disfrutar de una mayor privacidad. Además, la suite cuenta con una pequeña cocina y una cómoda zona de trabajo. Relájese en el maravilloso dormitorio con su gran vestidor o en el lujoso baño. La terraza de 220 m² permite celebrar eventos privados y los grandes ventanales llenan la sala de luz natural.' },
@@ -31,8 +31,15 @@ export class DetalleHabitacionesComponent {
 
   async ngOnInit() {
     try {
+      // Obtener la habitación desde el servicio
       this.habitacion = await this.habitacionesService.getById(this.habitacionId);
       console.log(this.habitacion);
+      // Obtener las imágenes de la habitación
+      if (this.habitacion && this.habitacion.imagenes) {
+        this.rutasImagenes = this.habitacion.imagenes.map(imagen => imagen.ruta);
+        // this.habitacionesService.setRutasImagenes(this.habitacion);
+        console.log(this.rutasImagenes);
+      }
     } catch (error) {
       console.log(error);
     }

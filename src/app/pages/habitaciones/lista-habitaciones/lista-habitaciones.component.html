@@ -13,7 +13,7 @@
   <div class="contenedor">
     <div class="cardHabitacion">
       <!-- Room Item -->
-      @for (habitacion of arrHabitaciones; track habitacion.id) {
+      @for (habitacion of Habitacion; track habitacion.id) {
       <div class="">
         <div class="room-item">
           <img src="room/room-deluxe_2.jpg" alt="Room Image" />
@@ -34,7 +34,9 @@
                 <strong>Detalles: </strong
                 >{{ getDetailForCategory(habitacion.categoria) }}
               </p>
-              <!-- Traer de el array de detalles si el detalle correspone a {{ habitacion.categoria }} -->
+              <p>
+                <!-- Traer de el array de detalles si el detalle correspone a {{ habitacion.categoria }} -->
+              </p>
 
               <p><strong>Servicios: </strong></p>
               <div class="room-features">

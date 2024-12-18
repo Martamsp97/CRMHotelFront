@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import Habitacion from '../interfaces/habitacion.interface';
-import { lastValueFrom } from 'rxjs';
+import { BehaviorSubject, lastValueFrom } from 'rxjs';
 
 type CreateBody = {
   id: number;
@@ -24,6 +24,13 @@ export class HabitacionesService {
   private httpClient = inject(HttpClient);
   private baseUrl = `${environment.apiUrl}/habitaciones`;
 
+  // private rutasImagenesSource = new BehaviorSubject<string[]>([]);
+  // rutasImagenes$ = this.rutasImagenesSource.asObservable();
+
+  // setRutasImagenes(rutas: string[]): void {
+  //   this.rutasImagenesSource.next(rutas);
+  // }
+
   getAll(): Promise<Habitacion[]> {
     return lastValueFrom(
       this.httpClient.get<Habitacion[]>(this.baseUrl)
@@ -31,7 +38,6 @@ export class HabitacionesService {
   }
   getById(habitacionID: number): Promise<Habitacion> {
     console.log(habitacionID);
-
     return lastValueFrom(
       this.httpClient.get<Habitacion>(`${this.baseUrl}/${habitacionID}`)
     )
