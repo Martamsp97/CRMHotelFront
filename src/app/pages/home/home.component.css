@@ -299,38 +299,37 @@ carousel-item {
 
 }
 
-.boton-reservar {
-    display: flex;
-    margin-top: 4.375rem;
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
 
-    a {
-        display: inline-flex;
-        text-decoration: none;
-        background-color: transparent;
-        border: none;
-        width: 100%;
-        cursor: pointer;
-        justify-content: center;
-        align-items: center;
-        gap: 0.9375rem;
-        text-align: left;
+.input-con-icono {
+    margin-top: 15px;
+    width: 35%;
+    border-radius: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    background-image: url('/images/icono_blanco.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: transparent;
+    font-family: var(--fuente-secundaria);
+    font-weight: 500;
+    color: white;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
 
-
-        p {
-            margin: 0rem;
-            width: 5rem;
-            font-size: 1.2rem;
-
-        }
-
-        img {
-            width: 3.75rem;
-        }
-    }
-
-    a:hover {
-        transform: translateX(0.4375rem);
-    }
+.input-con-icono:hover {
+    transform: translateX(7px);
 }
 
 .relax {
