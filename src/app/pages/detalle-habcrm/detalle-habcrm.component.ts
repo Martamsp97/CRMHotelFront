@@ -52,4 +52,5 @@ export class DetalleHabcrmComponent {
     this.files = event.target.files;
   }
 
+
 }
