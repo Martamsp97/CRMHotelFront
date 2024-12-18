@@ -4,6 +4,7 @@ import { CrmHabsService } from '../../services/crm-habs.service';
 import { CurrencyPipe } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -39,7 +40,7 @@ export class DetalleHabcrmComponent {
   }
 
   onSubmit() {
-    console.log('YEEEEE');
+
 
     const formData = new FormData();
     formData.append('imagen', this.files[0]);
@@ -51,5 +52,22 @@ export class DetalleHabcrmComponent {
   onFileChange(event: any) {
     this.files = event.target.files;
   }
+  async deleteFoto(event: any) {
+    console.log(event)
+    const result = await Swal.fire({ title: 'Eliminar habitación', text: '¿Estás seguro que quieres eliminar esta habitación? Si le das a aceptar, no podrás deshacer esta acción', icon: 'question', showCancelButton: true, confirmButtonText: 'Sí, quiero eliminarla' });
+    if (result.isConfirmed) {
+      try {
+        if (this.files) {
+          console.log(this.files)
+          this.files = await this.crmHabService.deleteImagen(this.files.id)
 
+          Swal.fire('Eliminar habitación', 'La habitación ha sido eliminado con éxito', 'success')
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
 }
+
+

@@ -3,6 +3,7 @@ import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
 import Habitacion from '../interfaces/habitacion.interface';
+import { Images } from '../interfaces/images.interface';
 
 type createHab = {
   piso: number;
@@ -63,8 +64,11 @@ export class CrmHabsService {
     )
   }
 
-
-
+  deleteImagen(imagenId: number): Promise<Images> {
+    return lastValueFrom(
+      this.httpClient.delete<Images>(`${this.baseUrl}/imagen/${imagenId}`)
+    )
+  }
   updateHabitacion(habId: number, body: createHab): Promise<Habitacion> {
     return lastValueFrom(
       this.httpClient.put<Habitacion>(`${this.baseUrl}/${habId}`, body)
