@@ -66,7 +66,7 @@ export class CrmHabsService {
 
   deleteImagen(imagenId: number): Promise<Images> {
     return lastValueFrom(
-      this.httpClient.delete<Images>(`${this.baseUrl}/imagen/${imagenId}`)
+      this.httpClient.delete<Images>(`${this.baseUrl}/imagenes/${imagenId}`)
     )
   }
   updateHabitacion(habId: number, body: createHab): Promise<Habitacion> {

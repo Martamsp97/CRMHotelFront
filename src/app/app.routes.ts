@@ -17,6 +17,8 @@ import { SpaComponent } from './pages/spa/spa.component';
 import { DetalleHabitacionesComponent } from './pages/habitaciones/detalle-habitaciones/detalle-habitaciones.component';
 
 import { FormularioReservasComponent } from './pages/formulario-reservas/formulario-reservas.component';
+import { EditReservaComponent } from './pages/edit-reserva/edit-reserva.component';
+import { MisReservasComponent } from './pages/mis-reservas/mis-reservas.component';
 
 export const routes: Routes = [
     {
@@ -28,6 +30,7 @@ export const routes: Routes = [
             { path: 'crearHabitacion', component: NuevaHabitacionComponent },
             { path: 'habitaciones/:habitacionId', component: DetalleHabitacionesComponent },
             { path: 'reservas', component: FormularioReservasComponent },
+            { path: 'misreservas', component: MisReservasComponent },
 
             { path: 'nosotros', component: QuienessomosComponent },
             { path: 'spa', component: SpaComponent },
@@ -46,6 +49,7 @@ export const routes: Routes = [
             { path: '', redirectTo: 'reservas', pathMatch: 'full' },
             { path: 'reservas', component: CrmReservasComponent },
             { path: 'reservas/:id', component: CrmDetalleReservaComponent },
+            { path: 'reservas/edit/:resId', component: EditReservaComponent },
             { path: 'habitaciones', component: CrmHabitacionesComponent },
             { path: '', component: CrmDetalleReservaComponent },
             { path: 'habitaciones/new', component: NewHabComponent },

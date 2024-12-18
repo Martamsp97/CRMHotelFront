@@ -19,7 +19,8 @@
         <p><strong>Número de Habitaciones:</strong> {{ reserva.num_habitaciones }}</p>
     </div>
     <div class="d-flex justify-content-end mt-3">
-        <button class="btn btn-primary me-2" (click)="editarReserva()">Editar Reserva</button>
+        <button class="btn btn-primary me-2" [routerLink]="['/dashboard/reservas/edit', reserva.id]">Editar
+            Reserva</button>
         <button class="btn btn-danger" (click)="cancelarReserva()">Cancelar Reserva</button>
     </div>
     }@else {

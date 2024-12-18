@@ -29,13 +29,17 @@ export class ReservasService {
       this.httpClient.get<Reserva[]>(`${this.url}/dni/${dni}`))
   }
 
-  filterById(id: number): Promise<Reserva> {
+  filterById(resId: number): Promise<Reserva> {
     return lastValueFrom(
-      this.httpClient.get<Reserva>(`${this.url}/${id}`))
+      this.httpClient.get<Reserva>(`${this.url}/${resId}`))
   }
 
   createReserva(body: Reserva): Promise<Reserva> {
     return lastValueFrom(
       this.httpClient.post<Reserva>(`${this.url}`, body))
+  }
+  editReserva(resId: number, body: Reserva): Promise<Reserva> {
+    return lastValueFrom(
+      this.httpClient.put<Reserva>(`${this.url}/edit/${resId}`, body))
   }
 }

@@ -1,11 +1,12 @@
 import { Component, inject, Input } from '@angular/core';
 import { Reserva } from '../../interfaces/reserva';
 import { ReservasService } from '../../services/reservas.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-crm-detalle-reserva',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './crm-detalle-reserva.component.html',
   styleUrl: './crm-detalle-reserva.component.css'
 })
@@ -27,7 +28,7 @@ export class CrmDetalleReservaComponent {
   }
 
 
-  editarReserva() { }
+
 
   cancelarReserva() { }
 

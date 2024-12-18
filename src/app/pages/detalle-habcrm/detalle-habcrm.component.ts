@@ -52,17 +52,14 @@ export class DetalleHabcrmComponent {
   onFileChange(event: any) {
     this.files = event.target.files;
   }
-  async deleteFoto(event: any) {
-    console.log(event)
+  async deleteFoto(imagenId: any) {
+
     const result = await Swal.fire({ title: 'Eliminar habitación', text: '¿Estás seguro que quieres eliminar esta habitación? Si le das a aceptar, no podrás deshacer esta acción', icon: 'question', showCancelButton: true, confirmButtonText: 'Sí, quiero eliminarla' });
     if (result.isConfirmed) {
       try {
-        if (this.files) {
-          console.log(this.files)
-          this.files = await this.crmHabService.deleteImagen(this.files.id)
-
-          Swal.fire('Eliminar habitación', 'La habitación ha sido eliminado con éxito', 'success')
-        }
+        const response = await this.crmHabService.deleteImagen(imagenId)
+        console.log(response)
+        Swal.fire('Eliminar habitación', 'La habitación ha sido eliminado con éxito', 'success')
       } catch (error) {
         console.log(error)
       }

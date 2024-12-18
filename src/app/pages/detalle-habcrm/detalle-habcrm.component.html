@@ -7,7 +7,7 @@
 
             <figure>
                 <img [src]="'http://localhost:3000/'+imagen.ruta" alt="">
-                <button (onclick)="deleteFoto($event)">Eliminar</button>
+                <button (click)="deleteFoto(imagen.id)">Eliminar</button>
             </figure>
 
             }
