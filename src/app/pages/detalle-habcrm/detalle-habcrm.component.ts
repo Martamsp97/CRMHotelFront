@@ -54,9 +54,6 @@ export class DetalleHabcrmComponent {
   }
   async deleteFoto(imagenId: any) {
 
-<<<<<<< HEAD
-
-=======
     const result = await Swal.fire({ title: 'Eliminar habitación', text: '¿Estás seguro que quieres eliminar esta habitación? Si le das a aceptar, no podrás deshacer esta acción', icon: 'question', showCancelButton: true, confirmButtonText: 'Sí, quiero eliminarla' });
     if (result.isConfirmed) {
       try {
@@ -68,7 +65,6 @@ export class DetalleHabcrmComponent {
       }
     }
   }
->>>>>>> feature-front
 }
 
 
