@@ -31,8 +31,7 @@ export const routes: Routes = [
             { path: 'reservas', component: FormularioReservasComponent },
             { path: 'nosotros', component: QuienessomosComponent },
             { path: 'spa', component: SpaComponent },
-
-            // { path: 'habitaciones/:habitacionId', component: DetalleHabcrmComponent }
+            { path: 'habitaciones/:habitacionId', component: DetalleHabcrmComponent }
         ],
     },
 
