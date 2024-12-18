@@ -1,5 +1,4 @@
 <div class="newhab">
-<<<<<<< HEAD
     @if(habitacion){
     <div class="hab">
         <h2>HABITACIÓN {{habitacion.puerta}}</h2>
@@ -65,33 +64,3 @@
         </form>
     </div>
 </div>
-=======
-  @if(habitacion){
-  <h2>HABITACIÓN {{ habitacion.puerta }}</h2>
-  <div class="contenido">
-    <p>
-      <span>Piso: </span> {{ habitacion.piso }}, <span>Vista: </span
-      >{{ habitacion.vista }}
-    </p>
-    <p><span>Categoría: </span> {{ habitacion.categoria }}</p>
-    <p><span>Número de camas: </span> {{ habitacion.num_camas }}</p>
-    <p class="precio">
-      <span>Precio: </span> {{ habitacion.precio | currency : "EUR" }}
-    </p>
-  </div>
-  }
-  <div class="form-images">
-    <form [formGroup]="imageForm" (ngSubmit)="onSubmit()">
-      <label for="imagen" class="form-label">Imagen de la habitación</label>
-      <input
-        type="file"
-        name="imagen"
-        id="imagen"
-        formControlName="imagen"
-        (change)="onFileChange($event)"
-      />
-      <input type="submit" value="Subir imagen" />
-    </form>
-  </div>
-</div>
->>>>>>> feature_jc
