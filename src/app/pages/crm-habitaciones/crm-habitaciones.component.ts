@@ -83,7 +83,12 @@ export class CrmHabitacionesComponent {
   }
   async filtrarCategoria() {
     try {
+
       const categoria = this.filtrocat.value.categoria;
+      if (this.filtrocat.value.categoria === '') {
+        this.arrHabitaciones = await this.crmHabsService.getAllHabitaciones();
+        return;
+      }
       const response = await this.crmHabsService.getHabByCategoria(categoria);
       this.arrHabitaciones = response;
       console.log(this.arrHabitaciones)
@@ -95,7 +100,10 @@ export class CrmHabitacionesComponent {
   async filtrarUbicacion() {
     try {
       const vista = this.filtroubi.value.vista;
-
+      if (this.filtroubi.value.vista === '') {
+        this.arrHabitaciones = await this.crmHabsService.getAllHabitaciones();
+        return;
+      }
       const response = await this.crmHabsService.getHabByVista(vista);
       this.arrHabitaciones = response;
       console.log(this.arrHabitaciones)

@@ -8,7 +8,9 @@
 
             <figure>
                 <img [src]="'http://localhost:3000/'+imagen.ruta" alt="">
+                <button (click)="deleteFoto(imagen.id)">Eliminar</button>
             </figure>
+
             }
         </div>
         <div class="contenido">

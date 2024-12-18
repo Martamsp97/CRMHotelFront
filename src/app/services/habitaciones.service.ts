@@ -47,6 +47,7 @@ export class HabitacionesService {
       this.httpClient.delete<Habitacion>(`${this.baseUrl}`)
     );
   }
+
   isAdmin(): boolean {
 
     {

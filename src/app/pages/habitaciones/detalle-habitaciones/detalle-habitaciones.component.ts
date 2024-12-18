@@ -32,7 +32,7 @@ export class DetalleHabitacionesComponent {
   async ngOnInit() {
     try {
       this.habitacion = await this.habitacionesService.getById(this.habitacionId);
-      console.log(this.habitacion);
+      console.log(this.habitacionId);
     } catch (error) {
       console.log(error);
     }
