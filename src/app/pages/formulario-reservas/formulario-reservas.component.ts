@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ReservasService } from '../../services/reservas.service';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-reservas',
@@ -11,41 +13,59 @@ import { ReservasService } from '../../services/reservas.service';
 })
 export class FormularioReservasComponent {
 
-  reservasService = inject(ReservasService);
+  busqueda: any;
+  habitacionId: any;
 
+  reservasService = inject(ReservasService);
+  router = inject(Router);
 
 
   formulario: FormGroup = new FormGroup({
-    fecha_entrada: new FormControl(''),
-    fecha_salida: new FormControl(''),
-    num_personas: new FormControl(''),
-    regimen: new FormControl(''),
-    tipo_cancelacion: new FormControl(''),
-    aparcamiento: new FormControl(''),
-    desayuno: new FormControl(''),
-    spa: new FormControl(''),
-    gimnasio: new FormControl(''),
-    piscina: new FormControl(''),
-    metodo_pago: new FormControl(''),
-    num_habitaciones: new FormControl('')
+    regimen: new FormControl(null, [Validators.required]),
+    tipo_cancelacion: new FormControl(null, [Validators.required]),
+    aparcamiento: new FormControl(false),
+    desayuno: new FormControl(null, [Validators.required]),
+    spa: new FormControl(false),
+    gimnasio: new FormControl(false),
+    piscina: new FormControl(false),
+    metodo_pago: new FormControl(null, [Validators.required]),
   })
 
-  ngOnInit() {
-    const busqueda = JSON.parse(localStorage.getItem("busqueda")!);
-    const habitacionId = JSON.parse(localStorage.getItem("habitacion_seleccionada")!);
+  checkError(fieldName: string, errorName: string) {
+    return this.formulario.get(fieldName)?.hasError(errorName) && this.formulario.get(fieldName)?.touched
+  }
 
-    console.log(busqueda, habitacionId);
-    this.formulario.get('fecha_entrada')?.setValue(busqueda.llegada);
-    this.formulario.get('fecha_salida')?.setValue(busqueda.salida);
-    this.formulario.get('num_personas')?.setValue(busqueda.num_personas);
+  ngOnInit() {
+    this.busqueda = JSON.parse(localStorage.getItem("busqueda")!);
+    this.habitacionId = JSON.parse(localStorage.getItem("habitacion_seleccionada")!);
+    console.log(this.busqueda);
   }
 
   crearReserva() {
+    if (this.formulario.valid) {
+      const nuevaReserva = {
+        ...this.formulario.value,
+        fecha_entrada: this.busqueda.llegada,
+        fecha_salida: this.busqueda.salida,
+        num_personas: this.busqueda.num_personas,
+        habitacion_id: this.habitacionId,
+      }
 
+      this.reservasService.createReserva(nuevaReserva)
+
+      Swal.fire({
+        title: 'Reserva realizada con éxito',
+        text: '¡Revisa tu correo para ver todos los detalles de tu reserva!',
+        icon: 'success',
+        iconColor: 'var(--color-primario)',
+        confirmButtonColor: 'var(--color-primario)'
+      })
+
+      this.router.navigateByUrl('/misreservas')
+    }
   }
-
-  //recordar al insertar en la bbdd la reserva añadirle el id del usuario que la ha hecho y el estado de la reserva, que sería confirmada
-  // req.user.id en el back para obtener el id del usuario que ha hecho la reserva
-  //el desayuno es continental o buffet, cambiar a un select
-
 }
+
+
+
+
