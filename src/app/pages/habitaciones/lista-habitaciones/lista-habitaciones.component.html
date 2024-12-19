@@ -89,8 +89,9 @@
               <!-- Icono seleccionado -->
             </div>
             <div class="btn-res d-flex gap-3">
-              <button [routerLink]="['/registro']" class="btn btn-primary d-flex align-items-center gap-2">
-                Reservar <i class="fi fi-rs-arrow-small-right"></i>
+              <button [routerLink]="['/habitaciones', habitacion.id]"
+                class="btn btn-primary d-flex align-items-center gap-2">
+                Ver más <i class="fi fi-rs-arrow-small-right"></i>
               </button>
             </div>
           </div>
