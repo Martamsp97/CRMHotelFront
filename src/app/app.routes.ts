@@ -22,6 +22,7 @@ import { EditReservaComponent } from './pages/edit-reserva/edit-reserva.componen
 import { MisReservasComponent } from './pages/mis-reservas/mis-reservas.component';
 
 import { BusquedaHabitacionesComponent } from './pages/busqueda-habitaciones/busqueda-habitaciones.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 
 
 export const routes: Routes = [
@@ -41,7 +42,7 @@ export const routes: Routes = [
 
             { path: 'nosotros', component: QuienessomosComponent },
             { path: 'spa', component: SpaComponent },
-            { path: 'habitaciones/:habitacionId', component: DetalleHabcrmComponent },
+
 
             { path: 'busqueda', component: BusquedaHabitacionesComponent }
 
@@ -50,6 +51,7 @@ export const routes: Routes = [
 
     { path: 'login', component: LoginComponent },
     { path: 'registro', component: RegistroComponent },
+    { path: 'editusuario', component: EditarPerfilComponent },
 
     {
         path: 'dashboard',
