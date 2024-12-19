@@ -70,7 +70,13 @@
       @for (habitacion of Habitacion; track habitacion.id) {
       <div class="">
         <div class="room-item">
-          <img src="room/room-deluxe_2.jpg" alt="Room Image" />
+          <figure>
+            <img
+              [src]="'http://localhost:3000/' + getImagenPorId(habitacion.id)"
+              alt="Imagen de la habitación {{ habitacion.categoria }}"
+            />
+          </figure>
+
           <div class="ri-text">
             <h4>Habitación {{ habitacion.categoria }}</h4>
             <h3>{{ habitacion.precio }}€<span> / por noche</span></h3>
@@ -82,7 +88,7 @@
                   <strong>Detalles: </strong>
                 </p>
                 <p>
-                  {{ getDetailForCategory(habitacion.categoria, 30) }}
+                  {{ getDetailForCategory(habitacion.categoria, 16) }}
                 </p>
                 <div class="btn-read">
                   <a
