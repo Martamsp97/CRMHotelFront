@@ -22,8 +22,8 @@ export class HomeComponent {
 
 
   onSubmit() {
-
     localStorage.setItem('busqueda', JSON.stringify(this.reserva.value));
     this.router.navigate(['/busqueda']);
   }
+
 }
