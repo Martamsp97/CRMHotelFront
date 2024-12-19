@@ -17,7 +17,6 @@ img {
 }
 
 .titulo {
-
   display: block;
   width: 100%;
   align-items: center;
@@ -33,15 +32,13 @@ img {
     text-align: center;
 
     h5 {
-      font-family: "Quicksand",
-        sans-serif;
+      font-family: "Quicksand", sans-serif;
       font-size: 1rem;
       font-weight: 400;
       color: #000;
 
       letter-spacing: 0.125rem;
       text-transform: uppercase;
-
     }
 
     h2 {
@@ -52,7 +49,6 @@ img {
       font-size: 3rem;
       font-weight: 700;
       color: #000;
-
     }
 
     .cabecera-p {
@@ -69,8 +65,6 @@ img {
       font-size: 1.2rem;
       width: 40%;
       margin: 3rem auto 1rem auto;
-
-
     }
   }
 
@@ -79,7 +73,6 @@ img {
     justify-content: center;
     display: flex;
     margin-bottom: 2rem;
-
 
     figure {
       width: 3.125rem;
@@ -132,54 +125,80 @@ img {
   background-color: var(--color-secundario);
   transform: translateY(-3px);
   transition: 0.6s;
+  letter-spacing: 0.15em;
 
   i {
-    color: white;
-    transform: translateY(-3px);
-    transition: 0.6s;
+    visibility: hidden;
   }
 }
 
 .btn i {
-  font-size: 18px; /* Ajusta el tamaño del ícono */
+  font-size: 18px;
 }
 
-/* .btn-res {
-  margin-top: 20px;
-  position: absolute;
-  bottom: 2rem;
-  left: 19rem;
+/* Boton Seguir Leyendo */
+.btn-read {
+  margin: 3rem 1rem 4rem 7rem;
 }
 
-.primary-btn {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 15px 0;
-  padding-left: 34px;
-  padding-right: 64px;
-  color: black;
-  font-family: var(--fuente-secundaria);
-  text-transform: uppercase;
-  border: 2px solid var(--color-primario);
+.cta {
   position: relative;
-  margin-top: 2rem;
+  left: 9rem;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
 }
+.cta:before {
+  content: "";
 
-.btn-res .primary-btn:hover {
-  background-color: var(--color-primario);
-  transform: translateY(-3px);
-  transition: 0.6s;
-  color: white;
-}
-
-.primary-btn i {
   position: absolute;
-  right: 25px;
-  top: 14px;
-  font-size: 21px;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: #9fbfb6;
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.cta span {
+  position: relative;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  vertical-align: middle;
   color: var(--color-primario);
-} */
+  font-family: var(--fuente-secundaria);
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--color-primario);
+  stroke-width: 2;
+  transform: translateX(-5px);
+  /* transition: all 0.3s ease; */
+}
+.cta:hover:before {
+  width: 100%;
+  background: var(--color-secundario);
+}
+
+.cta:hover span {
+  color: white;
+  letter-spacing: 0.1em;
+}
+.cta:hover svg {
+  visibility: hidden;
+}
+.cta:active {
+  transform: scale(0.96);
+}
 
 /*---------------------
   Room Section

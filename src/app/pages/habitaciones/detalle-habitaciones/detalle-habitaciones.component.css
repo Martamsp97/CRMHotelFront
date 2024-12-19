@@ -99,7 +99,7 @@ figcaption {
 -------------------------*/
 .btn-res {
   justify-content: center;
-  margin-top: 20px;
+  margin: 4rem auto 1rem;
 }
 
 .btn {
@@ -154,17 +154,15 @@ figcaption {
   display: flex;
   justify-content: center;
 }
-.wrapper {
-  margin-left: 150px;
-}
+
 .room-item {
   /* border: 2px double var(--color-secundario); */
   border-radius: 8px;
   overflow: hidden;
   /* margin-bottom: 30px;
   margin-top: 3rem; */
-  width: 1100px;
-  height: auto;
+  width: 1200px;
+  height: 600px;
   transition: transform 0.3s ease;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.41);
@@ -233,7 +231,7 @@ figcaption {
   Room Details Section
 -------------------------*/
 .description-text {
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   font-family: var(--fuente-secundaria);
   color: black;
   margin-top: 1rem;
