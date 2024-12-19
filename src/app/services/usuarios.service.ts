@@ -52,4 +52,11 @@ export class UsuariosService {
     }
     return false
   }
+
+
+  getById(userId: number): Promise<Usuario> {
+    return lastValueFrom(
+      this.httpClient.get<Usuario>(`${this.url}/editusuario/${userId}`)
+    )
+  }
 }

@@ -14,7 +14,26 @@ h2 {
 
 }
 
+.delete {
+    position: absolute;
+    top: -20px;
+    right: -8px;
+    font-family: var(--fuente-secundaria);
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 13px 20px;
+    font-weight: 700;
+}
 
+.delete:hover {
+    color: whitesmoke;
+
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+
+}
 
 label {
     margin-right: 10px;
@@ -167,6 +186,6 @@ img {
 figure {
 
     width: 100%;
-
+    position: relative;
 
 }

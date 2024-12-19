@@ -32,8 +32,12 @@ export class LoginComponent {
 
   ngOnInit() {
     this.document.body.classList.add('fondo-login');
-
   }
+
+  ngOnDestroy() {
+    this.document.body.classList.remove('fondo-login');
+  }
+
   checkError(fieldName: string, errorName: string) {
     return this.formulario.get(fieldName)?.hasError(errorName) && this.formulario.get(fieldName)?.touched
   }

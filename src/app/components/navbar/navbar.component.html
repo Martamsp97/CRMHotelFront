@@ -20,6 +20,9 @@
             <li><a [routerLink]="['/misreservas']">Mis
                     reservas</a></li>
             }
+            @if(usuariosService.islogged()) {
+            <li><a [routerLink]="['/editusuario', usuario!.id]">Editar Perfil</a></li>
+            }
             @if (!usuariosService.islogged()) {
             <li><a [routerLink]="['/registro']">Registro</a></li>
             <li><a [routerLink]="['/login']">Login</a></li>}
