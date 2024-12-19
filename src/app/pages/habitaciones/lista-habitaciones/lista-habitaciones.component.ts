@@ -4,6 +4,7 @@ import Habitacion, { Details, Features } from '../../../interfaces/habitacion.in
 import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { UsuariosService } from '../../../services/usuarios.service';
 
 @Component({
   selector: 'app-lista-habitaciones',
@@ -19,7 +20,7 @@ export class ListaHabitacionesComponent {
   Habitacion: Habitacion[] = [];
 
   rutasImagenes: string[] = [];
-
+  usuarioService = inject(UsuariosService);
   arrHabitaciones: Habitacion[] = [];
   router = inject(Router)
 

@@ -151,6 +151,7 @@ img {
   padding: 19px 22px;
   transition: all 0.2s ease;
 }
+
 .cta:before {
   content: "";
 
@@ -164,6 +165,7 @@ img {
   height: 56px;
   transition: all 0.3s ease;
 }
+
 .cta span {
   position: relative;
   font-size: 16px;
@@ -175,6 +177,7 @@ img {
   color: var(--color-primario);
   font-family: var(--fuente-secundaria);
 }
+
 .cta svg {
   position: relative;
   top: 0;
@@ -187,6 +190,7 @@ img {
   transform: translateX(-5px);
   /* transition: all 0.3s ease; */
 }
+
 .cta:hover:before {
   width: 100%;
   background: var(--color-secundario);
@@ -196,9 +200,11 @@ img {
   color: white;
   letter-spacing: 0.1em;
 }
+
 .cta:hover svg {
   visibility: hidden;
 }
+
 .cta:active {
   transform: scale(0.96);
 }
@@ -218,6 +224,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1rem;
+
 }
 
 .room-item {
@@ -225,9 +232,10 @@ img {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 30px;
+  padding-bottom: 50px;
   transition: transform 0.3s ease;
   max-width: 500px;
-  height: 85rem;
+  height: 103rem;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.41);
   border-radius: 10px;
