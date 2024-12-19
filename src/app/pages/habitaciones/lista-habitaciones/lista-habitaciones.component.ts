@@ -1,13 +1,14 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { HabitacionesService } from '../../../services/habitaciones.service';
 import Habitacion, { Details, Features } from '../../../interfaces/habitacion.interface';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-lista-habitaciones',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ReactiveFormsModule],
   templateUrl: './lista-habitaciones.component.html',
   styleUrl: './lista-habitaciones.component.css'
 })
@@ -18,6 +19,7 @@ export class ListaHabitacionesComponent {
 
   habitacionesService = inject(HabitacionesService);
   arrHabitaciones: Habitacion[] = [];
+  router = inject(Router)
 
   arrDetails: Details[] = [
     { category: 'deluxe', detail: 'Esta espectacular Habitación de 400 m² hace gala de una elegante combinación de arte, diseño y tecnología. El espacio se distribuye en un amplio salón y un comedor para disfrutar de una mayor privacidad. Además, la suite cuenta con una pequeña cocina y una cómoda zona de trabajo. Relájese en el maravilloso dormitorio con su gran vestidor o en el lujoso baño. La terraza de 220 m² permite celebrar eventos privados y los grandes ventanales llenan la sala de luz natural.' },
@@ -71,6 +73,19 @@ export class ListaHabitacionesComponent {
     { icon: 'fi fi-rr-bell', label: 'Recepción 24h' }
   ];
 
+  reserva: FormGroup = new FormGroup(
+    {
+      llegada: new FormControl(),
+      salida: new FormControl(),
+      num_personas: new FormControl(),
+    })
+
+
+  onSubmit() {
+
+    localStorage.setItem('busqueda', JSON.stringify(this.reserva.value));
+    this.router.navigate(['/busqueda']);
+  }
 
   async ngOnInit() {
     try {

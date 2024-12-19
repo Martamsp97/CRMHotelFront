@@ -1,14 +1,14 @@
 .reservas-container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    padding-left: 200px;
+    padding: 70px;
     border-radius: 8px;
 
 }
 
 h2 {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 50px;
     font-family: var(--fuente-principal);
     font-size: 70px;
     font-weight: 500;
@@ -17,7 +17,7 @@ h2 {
 
 .reservas-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-wrap: wrap;
     gap: 30px;
 }
@@ -44,36 +44,27 @@ h2 {
     font-family: var(--fuente-secundaria);
 }
 
-.reserva-card .input-con-icono {
-    margin-top: 5px;
-    width: 70%;
-    border-radius: 0;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    position: relative;
-    text-align: center;
-    background-image: url('/images/icono.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: transparent;
-    font-weight: 500;
-    color: black;
-    transition: transform 0.3s ease;
-    box-sizing: border-box;
-    font-family: var(--fuente-secundaria);
-}
-
-.reserva-card .input-con-icono:hover {
-    transform: translateX(7px);
-}
 
 span {
     font-weight: 700;
     color: var(--color-secundario);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-danger {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: var(--color-secundario)
 }

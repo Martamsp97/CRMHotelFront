@@ -7,10 +7,12 @@
             <p><span>Número de Personas:</span> {{reserva.num_personas}}</p>
             <p><span>Fecha de Entrada:</span> {{reserva.fecha_entrada}}</p>
             <p><span>Fecha de Salida:</span> {{reserva.fecha_salida}}</p>
-            <p><span>Precio:</span> {{reserva.precio}}</p>
+            <p><span>Precio:</span> {{reserva.precio}} €</p>
             <p><span>Tipo de Cancelación:</span> {{reserva.tipo_cancelacion}}</p>
             <p><span>Método de Pago:</span> {{reserva.metodo_pago}}</p>
-            <input value="Ver detalle" class="input-con-icono" [routerLink]="['/dashboard/reservas/', reserva.id]">
+            @if(reserva.estado !== 'Cancelada') {
+            <button class="btn btn-danger" (click)="cancelarReserva(reserva.id)">Cancelar Reserva</button>
+            }
         </div>
         }
     </div>
