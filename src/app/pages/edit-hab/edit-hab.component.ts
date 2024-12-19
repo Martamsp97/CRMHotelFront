@@ -25,7 +25,7 @@ export class EditHabComponent {
     piso: new FormControl([Validators.required]),
     puerta: new FormControl([Validators.required]),
     mascotas: new FormControl("", [Validators.required]),
-    num_camas: new FormControl([Validators.required]),
+    num_camas: new FormControl("", [Validators.required]),
     categoria: new FormControl("", [Validators.required]),
     precio: new FormControl([Validators.required]),
     tamanho: new FormControl("", [Validators.required]),

@@ -27,8 +27,7 @@
               <div class="description-text">
                 <h4>Categoria {{ habitacion.categoria }}</h4>
                 <p>
-                  <strong>Detalles: </strong
-                  >{{ getDetailForCategory(habitacion.categoria) }}
+                  <strong>Detalles: </strong>{{ getDetailForCategory(habitacion.categoria) }}
                 </p>
                 <p><strong>Numero de Piso: </strong>{{ habitacion.piso }}</p>
                 <p><strong>Tamaño: </strong> {{ habitacion.tamanho }}</p>
@@ -36,15 +35,13 @@
                   <strong>Numero de Camas: </strong>{{ habitacion.num_camas }}
                 </p>
                 <p>
-                  <strong>Mascotas: </strong
-                  >{{ getMascotasStatus(habitacion.cocina) }}
+                  <strong>Mascotas: </strong>{{ getMascotasStatus(habitacion.mascotas) }}
                 </p>
                 <p>
                   <strong>Vista: </strong>{{ getVistaStatus(habitacion.vista) }}
                 </p>
                 <p>
-                  <strong>Cocina: </strong
-                  >{{ getCocinaStatus(habitacion.cocina) }}
+                  <strong>Cocina: </strong>{{ getCocinaStatus(habitacion.cocina) }}
                 </p>
                 <p class="precio">
                   <strong>Precio: </strong>{{ habitacion.precio }} €
@@ -61,11 +58,8 @@
             </div>
           </div>
           <div class="btn-res d-flex gap-3">
-            <button
-              [routerLink]="['/habitaciones']"
-              type="submit"
-              class="btn btn-primary d-flex align-items-center gap-2"
-            >
+            <button [routerLink]="['/habitaciones']" type="submit"
+              class="btn btn-primary d-flex align-items-center gap-2">
               Volver <i class="fi fi-rr-file-edit"></i>
             </button>
           </div>
@@ -76,3 +70,5 @@
   </section>
   <!-- Rooms Section End -->
 </div>
+
+<!-- Rooms Section End -->

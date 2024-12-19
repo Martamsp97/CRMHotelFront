@@ -93,6 +93,13 @@ export class ListaHabitacionesComponent {
     return feature ? feature.detail : 'Detalle no disponible';
   }
 
+  selectedFeature: { icon: string; label: string } | null = null;
+  selectedDetail: { text: string } | null = null;
+
+  selectIcons(feature: { icon: string; label: string }) {
+    this.selectedFeature = feature;
+  }
+
   getIconsByCategory(categoria: string): Features[] {
     switch (categoria.toLowerCase()) {
       case 'deluxe':
@@ -104,9 +111,6 @@ export class ListaHabitacionesComponent {
       default:
         return [];
     }
-  }
-  selectIcons(servicio: Features) {
-    console.log('Servicio seleccionado:', servicio);
   }
 
   getCocinaStatus(cocina: boolean): string {

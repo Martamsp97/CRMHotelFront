@@ -79,7 +79,7 @@
             <p>En Eira, creemos en el poder de la simplicidad. Nuestro hotel está diseñado cuidadosamente para
                 ofrecerte un refugio
                 tranquilo, lejos del ajetreo y el bullicio de la vida diaria.</p>
-            <a>
+            <a [routerLink]="['nosotros']">
                 <p>QUIÉNES SOMOS</p>
                 <img src="/images/icono.png" alt="">
             </a>
@@ -135,15 +135,9 @@
                 <input class="form-control" type="text" name="clientes" id="clientes" placeholder="3"
                     formControlName="num_personas">
             </div>
+            <input type="submit" value="RESERVAR" class="input-con-icono">
         </form>
     </div>
-    <div class="boton-reservar">
-        <a>
-            <p>RESERVAR</p>
-            <img src="/images/icono_blanco.png" alt="">
-        </a>
-    </div>
-
 </section>
 <section class="relax">
     <h2>Relájate, Rejuvenece, Renueva</h2>
@@ -157,7 +151,7 @@
                 y reconectar
                 contigo mismo.</p>
             <div class="boton-spa">
-                <a>
+                <a [routerLink]="['spa']">
                     <p>SERVICIOS DE SPA</p>
                     <img src="/images/icono.png" alt="">
                 </a>

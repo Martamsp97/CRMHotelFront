@@ -1,4 +1,4 @@
-.newhab {
+.crmreserva {
     width: 90%;
     margin: 0 auto;
     padding-left: 200px;
@@ -12,6 +12,12 @@ h2 {
     font-size: 70px;
     font-weight: 500;
 
+}
+
+label {
+    font-family: var(--fuente-secundaria);
+
+    font-weight: 300;
 }
 
 h5 {
@@ -87,8 +93,6 @@ select {
     text-align: center;
 }
 
-label {
-    font-family: var(--fuente-secundaria);
-
-
+.check {
+    width: 30px;
 }

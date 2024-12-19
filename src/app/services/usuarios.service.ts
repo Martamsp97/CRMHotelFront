@@ -41,6 +41,10 @@ export class UsuariosService {
   isAdmin(): boolean {
 
     const token = localStorage.getItem('hotel_token');
+    if (!token) {
+      return false
+    }
+
     const data = jwtDecode<CustomPayload>(token!);
 
     if (data.usuario_rol === 'admin') {

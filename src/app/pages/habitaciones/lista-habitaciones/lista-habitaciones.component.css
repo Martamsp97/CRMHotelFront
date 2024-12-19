@@ -17,45 +17,69 @@ img {
 }
 
 .titulo {
-  margin: 3.75rem auto 2.5rem auto;
+
   display: block;
   width: 100%;
   align-items: center;
   align-content: center;
   text-align: center;
 
-  h5 {
-    font-family: var(--fuente-principal);
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-primario);
-    margin: 0;
-    padding: 0;
-    letter-spacing: 0.0625rem;
-  }
+  .cabecera {
+    margin: 1.5rem auto 1.5rem auto;
+    display: block;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 
-  h1 {
-    margin: 20px 0 40px 0;
+    h5 {
+      font-family: "Quicksand",
+        sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #000;
+
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+
+    }
+
+    h2 {
+      margin: 20px 0 40px 0;
+      font-family: "Nympha";
+      letter-spacing: 0.0625rem;
+      font-style: normal;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #000;
+
+    }
+
+    .cabecera-p {
+      width: 100%;
+      margin: 0 auto;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      display: block;
+    }
 
     p {
-      font-family: var(--fuente-secundaria);
-      font-style: normal;
-      font-size: 2rem;
-      font-weight: 300;
-      color: black;
-    }
-  }
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.2rem;
+      width: 40%;
+      margin: 3rem auto 1rem auto;
 
-  p {
-    font-family: var(--fuente-secundaria);
-    font-size: 1.4rem;
+
+    }
   }
 
   .icono {
     width: 100%;
     justify-content: center;
     display: flex;
-    margin-top: 3.125rem;
+    margin-bottom: 2rem;
+
 
     figure {
       width: 3.125rem;
@@ -197,6 +221,7 @@ img {
   border-top: none;
   padding: 24px 24px 30px 28px;
 }
+
 .room-item .ri-text h4 {
   color: var(--color-primario);
   margin-bottom: 17px;
@@ -204,11 +229,13 @@ img {
   font-family: var(--fuente-principal);
   font-weight: 400;
 }
+
 .room-item .ri-text h3 {
   color: var(--color-primario);
   font-weight: 700;
   font-size: 2rem;
 }
+
 .room-item .ri-text h3 span {
   font-family: var(--fuente-secundaria);
   font-size: 14px;
@@ -238,6 +265,7 @@ img {
   color: black;
   margin-top: 1rem;
 }
+
 .description-info {
   font-size: 1.2rem;
   font-family: var(--fuente-secundaria);
@@ -246,36 +274,45 @@ img {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 .room-details-section {
   padding-top: 0;
   padding-bottom: 80px;
 }
+
 .room-details-item {
   margin-bottom: 50px;
 }
+
 .room-details-item img {
   margin-bottom: 40px;
 }
+
 .room-details-item .rd-text .rd-title {
   overflow: hidden;
   margin-bottom: 8px;
 }
+
 .room-details-item .rd-text .rd-title h3 {
   color: #19191a;
   float: left;
 }
+
 .room-details-item .rd-text .rd-title .rdt-right {
   float: right;
   text-align: right;
 }
+
 .room-details-item .rd-text .rd-title .rdt-right .rating {
   display: inline-block;
   margin-right: 25px;
   margin-bottom: 10px;
 }
+
 .room-details-item .rd-text .rd-title .rdt-right .rating i {
   color: #f5b917;
 }
+
 .room-details-item .rd-text .rd-title .rdt-right a {
   display: inline-block;
   color: #ffffff;
@@ -285,32 +322,39 @@ img {
   background: #dfa974;
   padding: 14px 28px 13px;
 }
+
 .room-details-item .rd-text h2 {
   color: #dfa974;
   font-weight: 700;
   margin-bottom: 25px;
 }
+
 .room-details-item .rd-text h2 span {
   font-family: "Cabin", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #19191a;
 }
+
 .room-details-item .rd-text table {
   margin-bottom: 32px;
 }
+
 .room-details-item .rd-text table tbody tr td {
   font-size: 16px;
   color: #19191a;
   line-height: 36px;
 }
+
 .room-details-item .rd-text table tbody tr td.r-o {
   width: 120px;
   color: #707079;
 }
+
 .room-details-item .rd-text p {
   color: #707079;
 }
+
 .room-details-item .rd-text p.f-para {
   margin-bottom: 22px;
 }
@@ -342,6 +386,7 @@ img {
   font-weight: 400;
   color: #2d220f;
 }
+
 .room-item .room-text .room-features .room-info {
   margin-right: 28px;
 }
@@ -382,60 +427,73 @@ img {
     bottom: -200px;
   }
 }
+
 @media only screen and (min-width: 1200px) and (max-width: 1250px) {
   .hp-room-items .hp-room-item .hr-text {
     bottom: -288px;
   }
 }
+
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1170px;
   }
 }
+
 /* Medium Device: 1200px */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .testimonial-slider.owl-carousel .owl-nav button {
     left: -150px;
   }
+
   .testimonial-slider.owl-carousel .owl-nav button.owl-next {
     right: -150px;
   }
+
   .hp-room-items .hp-room-item .hr-text {
     bottom: -322px;
   }
+
   .hp-room-items .hp-room-item:hover .hr-text {
     bottom: 80px;
   }
 }
+
 @media only screen and (max-width: 991px) {
   .top-nav {
     display: none;
   }
+
   .menu-item .nav-menu {
     display: none;
   }
 }
+
 /* Tablet Device: 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .hp-room-items {
     margin: 0;
   }
+
   .hp-room-item {
     margin-bottom: 15px;
   }
 }
+
 /* Large Mobile: 480px */
 
 @media only screen and (max-width: 767px) {
   .room-details-item .rd-text .rd-title {
     margin-bottom: 25px;
   }
+
   .room-details-item .rd-text .rd-title h3 {
     float: none;
     margin-bottom: 30px;
   }
+
   .room-details-item .rd-text .rd-title .rdt-right {
     float: none;
     text-align: left;

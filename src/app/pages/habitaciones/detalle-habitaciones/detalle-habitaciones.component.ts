@@ -1,6 +1,6 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { HabitacionesService } from '../../../services/habitaciones.service';
-import Habitacion, { Details, Imagen } from '../../../interfaces/habitacion.interface';
+import Habitacion, { Details } from '../../../interfaces/habitacion.interface';
 import { RouterLink } from '@angular/router';
 
 

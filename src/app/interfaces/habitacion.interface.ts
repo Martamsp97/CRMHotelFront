@@ -1,3 +1,6 @@
+import { Images } from "./images.interface";
+import { Reserva } from "./reserva";
+
 export default interface Habitacion {
 
     id: number;
@@ -9,15 +12,11 @@ export default interface Habitacion {
     precio: number;
     tamanho: string;
     vista: string;
-    cocina: boolean,
-    imagenes: Imagen[];
+    cocina: boolean;
+    reserva_habitaciones: Reserva[];
+    imagenes: Images[];
 }
 
-export interface Imagen {
-    id: number;
-    ruta: string;
-    habitaciones_id: number;
-}
 export interface Details {
     category: string;
     detail: string;

@@ -6,16 +6,23 @@
 <div>
     <nav class="navbar">
         <ul class="nav-home">
-            <li><a [routerLink]="['/nosotros']">Quiénes Somos</a></li>
             <li><a [routerLink]="['/habitaciones']">Nuestras habitaciones</a></li>
-            <li><a [routerLink]="['/reservas']">Reservas</a></li>
             <li><a [routerLink]="['/spa']">Spa</a></li>
+            <li><a [routerLink]="['/nosotros']">Quiénes Somos</a></li>
+
+
+
             @if (usuariosService.isAdmin()) {<li><a [routerLink]="['/dashboard']">Dashboard</a></li>}
         </ul>
-        @if(usuariosService.islogged())
-        { <ul class="login">
+
+        <ul class="login">
+            @if (usuariosService.islogged() && !usuariosService.isAdmin()) {
+            <li><a [routerLink]="['/misreservas']">Mis
+                    reservas</a></li>
+            }
+            @if (!usuariosService.islogged()) {
             <li><a [routerLink]="['/registro']">Registro</a></li>
-            <li><a [routerLink]="['/login']">Login</a></li>
-        </ul>}
+            <li><a [routerLink]="['/login']">Login</a></li>}
+        </ul>
     </nav>
 </div>

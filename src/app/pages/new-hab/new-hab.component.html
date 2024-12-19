@@ -22,8 +22,12 @@
                 </div>
                 <div class="form-group">
                     <label for="num_camas" class="form-label">¿Cuántas camas tiene?</label>
-                    <input class="form-control" type="text" name="num_camas" id="num_camas" formControlName="num_camas"
-                        placeholder="Ejemplo: 2">
+                    <select class="form-control" name="num_camas" id="num_camas" formControlName="num_camas">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Doble">Doble</option>
+                        <option value="Triple">Triple</option>
+                        <option value="Suite">Suite</option>
+                    </select>
                     @if(checkError('num_camas', 'required')) {
                     <p class="error">El campo número de camas es obligatorio</p>
                     }
@@ -32,9 +36,9 @@
                     <label for="categoria" class="form-label">¿Cuál es su categoría?</label>
                     <select class="form-control" name="categoria" id="categoria" formControlName="categoria">
                         <option value="">Selecciona una opción</option>
-                        <option value="standard">Standard</option>
-                        <option value="deluxe">Deluxe</option>
-                        <option value="premium">Premium</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Deluxe">Deluxe</option>
+                        <option value="Premium">Premium</option>
                     </select>
                     @if(checkError('categoria', 'required')) {
                     <p class="error">El campo categoria es obligatorio</p>
@@ -44,9 +48,9 @@
                     <label for="tamanho" class="form-label">¿Cuál es su tamaño?</label>
                     <select class="form-control" name="tamanho" id="tamanho" formControlName="tamanho">
                         <option value="">Selecciona una opción</option>
-                        <option value="pequenha">Pequenha</option>
-                        <option value="mediana">Mediana</option>
-                        <option value="grande">Grande</option>
+                        <option value="Pequeña">Pequeña</option>
+                        <option value="Mediana">Mediana</option>
+                        <option value="Grande">Grande</option>
                     </select>
                     @if(checkError('tamanho', 'required')) {
                     <p class="error">El campo tamaño es obligatorio</p>
@@ -59,8 +63,8 @@
                     <label for="vista" class="form-label">¿Cuál es su vista?</label>
                     <select class="form-control" name="vista" id="vista" formControlName="vista">
                         <option value="">Selecciona una opción</option>
-                        <option value="int">Interior</option>
-                        <option value="ext">Exterior</option>
+                        <option value="Int">Interior</option>
+                        <option value="Ext">Exterior</option>
                     </select>
                     @if(checkError('vista', 'required')) {
                     <p class="error">El campo vista es obligatorio</p>

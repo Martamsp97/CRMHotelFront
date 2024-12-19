@@ -11,21 +11,13 @@
             <button type="submit">Filtrar</button>
         </form> -->
 
-    <form
-      class="filplanta"
-      [formGroup]="filtroPlanta"
-      (ngSubmit)="filtrarPlanta()"
-    >
+    <form class="filplanta" [formGroup]="filtroPlanta" (ngSubmit)="filtrarPlanta()">
       <label for="piso">Piso: </label>
       <input type="text" id="piso" name="piso" formControlName="piso" />
 
       <button type="submit">Filtrar</button>
     </form>
-    <form
-      class="filcat"
-      [formGroup]="filtrocat"
-      (ngSubmit)="filtrarCategoria()"
-    >
+    <form class="filcat" [formGroup]="filtrocat" (ngSubmit)="filtrarCategoria()">
       <label for="categoria">Categoría: </label>
       <select name="categoria" id="categoria" formControlName="categoria">
         <option value="">Selecciona una categoría</option>
@@ -36,19 +28,15 @@
 
       <button type="submit">Filtrar</button>
     </form>
-    <form
-      class="filubi"
-      [formGroup]="filtroubi"
-      (ngSubmit)="filtrarUbicacion()"
-    >
+    <form class="filubi" [formGroup]="filtroubi" (ngSubmit)="filtrarUbicacion()">
       <label for="vista">Vista: </label>
       <select name="vista" id="vista" formControlName="vista">
         <option value="">Selecciona una vista</option>
-        <option value="int">INT</option>
-        <option value="ext">EXT</option>
-      </select>
+        <option value="int">Interior</option>
+        <option value="ext">Exterior</option>
 
-      <button type="submit">Filtrar</button>
+        <button type="submit">Filtrar</button>
+      </select>
     </form>
 
     <div class="create">
@@ -60,10 +48,7 @@
 
   <section class="hab-cards">
     @for (habitacion of arrHabitaciones; track habitacion.id) {
-    <app-crmhabscard
-      [habitacion]="habitacion"
-      (habitacionBorrada)="onHabitacionBorrada()"
-    ></app-crmhabscard>
+    <app-crmhabscard [habitacion]="habitacion" (habitacionBorrada)="onHabitacionBorrada()"></app-crmhabscard>
 
     }
   </section>
