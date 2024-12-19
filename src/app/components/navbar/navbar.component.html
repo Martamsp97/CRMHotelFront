@@ -21,7 +21,7 @@
                     reservas</a></li>
             }
             @if(usuariosService.islogged()) {
-            <li><a [routerLink]="['/editusuario', usuario!.id]">Editar Perfil</a></li>
+            <li><a [routerLink]="['/editusuario']">Editar Perfil</a></li>
             }
             @if (!usuariosService.islogged()) {
             <li><a [routerLink]="['/registro']">Registro</a></li>
