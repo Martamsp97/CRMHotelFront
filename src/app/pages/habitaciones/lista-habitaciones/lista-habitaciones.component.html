@@ -38,12 +38,10 @@
                 <strong>Vista: </strong>{{ getVistaStatus(habitacion.vista) }}
               </p>
               <p>
-                <strong>Cocina: </strong
-                >{{ getCocinaStatus(habitacion.cocina) }}
+                <strong>Cocina: </strong>{{ getCocinaStatus(habitacion.cocina) }}
               </p>
               <p>
-                <strong>Detalles: </strong
-                >{{ getDetailForCategory(habitacion.categoria) }}
+                <strong>Detalles: </strong>{{ getDetailForCategory(habitacion.categoria) }}
               </p>
               <p>
                 <!-- Traer de el array de detalles si el detalle correspone a {{ habitacion.categoria }} -->
@@ -64,11 +62,9 @@
               <!-- Icono seleccionado -->
             </div>
             <div class="btn-res d-flex gap-3">
-              <button
-                [routerLink]="['/registro']"
-                class="btn btn-primary d-flex align-items-center gap-2"
-              >
-                Reservar <i class="fi fi-rs-arrow-small-right"></i>
+              <button [routerLink]="['/habitaciones', habitacion.id]"
+                class="btn btn-primary d-flex align-items-center gap-2">
+                Ver más <i class="fi fi-rs-arrow-small-right"></i>
               </button>
             </div>
           </div>
