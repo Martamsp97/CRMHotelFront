@@ -227,7 +227,7 @@ img {
   margin-bottom: 30px;
   transition: transform 0.3s ease;
   max-width: 500px;
-  height: 90rem;
+  height: 85rem;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.41);
   border-radius: 10px;
@@ -443,7 +443,9 @@ img {
   color: #2d220f;
 }
 
-/*-------------------------------- Respinsive Media Styles --------------------------------*/
+/*-------------------------------- 
+Respinsive Media Styles 
+--------------------------------*/
 
 @media only screen and (min-width: 1554px) and (max-width: 1920px) {
   .hp-room-items .hp-room-item .hr-text {
