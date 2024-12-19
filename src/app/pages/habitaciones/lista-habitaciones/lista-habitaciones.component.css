@@ -96,14 +96,16 @@ img {
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  border-radius: 8px; /* Botones más redondeados */
+  border-radius: 8px;
+  /* Botones más redondeados */
   transition: transform 0.2s, background-color 0.3s;
   cursor: pointer;
   width: 9rem;
 }
 
 .btn:hover {
-  transform: scale(1.05); /* Efecto de agrandamiento */
+  transform: scale(1.05);
+  /* Efecto de agrandamiento */
 }
 
 .btn-primary {
@@ -112,6 +114,7 @@ img {
   border-color: var(--color-premium);
   margin-bottom: 2rem;
 }
+
 .btn-primary i {
   position: absolute;
   left: 7rem;
@@ -232,6 +235,7 @@ img {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
+
 .room-item:hover {
   transform: scale(1.02);
 }
@@ -517,4 +521,91 @@ img {
     float: none;
     text-align: left;
   }
+}
+
+.reserva {
+  margin-top: 2rem;
+  background-color: #2e5951;
+  color: whitesmoke;
+  padding: 5rem 3rem;
+  text-align: center;
+  margin-bottom: 100px;
+
+  h2 {
+    letter-spacing: 0.0625rem;
+    margin-bottom: 1rem;
+    font-family: "Nympha";
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  .form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .row {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+
+      .campo-form {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 30%;
+        margin-top: 3.75rem;
+
+        .form-label {
+          font-family: "quicksand", sans-serif;
+          margin-bottom: 0.625rem;
+          text-align: left;
+        }
+
+        .form-control {
+          color: whitesmoke;
+          background-color: transparent;
+          border: none;
+          border-bottom: 0.0625rem solid whitesmoke;
+        }
+
+        input::placeholder {
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.input-con-icono {
+  margin-top: 15px;
+  width: 35%;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  background-image: url("/images/icono_blanco.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: transparent;
+  font-family: var(--fuente-secundaria);
+  font-weight: 500;
+  color: white;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-con-icono:hover {
+  transform: translateX(7px);
 }

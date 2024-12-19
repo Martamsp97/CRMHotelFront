@@ -20,16 +20,16 @@ export class EditReservaComponent {
 
   editForm: FormGroup = new FormGroup({
 
-    fecha_entrada: new FormControl([Validators.required]),
-    fecha_salida: new FormControl([Validators.required]),
-    num_personas: new FormControl([Validators.required]),
+    fecha_entrada: new FormControl(null, [Validators.required]),
+    fecha_salida: new FormControl(null, [Validators.required]),
+    num_personas: new FormControl(null, [Validators.required]),
     regimen: new FormControl("", [Validators.required]),
     tipo_cancelacion: new FormControl("", [Validators.required]),
-    aparcamiento: new FormControl([Validators.required]),
+    aparcamiento: new FormControl(false, [Validators.required]),
     desayuno: new FormControl("", [Validators.required]),
-    spa: new FormControl([Validators.required]),
-    gimnasio: new FormControl([Validators.required]),
-    piscina: new FormControl([Validators.required]),
+    spa: new FormControl(true, [Validators.required]),
+    gimnasio: new FormControl(false, [Validators.required]),
+    piscina: new FormControl(true, [Validators.required]),
     metodo_pago: new FormControl("", [Validators.required]),
 
   })

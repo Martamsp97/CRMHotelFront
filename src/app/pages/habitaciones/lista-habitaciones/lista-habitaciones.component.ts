@@ -1,13 +1,14 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { HabitacionesService } from '../../../services/habitaciones.service';
 import Habitacion, { Details, Features } from '../../../interfaces/habitacion.interface';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-lista-habitaciones',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ReactiveFormsModule],
   templateUrl: './lista-habitaciones.component.html',
   styleUrl: './lista-habitaciones.component.css'
 })
@@ -19,6 +20,8 @@ export class ListaHabitacionesComponent {
 
   rutasImagenes: string[] = [];
 
+  arrHabitaciones: Habitacion[] = [];
+  router = inject(Router)
 
 
   arrDetails: Details[] = [
@@ -73,6 +76,19 @@ export class ListaHabitacionesComponent {
     { icon: 'fi fi-rr-bell', label: 'Recepción 24h' }
   ];
 
+  reserva: FormGroup = new FormGroup(
+    {
+      llegada: new FormControl(),
+      salida: new FormControl(),
+      num_personas: new FormControl(),
+    })
+
+
+  onSubmit() {
+
+    localStorage.setItem('busqueda', JSON.stringify(this.reserva.value));
+    this.router.navigate(['/busqueda']);
+  }
 
   async ngOnInit() {
     try {
@@ -120,6 +136,7 @@ export class ListaHabitacionesComponent {
   selectIcons(servicio: Features) {
     console.log('Servicio seleccionado:', servicio);
   }
+
 
   getCocinaStatus(cocina: boolean): string {
     return cocina ? 'Incluye' : 'No incluye';

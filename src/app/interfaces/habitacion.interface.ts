@@ -19,11 +19,6 @@ export default interface Habitacion {
     isExpanded: boolean;
 }
 
-export interface HabitacionExtendida extends Habitacion {
-    shortDetail: string; // Texto truncado
-    isExpanded: boolean; // Estado de expansión
-}
-
 export interface Details {
     category: string;
     detail: string;

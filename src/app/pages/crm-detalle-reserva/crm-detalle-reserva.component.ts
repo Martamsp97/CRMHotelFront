@@ -2,6 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { Reserva } from '../../interfaces/reserva';
 import { ReservasService } from '../../services/reservas.service';
 import { RouterLink } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-crm-detalle-reserva',
@@ -27,9 +28,22 @@ export class CrmDetalleReservaComponent {
     }
   }
 
+  async cancelarReserva() {
 
+    try {
+      const reserva = await this.reservasService.cancelarReserva(this.id)
 
+      Swal.fire({
+        title: 'Reserva cancelada',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+      })
 
-  cancelarReserva() { }
+      this.reserva = reserva
 
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
 }

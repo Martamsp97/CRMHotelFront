@@ -27,11 +27,13 @@ input {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-family: var(--fuente-secundaria);
 }
 
 .form-group {
     margin-top: 20px;
 }
+
 
 select {
     margin-right: 20px;

@@ -16,7 +16,8 @@ h2 {
 
 label {
     font-family: var(--fuente-secundaria);
-
+    text-align: center;
+    align-items: center;
     font-weight: 300;
 }
 
@@ -33,6 +34,11 @@ input {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-family: var(--fuente-secundaria);
+}
+
+select option {
+    font-family: var(--fuente-secundaria);
 }
 
 .form-group {
@@ -94,5 +100,31 @@ select {
 }
 
 .check {
-    width: 30px;
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-top: -5px;
+}
+
+.checkgroup {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: left;
+    align-items: center;
+
+}
+
+/* form input:focus {
+    background-color: var(--color-secundario);
+} */
+.check:checked {
+    background-color: var(--color-secundario);
+}
+
+form input[type="checkbox"] {
+    /* width: auto; */
+    /* margin-top: 8px; */
+    cursor: pointer;
+    /* align-items: flex-end; */
 }

@@ -8,6 +8,7 @@ import { CustomPayload } from '../guards/admin.guard';
 
 type LoginBody = { email: string, password: string };
 type ResponseLogin = { message: string, token: string };
+type userBody = { nombre: string, apellidos: string, username: string, email: string, password: string, dni: string, telefono: string, ciudad: string, pais: string, cod_postal: string, fecha_nacimiento: string, direccion: string }
 
 @Injectable({
   providedIn: 'root'
@@ -51,5 +52,18 @@ export class UsuariosService {
       return true
     }
     return false
+  }
+
+
+
+  getUserSinId(): Promise<Usuario> {
+    return lastValueFrom(
+      this.httpClient.get<Usuario>(`${this.url}/logeado`)
+    )
+  }
+  updateUsuario(body: userBody): Promise<Usuario> {
+    return lastValueFrom(
+      this.httpClient.put<Usuario>(`${this.url}/edit/`, body)
+    )
   }
 }
