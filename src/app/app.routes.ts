@@ -15,10 +15,13 @@ import { DetalleHabcrmComponent } from './pages/detalle-habcrm/detalle-habcrm.co
 import { QuienessomosComponent } from './pages/quienessomos/quienessomos.component';
 import { SpaComponent } from './pages/spa/spa.component';
 import { DetalleHabitacionesComponent } from './pages/habitaciones/detalle-habitaciones/detalle-habitaciones.component';
+
 import { FormularioReservasComponent } from './pages/formulario-reservas/formulario-reservas.component';
 import { BusquedaHabitacionesComponent } from './pages/busqueda-habitaciones/busqueda-habitaciones.component';
 import { EditReservaComponent } from './pages/edit-reserva/edit-reserva.component';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
+import { MisReservasComponent } from './pages/mis-reservas/mis-reservas.component';
+
 
 
 export const routes: Routes = [
@@ -32,11 +35,10 @@ export const routes: Routes = [
             { path: 'crearHabitacion', component: NuevaHabitacionComponent },
             { path: 'habitaciones/:habitacionId', component: DetalleHabitacionesComponent },
             { path: 'reservas', component: FormularioReservasComponent },
+            { path: 'misreservas', component: MisReservasComponent },
             { path: 'nosotros', component: QuienessomosComponent },
             { path: 'spa', component: SpaComponent },
             { path: 'habitaciones/:habitacionId', component: DetalleHabcrmComponent },
-
-
             { path: 'busqueda', component: BusquedaHabitacionesComponent }
 
         ],

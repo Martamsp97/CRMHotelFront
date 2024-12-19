@@ -42,4 +42,14 @@ export class ReservasService {
     return lastValueFrom(
       this.httpClient.put<Reserva>(`${this.url}/edit/${resId}`, body))
   }
+
+  cancelarReserva(resId: number): Promise<Reserva> {
+    return lastValueFrom(
+      this.httpClient.put<Reserva>(`${this.url}/cancelar/${resId}`, {}))
+  }
+
+  getReservasByUser(): Promise<Reserva[]> {
+    return lastValueFrom(
+      this.httpClient.get<Reserva[]>(`${this.url}/misreservas`))
+  }
 }
