@@ -15,6 +15,8 @@ export default interface Habitacion {
     cocina: boolean;
     reserva_habitaciones: Reserva[];
     imagenes: Images[];
+    shortDetail: string; // Texto truncado
+    isExpanded: boolean;
 }
 
 export interface Details {

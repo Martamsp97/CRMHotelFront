@@ -23,6 +23,7 @@ export class ListaHabitacionesComponent {
   arrHabitaciones: Habitacion[] = [];
   router = inject(Router)
 
+
   arrDetails: Details[] = [
     { category: 'deluxe', detail: 'Esta espectacular Habitación de 400 m² hace gala de una elegante combinación de arte, diseño y tecnología. El espacio se distribuye en un amplio salón y un comedor para disfrutar de una mayor privacidad. Además, la suite cuenta con una pequeña cocina y una cómoda zona de trabajo. Relájese en el maravilloso dormitorio con su gran vestidor o en el lujoso baño. La terraza de 220 m² permite celebrar eventos privados y los grandes ventanales llenan la sala de luz natural.' },
 
@@ -93,28 +94,32 @@ export class ListaHabitacionesComponent {
     try {
       this.Habitacion = await this.habitacionesService.getAll();
       console.log(this.Habitacion);
+
     } catch (error) {
       console.log(error);
     }
   }
 
+  toggleDetail(habitacion: any) {
+    habitacion.isExpanded = !habitacion.isExpanded;
+  }
 
-  // getImageById(id: number): string {
-  //   const habitacion = this.Habitacion.find(habitacion => habitacion.id === id);
-  //   return habitacion ? habitacion.imagenes[0].ruta : '';
+  // getDetailForCategory(category: string): string {
+  //   const feature = this.arrDetails.find(detail => detail.category === category);
+  //   return feature ? feature.detail : 'Detalle no disponible';
   // }
 
-  getDetailForCategory(category: string): string {
+  getDetailForCategory(category: string, wordLimit: number = 30): string {
     const feature = this.arrDetails.find(detail => detail.category === category);
-    return feature ? feature.detail : 'Detalle no disponible';
+    if (!feature) {
+      return 'Detalle no disponible';
+    }
+    const words = feature.detail.split(' ');
+    return words.length > wordLimit
+      ? words.slice(0, wordLimit).join(' ') + '...'
+      : feature.detail;
   }
 
-  selectedFeature: { icon: string; label: string } | null = null;
-  selectedDetail: { text: string } | null = null;
-
-  selectIcons(feature: { icon: string; label: string }) {
-    this.selectedFeature = feature;
-  }
 
   getIconsByCategory(categoria: string): Features[] {
     switch (categoria.toLowerCase()) {
@@ -127,6 +132,9 @@ export class ListaHabitacionesComponent {
       default:
         return [];
     }
+  }
+  selectIcons(servicio: Features) {
+    console.log('Servicio seleccionado:', servicio);
   }
 
 
