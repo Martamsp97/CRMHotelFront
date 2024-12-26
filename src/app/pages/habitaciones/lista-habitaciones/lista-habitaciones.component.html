@@ -23,18 +23,36 @@
     <form [formGroup]="reserva" (ngSubmit)="onSubmit()" class="row">
       <div class="campo-form">
         <label class="form-label" for="fecha">Llegada</label>
-        <input class="form-control" type="date" name="fecha" id="fecha" placeholder="Mar, 15/6/2025"
-          formControlName="llegada" />
+        <input
+          class="form-control"
+          type="date"
+          name="fecha"
+          id="fecha"
+          placeholder="Mar, 15/6/2025"
+          formControlName="llegada"
+        />
       </div>
       <div class="campo-form">
         <label class="form-label" for="fecha">Salida</label>
-        <input class="form-control" type="date" name="fecha" id="fecha" placeholder="Mar, 20/6/2025"
-          formControlName="salida" />
+        <input
+          class="form-control"
+          type="date"
+          name="fecha"
+          id="fecha"
+          placeholder="Mar, 20/6/2025"
+          formControlName="salida"
+        />
       </div>
       <div class="campo-form">
         <label class="form-label" for="clientes">Número de clientes</label>
-        <input class="form-control" type="text" name="clientes" id="clientes" placeholder="0"
-          formControlName="num_personas" />
+        <input
+          class="form-control"
+          type="text"
+          name="clientes"
+          id="clientes"
+          placeholder="0"
+          formControlName="num_personas"
+        />
       </div>
       <input type="submit" value="RESERVAR" class="input-con-icono" />
     </form>
@@ -53,8 +71,12 @@
 
       <div class="">
         <div class="room-item">
-
-          <figure><img [src]="'http://localhost:3000/' + habitacion.imagenes[0].ruta" alt=""></figure>
+          <figure>
+            <img
+              [src]="'http://localhost:3000/' + getImagenPorId(habitacion.id)"
+              alt="Imagen de la habitación {{ habitacion.categoria }}"
+            />
+          </figure>
 
           <div class="ri-text">
             <h4>Habitación {{ habitacion.categoria }}</h4>
@@ -67,16 +89,32 @@
                   <strong>Detalles: </strong>
                 </p>
                 <p>
+                  <<<<<<< HEAD
                   {{ getDetailForCategory(habitacion.categoria.toLowerCase()) }}
+                  =======
+                  {{ getDetailForCategory(habitacion.categoria, 16) }}
+                  >>>>>>> feature_jc
                 </p>
                 <div class="btn-read">
-                  <a href="#" class="cta" [routerLink]="['/habitaciones/', habitacion.id]">
+                  <a
+                    href="#"
+                    class="cta"
+                    [routerLink]="['/habitaciones/', habitacion.id]"
+                  >
                     <span>Más Detalles</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" id="Outline" width="13px" height="15px" viewBox="0 0 24 24">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="Outline"
+                      width="13px"
+                      height="15px"
+                      viewBox="0 0 24 24"
+                    >
                       <path
-                        d="M13.1,19a1,1,0,0,1-.7-1.71L17,12.71a1,1,0,0,0,0-1.42L12.4,6.71a1,1,0,0,1,0-1.42,1,1,0,0,1,1.41,0L18.4,9.88a3,3,0,0,1,0,4.24l-4.59,4.59A1,1,0,0,1,13.1,19Z" />
+                        d="M13.1,19a1,1,0,0,1-.7-1.71L17,12.71a1,1,0,0,0,0-1.42L12.4,6.71a1,1,0,0,1,0-1.42,1,1,0,0,1,1.41,0L18.4,9.88a3,3,0,0,1,0,4.24l-4.59,4.59A1,1,0,0,1,13.1,19Z"
+                      />
                       <path
-                        d="M6.1,19a1,1,0,0,1-.7-1.71L10.69,12,5.4,6.71a1,1,0,0,1,0-1.42,1,1,0,0,1,1.41,0l6,6a1,1,0,0,1,0,1.42l-6,6A1,1,0,0,1,6.1,19Z" />
+                        d="M6.1,19a1,1,0,0,1-.7-1.71L10.69,12,5.4,6.71a1,1,0,0,1,0-1.42,1,1,0,0,1,1.41,0l6,6a1,1,0,0,1,0,1.42l-6,6A1,1,0,0,1,6.1,19Z"
+                      />
                     </svg>
                   </a>
                 </div>
@@ -97,11 +135,14 @@
             </div>
             @if(!usuarioService.islogged()) {
             <div class="btn-res d-flex gap-3">
-              <button [routerLink]="['/login']" class="btn btn-primary d-flex align-items-center gap-2">
+              <button
+                [routerLink]="['/login']"
+                class="btn btn-primary d-flex align-items-center gap-2"
+              >
                 RESERVAR <i class="fi fi-rs-arrow-small-right"></i>
               </button>
-            </div>}
-
+            </div>
+            }
           </div>
         </div>
       </div>

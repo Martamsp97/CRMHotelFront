@@ -16,13 +16,16 @@ import { UsuariosService } from '../../../services/usuarios.service';
 
 export class ListaHabitacionesComponent {
 
+  @Input() habitacionId: number = 0;
+
+  router = inject(Router)
+
   habitacionesService = inject(HabitacionesService);
   Habitacion: Habitacion[] = [];
-
-  rutasImagenes: string[] = [];
-  usuarioService = inject(UsuariosService);
   arrHabitaciones: Habitacion[] = [];
-  router = inject(Router)
+
+  imagenesPorHabitacion: { id: number; rutasImagenes: string[] }[] = [];
+  rutasImagenes: string[] = [];
 
 
   arrDetails: Details[] = [
@@ -93,24 +96,33 @@ export class ListaHabitacionesComponent {
 
   async ngOnInit() {
     try {
+      // Obtener todas las habitaciones
       this.Habitacion = await this.habitacionesService.getAll();
       console.log(this.Habitacion);
+
+      // Mapear habitaciones con imágenes y almacenar ID y rutas
+      this.imagenesPorHabitacion = this.Habitacion.map(habitacion => ({
+        id: habitacion.id,
+        rutasImagenes: habitacion.imagenes ? habitacion.imagenes.map(imagen => imagen.ruta) : []
+      }));
+
+      console.log(this.imagenesPorHabitacion); // Rutas de imágenes organizadas por ID
+
+      // Extraer las rutas de las imágenes en un solo array
+      this.rutasImagenes = this.imagenesPorHabitacion.flatMap(habitacion => habitacion.rutasImagenes);
+      console.log(this.rutasImagenes);  // Rutas de imágenes
 
     } catch (error) {
       console.log(error);
     }
   }
 
-  toggleDetail(habitacion: any) {
-    habitacion.isExpanded = !habitacion.isExpanded;
+  getImagenPorId(id: number): string {
+    const habitacion = this.imagenesPorHabitacion.find(h => h.id === id);
+    return habitacion && habitacion.rutasImagenes.length > 0 ? habitacion.rutasImagenes[0] : 'ruta/por/defecto.jpg';
   }
 
-  // getDetailForCategory(category: string): string {
-  //   const feature = this.arrDetails.find(detail => detail.category === category);
-  //   return feature ? feature.detail : 'Detalle no disponible';
-  // }
-
-  getDetailForCategory(category: string, wordLimit: number = 30): string {
+  getDetailForCategory(category: string, wordLimit: number = 16): string {
     const feature = this.arrDetails.find(detail => detail.category === category);
     if (!feature) {
       return 'Detalle no disponible';

@@ -18,7 +18,10 @@
             <!-- Obtener imagenes del ngOnInit -->
             @for(ruta of rutasImagenes; track ruta) {
             <figure>
-              <img [src]="'http://localhost:3000/' + ruta" alt="Room Image" />
+              <img
+                [src]="'http://localhost:3000/' + ruta"
+                alt="Imagen de la habitación {{ habitacion?.categoria }}"
+              />
               <figcaption>Habitación {{ habitacion?.puerta }}</figcaption>
             </figure>
             }

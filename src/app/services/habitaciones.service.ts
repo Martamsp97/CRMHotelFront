@@ -24,12 +24,6 @@ export class HabitacionesService {
   private httpClient = inject(HttpClient);
   private baseUrl = `${environment.apiUrl}/habitaciones`;
 
-  // private rutasImagenesSource = new BehaviorSubject<string[]>([]);
-  // rutasImagenes$ = this.rutasImagenesSource.asObservable();
-
-  // setRutasImagenes(rutas: string[]): void {
-  //   this.rutasImagenesSource.next(rutas);
-  // }
 
   getAll(): Promise<Habitacion[]> {
     return lastValueFrom(
