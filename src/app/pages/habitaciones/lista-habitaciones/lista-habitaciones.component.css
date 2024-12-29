@@ -141,7 +141,10 @@ img {
 
 /* Boton Seguir Leyendo */
 .btn-read {
-  margin: 3rem 1rem 4rem 7rem;
+  margin: 1rem 1rem 1rem 7rem;
+  align-items: center;
+  align-content: center;
+
 }
 
 .cta {
@@ -224,6 +227,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1rem;
+
 }
 
 .room-item {
@@ -234,7 +238,7 @@ img {
   padding-bottom: 50px;
   transition: transform 0.3s ease;
   max-width: 500px;
-  height: 88rem;
+  height: 95rem;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.41);
   border-radius: 10px;
@@ -591,8 +595,8 @@ Respinsive Media Styles
 }
 
 .input-con-icono {
-  margin-top: 15px;
-  width: 35%;
+  margin-top: 30px;
+  width: 15%;
   border-radius: 0;
   display: inline-flex;
   align-items: center;

@@ -2,8 +2,7 @@
 <article class="hab-card">
   <h3>Habitación {{ habitacion.puerta }}</h3>
   <p>
-    <span>Piso: </span> {{ habitacion.piso }}, <span>Vista: </span
-    >{{ habitacion.vista }}
+    <span>Piso: </span> {{ habitacion.piso }}, <span>Vista: </span>{{ habitacion.vista }}
   </p>
   <p><span>Categoría: </span> {{ habitacion.categoria }}</p>
   <p><span>Número de camas: </span> {{ habitacion.num_camas }}</p>
@@ -15,4 +14,4 @@
     <button class="delete" (click)="borrarHab()">Eliminar</button>
   </div>
 </article>
-}.
+}

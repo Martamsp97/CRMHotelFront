@@ -1,10 +1,20 @@
 <div class="wrapper">
   <!-- Title Section Begin -->
   <section class="titulo">
-    <h5>HABITACIONES</h5>
-    <h2>
-      <p>Detalles de Habitaciones</p>
-    </h2>
+    <div class="cabecera">
+      <h2>Tu Espacio Perfecto</h2>
+      <h5>Un rincón diseñado para tu descanso</h5>
+      <div class="cabecera-p">
+        <p>
+          Cada habitación ha sido pensada para ofrecerte una experiencia única, combinando confort, estilo y una
+          conexión especial
+          con el entorno. Aquí, cada detalle está diseñado para que encuentres la paz y el lujo que mereces.
+        </p>
+      </div>
+    </div>
+    <div class="icono">
+      <figure><img src="/images/icono.png" alt="icono" /></figure>
+    </div>
   </section>
   <!-- Title Section End -->
 
@@ -18,10 +28,7 @@
             <!-- Obtener imagenes del ngOnInit -->
             @for(ruta of rutasImagenes; track ruta) {
             <figure>
-              <img
-                [src]="'http://localhost:3000/' + ruta"
-                alt="Imagen de la habitación {{ habitacion?.categoria }}"
-              />
+              <img [src]="'http://localhost:3000/' + ruta" alt="Imagen de la habitación {{ habitacion?.categoria }}" />
               <figcaption>Habitación {{ habitacion?.puerta }}</figcaption>
             </figure>
             }
@@ -30,24 +37,21 @@
               <div class="description-text">
                 <h4>Categoria {{ habitacion.categoria }}</h4>
                 <p>
-                  <strong>Detalles: </strong
-                  >{{ getDetailForCategory(habitacion.categoria) }}
+                  <strong>Detalles: </strong>{{ getDetailForCategory(habitacion.categoria.toLowerCase()) }}
                 </p>
-                <p><strong>Numero de Piso: </strong>{{ habitacion.piso }}</p>
+                <!-- <p><strong>Numero de Piso: </strong>{{ habitacion.piso }}</p> -->
                 <p><strong>Tamaño: </strong> {{ habitacion.tamanho }}</p>
                 <p>
                   <strong>Numero de Camas: </strong>{{ habitacion.num_camas }}
                 </p>
                 <p>
-                  <strong>Mascotas: </strong
-                  >{{ getMascotasStatus(habitacion.mascotas) }}
+                  <strong>Mascotas: </strong>{{ getMascotasStatus(habitacion.mascotas) }}
                 </p>
                 <p>
                   <strong>Vista: </strong>{{ getVistaStatus(habitacion.vista) }}
                 </p>
                 <p>
-                  <strong>Cocina: </strong
-                  >{{ getCocinaStatus(habitacion.cocina) }}
+                  <strong>Cocina: </strong>{{ getCocinaStatus(habitacion.cocina) }}
                 </p>
                 <p class="precio">
                   <strong>Precio: </strong>{{ habitacion.precio }} €
@@ -66,11 +70,8 @@
             </div>
           </div>
           <div class="btn-res d-flex gap-3">
-            <button
-              [routerLink]="['/habitaciones']"
-              type="submit"
-              class="btn btn-primary d-flex align-items-center gap-2"
-            >
+            <button [routerLink]="['/habitaciones']" type="submit"
+              class="btn btn-primary d-flex align-items-center gap-2">
               Volver <i class="fi fi-rr-file-edit"></i>
             </button>
           </div>
